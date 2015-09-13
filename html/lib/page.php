@@ -52,11 +52,11 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
   }
 
   private function getDefaultTitle() {
-    return $this->getSiteName()." · Top 10 Food Lists";
+    return $this->getSiteName()." ·Curated Top Lists";
   }
 
   private function getDefaultDescription() {
-    return "Top 10 Food Lists, from Resident Experts";
+    return "Curated Top Lists, from Resident Experts";
   }
 
 	private function getTitle() {
@@ -246,7 +246,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
     $ret .= '" >
     <div class="logo">
       <div class="logo-subtitle">
-        Top 10 Food Lists
+        Curated Top Lists
       </div>
       <h1>'.RenderUtils::renderLink('What\'s Nom?', '').'</h1>
     </div>'

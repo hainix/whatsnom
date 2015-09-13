@@ -23,6 +23,7 @@ $same_lists = DataReadUtils::getListsForQuery($query, 5);
 $city_lists = DataReadUtils::getTopListsForCity($city_id, 5);
 $recent_city_lists = DataReadUtils::getRecentListsForCity($city_id, 5);
 $primary_list = $primary_list ?: head((array) $same_lists);
+
 $entries =
   $primary_list
   ? DataReadUtils::getEntriesForList($primary_list)
@@ -45,7 +46,11 @@ $my_list_edit = null;
 // Primary List START
 $big_add_list_message = null;
 if (!$primary_list || !$entries || !$spots) {
-  $yelp_list_render = '<ul class="list">';
+  $yelp_list_render = '';
+  if (is_admin()) {
+    $yelp_list_render .= '<h3 align="center">FALLBACK QUERY</h3><br/><hr/>';
+  }
+  $yelp_list_render .= '<ul class="list">';
   $spots = DataReadUtils::getGenericSpotsForQuery($query);
   $position = 1;
   foreach ($spots as $spot) {
@@ -148,7 +153,7 @@ $yelp_attribution =
 $about_us =
   '<h3 style="margin-top: 0;"><span>What Is This?</span></h3>'
   .'<div class="about-us-container">Here, you\'ll find curated lists by '
-  .'local food experts.'
+  .'local experts.'
     .'<div align="left" style="margin: 10px 0 0 0; width: 100%;">'
       .FacebookUtils::render_share_box()
     .'</div>'

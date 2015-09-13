@@ -60,10 +60,12 @@ final class Modules {
 
       $ret .=
         '<li>'
+        /*
         .RenderUtils::renderLink(
           '<img class="round-profile list-profile" src="'.$profile_image.'"/>',
           'me/?view='.$list['creator_id']
         )
+        */
         .'<span class="title-text">'
         .RenderUtils::renderLink(
           'Top '.ListTypes::getName($list['type']),

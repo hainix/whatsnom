@@ -73,7 +73,7 @@ return false;
     global $link;
     $r = mysql_query($sql);
     if (!$r) {
-      $message  = 'Invalid query: ' . mysql_error() . "\n";
+      $message  = '[Alter List] Invalid query: ' . mysql_error() . "\n";
       $message .= 'Whole query: ' . $sql;
       die($message);
     }
@@ -85,16 +85,18 @@ return false;
       sprintf(
         "INSERT IGNORE INTO lists "
         ."(type, city, creator_id, created_time) "
-        ."VALUES (%d, %d, %d, %.0f, %d)",
+        ."VALUES (%d, %d, %.0f, %d)",
         $type_id,
         $city_id,
         $creator_id,
         time()
       );
+
+    slog($sql);
     global $link;
     $r = mysql_query($sql);
     if (!$r) {
-      $message  = 'Invalid query: ' . mysql_error() . "\n";
+      $message  = '[Create List] Invalid query: ' . mysql_error() . "\n";
       $message .= 'Whole query: ' . $q;
       die($message);
     }
@@ -122,7 +124,7 @@ return false;
     global $link;
     $r = mysql_query($sql);
     if (!$r) {
-      $message  = 'Invalid query: ' . mysql_error() . "\n";
+      $message  = '[Add Entry to List] Invalid query: ' . mysql_error() . "\n";
       $message .= 'Whole query: ' . $q;
       slog($message);
       return false;
@@ -152,7 +154,8 @@ return false;
       $sql =
         sprintf(
           "INSERT IGNORE into spots (name, rating, address, phone, profile_pic, "
-          ."yelp_id, type, review_count, last_updated, city_id) values ('%s', %d, '%s', '%s', '%s', '%s', %d, %d, %d, %d)",
+          ."yelp_id, type, review_count, last_updated, city_id, snippet, latitude, longitude, neighborhoods, cross_streets) "
+          ."values ('%s', %d, '%s', '%s', '%s', '%s', %d, %d, %d, %d, '%s', '%s', '%s', '%s', '%s')",
           DataReadUtils::cln($info['name']),
           $info['rating'],
           DataReadUtils::cln($info['address']),
@@ -162,7 +165,12 @@ return false;
           $type_id,
           $info['review_count'],
           time(),
-          $city_id
+          $city_id,
+          DataReadUtils::cln($info['snippet']),
+          $info['lat'],
+          $info['long'],
+          DataReadUtils::cln($info['neighborhoods']),
+          DataReadUtils::cln($info['cross_streets'])
         );
       $r = mysql_query($sql);
       if (!$r) {

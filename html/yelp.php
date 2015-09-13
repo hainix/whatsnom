@@ -1,14 +1,21 @@
 <?php
 
-// Uncomment to use this
-die(1);
-
-
 
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/page.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/write.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/api/yelp.php';
 
+if (!idx($_GET, 'y')) {
+  echo 'no y id';
+  die(1);
+}
+$yelp_id = $_GET['y'];
+$info = get_yelp_business_info($yelp_id);
+slog($info);
+
+
+
+die(1);
 
 // REMOVE to iterate
 //$type_override_id = ListTypes::DESSERT;

@@ -40,8 +40,8 @@ function get_yelp_business_info($name, $info = null) {
     ? $info->review_count
     : null;
   $data['phone'] =
-    property_exists($info, 'display_phone')
-    ? rem($info->display_phone, '+1-')
+    property_exists($info, 'phone')
+    ? $info->phone
     : null;
   $location =
     property_exists($info, 'location')
@@ -53,6 +53,26 @@ function get_yelp_business_info($name, $info = null) {
   $data['street_address'] = $data['address']
     ? head($location->display_address)
     : null;
+  $data['city'] = $location && $location->city
+    ? $location->city
+    : null;
+  $data['neighborhoods'] = $location && $location->neighborhoods
+    ? implode($location->neighborhoods, ', ')
+    : null;
+  $data['cross_streets'] = $location && $location->cross_streets
+    ? $location->cross_streets
+    : null;
+  $data['lat'] = $location && $location->coordinate
+    ? $location->coordinate->latitude
+    : null;
+  $data['long'] = $location && $location->coordinate
+    ? $location->coordinate->longitude
+    : null;
+  $data['snippet'] = property_exists($info, 'snippet_text')
+    ? $info->snippet_text
+    : null;
+
+
   $image =
     property_exists($info, 'image_url')
     ? $info->image_url
@@ -60,10 +80,12 @@ function get_yelp_business_info($name, $info = null) {
   if ($image) {
     $image = str_replace('ms.jpg', 'o.jpg', $image);
   }
+  /*
   $data['rating_image'] =
     $data['rating']
     ? $info->rating_img_url_small
     : null;
+  */
   $data['profile_pic'] = $image;
   $data['yelp_id'] = $info->id;
   $data['name'] = $info->name;
