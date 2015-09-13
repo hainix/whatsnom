@@ -1,4 +1,8 @@
 <?php
+abstract class ListGenreTypes extends Enum {
+  const DRINK            = 1;
+  const FOOD             = 2;
+}
 
 abstract class ListTypes extends Enum {
   const ASIAN            = 1;
@@ -48,4 +52,33 @@ abstract class ListTypes extends Enum {
   const VEGETARIAN       = 46;
   const WINE             = 47;
   const WINGS            = 40;
+  const DATE_BAR         = 48;
+  const HAPPY_HOUR       = 49;
 }
+
+
+
+final class ListTypeConfig {
+  const ID          = 'i';
+  const LIST_NAME   = 'n';
+  const ENTRY_NAME  = 'e';
+  const ICON        = 'i';
+  const GENRE       = 'g';
+
+  public static $config = array(
+
+    ListTypes::DATE_BAR => array(
+      self::ID           => ListTypes::DATE_BAR,
+      self::LIST_NAME    => 'Date Bars',
+      self::ENTRY_NAME   => 'Date Bar',
+      self::ICON         => 'wine',
+      self::GENRE        => ListGenreTypes::DRINK,
+    ),
+    ListTypes::HAPPY_HOUR => array(
+      self::ID => ListTypes::HAPPY_HOUR,
+    ),
+
+  );
+
+}
+
