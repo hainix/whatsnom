@@ -1,0 +1,101 @@
+
+.multiselect_list {
+	_border-color: #C1C1C1;
+	_border-style:none solid solid;
+	_border-width:medium 1px 1px;
+	_height:300px;
+	list-style-type:none;
+	margin:0pt;
+	overflow:hidden;
+	padding:0pt;
+	z-index:1;
+}
+
+.multiselect-object-box {
+    padding:8px;
+}
+
+#multiselect_list_filters {
+    display: none;
+	  _border-bottom:1px solid #C1C1C1;
+	padding:0;
+	zoom:1;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+#multiselect_list_filters .selections {
+	float:left;
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+
+#multiselect_list_filters .selections li.view_on {
+	background:#FFFFFF url(../images/multi_selector/multi_selector_bg.gif) repeat-x scroll center top;
+}
+#multiselect_list_filters .selections li {
+	float:left;
+	padding:4px 7px;
+	text-align:center;
+	width:100px;
+}
+#multiselect_list_filters .selections li a{
+	color:#3B5998;
+	text-decoration:none;
+}
+.multiselect_list li {
+	background-color:#F7F7F7;
+	border:1px solid #D8DFEA;
+	display:block;
+	float:left;
+	list-style-image:none;
+	list-style-type:none;
+	margin:2px;
+	padding:2px;
+}
+.multiselect_list .fcbklist_item
+{
+	background-color:#FFFFFF;
+	clear:both;
+	position:relative;
+	height:50px;
+	_overflow:auto;
+}
+.multiselect_list .itemover {
+	  _background-color:#F7F7F7 !important;
+	  background-color:#E6EEFF !important;
+	  _border:1px solid #8A8CFF !important;
+}
+.multiselect_list .liselected {
+	border:1px solid #149525 !important;
+	background-color:#D7F8AC !important;
+}
+
+.multiselect_list .itemselected
+{
+	background-color:#D7F8AC !important;
+	background-image: url(../images/multi_selector/checked.png);
+	background-repeat:no-repeat;
+	background-position:right bottom;
+}
+
+.multiselect_list .itemover {
+	background-color:#E6FFEB !important;
+	background-image: url(../images/multi_selector/checked.png);
+	background-repeat:no-repeat;
+	background-position:right bottom;
+}
+
+.multiselect_list strong {
+	color:#222222;
+	font-size:11px;
+	margin-top:2px;
+	width:65px;
+}
+.clearer
+{
+	clear:both;
+	height:1px;
+	font-size:1px;
+}
+

@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=fungossip.com&fp=KmvPZFzd4auIQIeEunuiQbIgILBNaIkbmuavMtIfLTmitwMklWNtXZhgOQyVSRy%2B7evOVMSksBcaNimikb5eXg%3D%3D&prvtof=I2QaBvJyjcOP%2Ba7Mm5Qcz0MqsutoXt8G%2FxYUyPh5JhE%3D&poru=Dd0e17OyCE5WKmyqoCsjHE5SagpwtQb99bw3SHmPTieFASyecIrmIdcxTu541VZ0G4hIZ%2B0iCLvFMpqt0SJrgopAP2cro71TyIE%2F2gjApSg%3D&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=fungossip.com&fp=KmvPZFzd4auIQIeEunuiQbIgILBNaIkbmuavMtIfLTmitwMklWNtXZhgOQyVSRy%2B7evOVMSksBcaNimikb5eXg%3D%3D&prvtof=9TSL%2BVGsGz%2FcGkzkzA30zzxxDGWdgP7itCl7YXa8688%3D&poru=JDA%2B5QzZywXlWXchyH1y%2BqTT6%2BWVdWcBVha4D%2F2In5cxt7RHOzQ4O2bUn0Y9stvQRVTVPZTZtxFc2XJwSTecYrpMfchQDcN8p%2Bi8cbWQj9M%3D&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=fungossip.com&fp=KmvPZFzd4auIQIeEunuiQbIgILBNaIkbmuavMtIfLTmitwMklWNtXZhgOQyVSRy%2B7evOVMSksBcaNimikb5eXg%3D%3D&prvtof=KXNcxoNsWmOgHYK77HuiwrHISM4s386PJ3zBultkxyc%3D&poru=W%2BMQXe3b0fKJJNdKR7z8YsqkALtr5%2FFLSkXWEH%2FfWeJW%2Bl09ont6q782HbZmCarlrKnPVmFNRcmByL9mpVZWQDh1vlOdVKNXouK5ey4baJk%3D&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=fungossip.com&fp=KmvPZFzd4auIQIeEunuiQbIgILBNaIkbmuavMtIfLTmitwMklWNtXZhgOQyVSRy%2B7evOVMSksBcaNimikb5eXg%3D%3D&prvtof=5tKMc%2FFrotWltsk%2BuJqorUX206S3nBHm54NIFLLwExY%3D&poru=9Dd8mg0IPkWD0OogL82cc5aaTBznwg0IV%2FNwoSc75hybY9yCASJVjGtNdt2Uy65Hj9OT0JBi1B%2FTW0XDAyipbGUdE1X5brU8YyWJkUzDeGE%3D&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

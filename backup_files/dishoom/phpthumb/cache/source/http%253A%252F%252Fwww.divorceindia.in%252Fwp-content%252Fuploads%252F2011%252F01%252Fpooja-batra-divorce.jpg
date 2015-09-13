@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=www.divorceindia.in&fp=Y%2FKVZ9jpxbU2hdeuGbVCUgNEh3%2Bb6G3RS33uB6atHkOyJnqaRxmMxOkfsD8VWYMyjOO1XUrAkp%2FPVMTCSdLfAQ%3D%3D&prvtof=AQ3V8tkMKPiTH2hEi0dWFm4SM9uK%2Bkxy5jCUriQ0T3k%3D&poru=LmTZcgDm3JgN8tJXvEx%2BDVVgWYkx1YhvPz9AFKlNWH3K85OmzsHBneo4cLEjbaXjlYVVXzB64WNvpeR04%2Fy7Wv8Gr3LC%2BnYeZcUeq0UNSTjZlWNRCuEJKeibistnGWTi&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=www.divorceindia.in&fp=Y%2FKVZ9jpxbU2hdeuGbVCUgNEh3%2Bb6G3RS33uB6atHkOyJnqaRxmMxOkfsD8VWYMyjOO1XUrAkp%2FPVMTCSdLfAQ%3D%3D&prvtof=kK6LCxtb3J5ZFPzJTEIZHms3D3suOCSutyYRgwOqA%2FA%3D&poru=lVrCP1m1aWbaXT7hyR54hHRVNJ%2F%2B3KDOSkWQbDrfw0Kc15IIg8OKSVRmAf%2Fpc3yy812wVS74JOymKkjVzsH0JR330EV8mG5D7GUCeaFa7LjWZbZiTJ5VBJLq0H20MWzd&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=www.divorceindia.in&fp=Y%2FKVZ9jpxbU2hdeuGbVCUgNEh3%2Bb6G3RS33uB6atHkOyJnqaRxmMxOkfsD8VWYMyjOO1XUrAkp%2FPVMTCSdLfAQ%3D%3D&prvtof=JQzG47HNunVq7fxHejqObjEaivqSNVtUPbWEUlv5KGs%3D&poru=UjShTaPywJjWZbo4C6Y7QQH%2B9cPLpgSH%2FSw9ohf5xFMl4VC8pk%2FmhTJb%2BH1Dy7Q5ORSrwd%2F4RubRNGilkxWocyJ9ucVM1P451bSZm95k5ucd9LZM1n935bVcJENXsCEP&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=www.divorceindia.in&fp=Y%2FKVZ9jpxbU2hdeuGbVCUgNEh3%2Bb6G3RS33uB6atHkOyJnqaRxmMxOkfsD8VWYMyjOO1XUrAkp%2FPVMTCSdLfAQ%3D%3D&prvtof=jMwFHLUMOw9ljwkOh%2FZ2GEiHb63CUg0rOFV6yyf%2Fqw0%3D&poru=u0VkuCBY8TymI4Awt5Ezbw2%2Bp48hFwrvIOFQ9Sp9BfnPAygeq%2BMgIWu4IRBZYkB%2FkzDYx2Laaa%2FNrugV5WBlDrWLMihflF8joAEieVHFt0yjFD87mCWydqQ0OVcy7qBp&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

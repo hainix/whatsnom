@@ -1,0 +1,22 @@
+#!/usr/local/bin/php                                                                                                   
+<?php
+include_once '../script_lib.php';
+include_once '../imdb_parser_lib.php';
+set_time_limit(0);
+ini_set('memory_limit', '32M');
+
+$names = get_to_change();
+hlog($names);
+
+do {
+
+  $sql = sprintf("update films set wiki_handle = '%s' where shortname = '%s' limit 1", tr($field), $shortname);
+  $result = mysql_query($sql);
+  if (!$result) {
+    hlog('sql error '.mysql_error() );
+    exit(1);
+  } else {
+    hlog('updated '.$shortname);
+  }
+} while (1);
+

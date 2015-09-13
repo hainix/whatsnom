@@ -1,0 +1,836 @@
+/*
+skins available:
+	- cool
+	- simple
+	- crazy
+*/
+
+/* the container */
+.allinone_thumbnailsBanner {
+	position:relative;
+}
+.allinone_thumbnailsBanner img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width:100%;
+	max-height:100%;
+}
+.allinone_thumbnailsBanner .stripe {
+	position:absolute;
+	display:block;
+	height:100%;
+	z-index:1;
+}
+.allinone_thumbnailsBanner .block {
+	position:absolute;
+	display:block;
+	z-index:1;
+}
+
+
+
+/**COOL SKIN***/
+
+.allinone_thumbnailsBanner.cool .bannerControls {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2;
+}
+
+.allinone_thumbnailsBanner.cool .leftNav {
+	position:absolute;
+	left:0px;
+	top:50%;
+	margin-top:-20px; /* height/2 */
+	width:22px;
+	height:75px;
+	background:url(../images/sidebar_slider/cool/leftNavOFF.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.cool .leftNav:hover {
+	background:url(../images/sidebar_slider/cool/leftNavON.png) 0 0 no-repeat;
+}
+.allinone_thumbnailsBanner.cool .rightNav {
+	position:absolute;
+	right:0px;
+	top:50%;
+	margin-top:-20px; /* height/2 */
+	width:22px;
+	height:75px;
+	background:url(../images/sidebar_slider/cool/rightNavOFF.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+.allinone_thumbnailsBanner.cool .rightNav:hover {
+	background:url(../images/sidebar_slider/cool/rightNavON.png) 0 0 no-repeat;
+}
+.allinone_thumbnailsBanner.cool .thumbsHolderWrapper {
+	position:absolute;
+	background:#000000;
+	border-top:1px solid #e66b19;
+	height:121px;
+	width:100%;
+	overflow:hidden;
+}
+.allinone_thumbnailsBanner.cool .thumbsHolderVisibleWrapper {
+	position:absolute;
+	width:100%;
+	height:121px;
+	overflow:hidden;
+}
+.allinone_thumbnailsBanner.cool .thumbsHolder {
+	position:absolute;
+}
+.allinone_thumbnailsBanner.cool .thumbsHolder_ThumbOFF {
+	float:left;
+	display:block;
+	width:110px;
+	height:65px;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.cool .thumbsHolder_ThumbOFF img {
+	position:relative;
+}
+
+.allinone_thumbnailsBanner.cool .thumbsHolder_ThumbON {
+	background:url(../images/sidebar_slider/cool/thumbActiveArrow.png) center 0px no-repeat;
+}
+.allinone_thumbnailsBanner.cool .carouselLeftNav {
+	position:absolute;
+	width:29px;
+	height:121px;
+	background:url(../images/sidebar_slider/cool/carouselLeftNav.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.cool .carouselLeftNav:hover {
+	background:url(../images/sidebar_slider/cool/carouselLeftNavOn.png) 0 0 no-repeat;
+}
+
+.allinone_thumbnailsBanner.cool .carouselLeftNavDisabled {
+	background:url(../images/sidebar_slider/cool/carouselLeftNavDisable.png) 0 0 no-repeat;
+	cursor:default;
+}
+.allinone_thumbnailsBanner.cool .carouselLeftNavDisabled:hover {
+	background:url(../images/sidebar_slider/cool/carouselLeftNavDisable.png) 0 0 no-repeat;
+}
+
+.allinone_thumbnailsBanner.cool .carouselRightNav {
+	position:absolute;
+	width:29px;
+	height:121px;
+	background:url(../images/sidebar_slider/cool/carouselRightNav.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.cool .carouselRightNav:hover {
+	background:url(../images/sidebar_slider/cool/carouselRightNavOn.png) 0 0 no-repeat;
+}
+
+.allinone_thumbnailsBanner.cool .carouselRightNavDisabled {
+	background:url(../images/sidebar_slider/cool/carouselRightNavDisable.png) 0 0 no-repeat;
+	cursor:default;
+}
+.allinone_thumbnailsBanner.cool .carouselRightNavDisabled:hover {
+	background:url(../images/sidebar_slider/cool/carouselRightNavDisable.png) 0 0 no-repeat;
+}
+
+
+
+/**SIMPLE SKIN***/
+
+.allinone_thumbnailsBanner.simple .bannerControls {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2;
+}
+
+.allinone_thumbnailsBanner.simple .leftNav {
+	position:absolute;
+	left:0px;
+	top:50%;
+	margin-top:-35px; /* height/2 */
+	width:31px;
+	height:71px;
+	background:url(../images/sidebar_slider/simple/leftNavOFF.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.simple .leftNav:hover {
+	background:url(../images/sidebar_slider/simple/leftNavON.png) 0 0 no-repeat;
+}
+.allinone_thumbnailsBanner.simple .rightNav {
+	position:absolute;
+	right:0px;
+	top:50%;
+	margin-top:-35px; /* height/2 */
+	width:31px;
+	height:71px;
+	background:url(../images/sidebar_slider/simple/rightNavOFF.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+.allinone_thumbnailsBanner.simple .rightNav:hover {
+	background:url(../images/sidebar_slider/simple/rightNavON.png) 0 0 no-repeat;
+}
+.allinone_thumbnailsBanner.simple .thumbsHolderWrapper {
+	position:absolute;
+	background:#FFFFFF;
+	border-top:1px solid #ff1414;
+	height:98px;
+	width:100%;
+	overflow:hidden;
+}
+.allinone_thumbnailsBanner.simple .thumbsHolderVisibleWrapper {
+	position:absolute;
+	width:100%;
+	height:121px;
+	overflow:hidden;
+}
+.allinone_thumbnailsBanner.simple .thumbsHolder {
+	position:absolute;
+}
+.allinone_thumbnailsBanner.simple .thumbsHolder_ThumbOFF {
+	float:left;
+	display:block;
+	width:110px;
+	height:65px;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.simple .thumbsHolder_ThumbOFF img {
+	position:relative;
+}
+
+.allinone_thumbnailsBanner.simple .thumbsHolder_ThumbON {
+	background:url(../images/sidebar_slider/simple/thumbActiveArrow.png) center 0px no-repeat;
+}
+.allinone_thumbnailsBanner.simple .carouselLeftNav {
+	position:absolute;
+	width:46px;
+	height:98px;
+	background:url(../images/sidebar_slider/simple/carouselLeftNav.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.simple .carouselLeftNav:hover {
+	background:url(../images/sidebar_slider/simple/carouselLeftNavOn.png) 0 0 no-repeat;
+}
+
+.allinone_thumbnailsBanner.simple .carouselLeftNavDisabled {
+	background:url(../images/sidebar_slider/simple/carouselLeftNavDisable.png) 0 0 no-repeat;
+	cursor:default;
+}
+.allinone_thumbnailsBanner.simple .carouselLeftNavDisabled:hover {
+	background:url(../images/sidebar_slider/simple/carouselLeftNavDisable.png) 0 0 no-repeat;
+}
+
+
+.allinone_thumbnailsBanner.simple .carouselRightNav {
+	position:absolute;
+	width:46px;
+	height:98px;
+	background:url(../images/sidebar_slider/simple/carouselRightNav.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.simple .carouselRightNav:hover {
+	background:url(../images/sidebar_slider/simple/carouselRightNavOn.png) 0 0 no-repeat;
+}
+.allinone_thumbnailsBanner.simple .carouselRightNavDisabled {
+	background:url(../images/sidebar_slider/simple/carouselRightNavDisable.png) 0 0 no-repeat;
+	cursor:default;
+}
+.allinone_thumbnailsBanner.simple .carouselRightNavDisabled:hover {
+	background:url(../images/sidebar_slider/simple/carouselRightNavDisable.png) 0 0 no-repeat;
+}
+
+
+/**CRAZY SKIN***/
+
+.allinone_thumbnailsBanner.crazy .bannerControls {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2;
+}
+
+.allinone_thumbnailsBanner.crazy .leftNav {
+	position:absolute;
+	left:110px;
+	top:50%;
+	margin-top:-20px; /* height/2 */
+	width:31px;
+	height:71px;
+	background:url(../images/sidebar_slider/crazy/leftNavOFF.png) 0 0 no-repeat;
+	cursor: pointer;
+	z-index:4;
+}
+
+.allinone_thumbnailsBanner.crazy .leftNav:hover {
+	background:url(../images/sidebar_slider/crazy/leftNavON.png) 0 0 no-repeat;
+}
+.allinone_thumbnailsBanner.crazy .rightNav {
+	position:absolute;
+	right:110px;
+	top:50%;
+	margin-top:-20px; /* height/2 */
+	width:31px;
+	height:71px;
+	background:url(../images/sidebar_slider/crazy/rightNavOFF.png) 0 0 no-repeat;
+	cursor: pointer;
+	z-index:4;
+}
+.allinone_thumbnailsBanner.crazy .rightNav:hover {
+	background:url(../images/sidebar_slider/crazy/rightNavON.png) 0 0 no-repeat;
+}
+.allinone_thumbnailsBanner.crazy .thumbsHolderWrapper {
+	position:absolute;
+	margin-top:-35px;
+	height:98px;
+	width:100%;
+	overflow:hidden;
+}
+.allinone_thumbnailsBanner.crazy .thumbsHolderVisibleWrapper {
+	position:absolute;
+	width:100%;
+	height:98px;
+	overflow:hidden;
+}
+
+.allinone_thumbnailsBanner.crazy .thumbsHolder {
+	position:absolute;
+	margin-top:0px;
+	height:98px;
+	z-index:4;
+}
+.allinone_thumbnailsBanner.crazy .thumbsHolder_ThumbOFF {
+	float:left;
+	display:block;
+	width:110px;
+	height:65px;
+	margin-top:-3px;
+	cursor: pointer;
+}
+
+.allinone_thumbnailsBanner.crazy .thumbsHolder_ThumbOFF img {
+	position:relative;
+}
+
+.allinone_thumbnailsBanner.crazy .thumbsHolder_ThumbON {
+	margin-top:-3px;
+	background:url(../images/sidebar_slider/crazy/thumbActiveArrow.png) center 3px no-repeat;
+}
+.allinone_thumbnailsBanner.crazy .carouselLeftNav {
+	position:absolute;
+	width:205px;
+	height:98px;
+	background:url(../images/sidebar_slider/crazy/carouselLeftNav.png) 0 0 no-repeat;
+	cursor: pointer;
+	z-index:4;
+}
+
+.allinone_thumbnailsBanner.crazy .carouselLeftNav:hover {
+	background:url(../images/sidebar_slider/crazy/carouselLeftNavOn.png) 0 0 no-repeat;
+}
+
+.allinone_thumbnailsBanner.crazy .carouselLeftNavDisabled {
+	background:url(../images/sidebar_slider/crazy/carouselLeftNavDisable.png) 0 0 no-repeat;
+	cursor:default;
+}
+.allinone_thumbnailsBanner.crazy .carouselLeftNavDisabled:hover {
+	background:url(../images/sidebar_slider/crazy/carouselLeftNavDisable.png) 0 0 no-repeat;
+}
+
+
+.allinone_thumbnailsBanner.crazy .carouselRightNav {
+	position:absolute;
+	width:205px;
+	height:98px;
+	background:url(../images/sidebar_slider/crazy/carouselRightNav.png) 0 0 no-repeat;
+	cursor: pointer;
+	z-index:4;
+}
+
+
+.allinone_thumbnailsBanner.crazy .carouselRightNav:hover {
+	background:url(../images/sidebar_slider/crazy/carouselRightNavOn.png) 0 0 no-repeat;
+}
+
+.allinone_thumbnailsBanner.crazy .carouselRightNavDisabled {
+	background:url(../images/sidebar_slider/crazy/carouselRightNavDisable.png) 0 0 no-repeat;
+	cursor:default;
+}
+.allinone_thumbnailsBanner.crazy .carouselRightNavDisabled:hover {
+	background:url(../images/sidebar_slider/crazy/carouselRightNavDisable.png) 0 0 no-repeat;
+}
+
+/**Texts**/
+/****/
+
+.textElement11_cool {
+	font: bold 24px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#000000;
+}
+.textElement12_cool {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#000000;
+}
+
+.textElement21_cool {
+	font: bold 32px/1.0em 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+}
+.textElement22_cool {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+}
+
+.textElement31_cool {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	padding:0px 15px 3px 15px;
+	color:#FFFFFF;
+}
+
+.textElement32_cool {
+	font: bold 26px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#FFFFFF;
+}
+
+.textElement33_cool {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	padding:4px 15px 6px 15px;
+	color:#FFFFFF;
+}
+
+
+.textElement41_cool {
+	font: bold 40px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#000000;
+}
+.textElement42_cool {
+	font: bold 20px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#000000;
+}
+
+
+
+.textElement51_cool a {
+	font: bold 28px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	color:#ffffff;
+	text-decoration:none;
+}
+
+.textElement51_cool a:hover {
+	color:#000000;
+}
+
+
+
+
+.textElement52_cool {
+	width:481px;
+	background:url(../images/sidebar_slider/cool/textBg_transparency.png);
+	font: 14px/1.3em 'Arial', Verdana, Helvetica, sans-serif;
+	padding:15px 15px 15px 15px;
+	color:#FFF;
+}
+
+.textElement52_cool a {
+	font: bold 14px 'Arial', Verdana, Helvetica, sans-serif;
+	color:#FF0000;
+	text-decoration:none;
+}
+
+.textElement52_cool a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+
+
+.textElement53_cool a {
+	background:url(../images/sidebar_slider/cool/textBg_transparency.png);
+	font: bold 14px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+	text-decoration:none;
+}
+
+.textElement53_cool a:hover {
+	background:#FFFFFF;
+	padding:6px 15px 6px 15px;
+	color:#512d5d;
+}
+
+
+
+/****SIMPLE***/
+
+.textbg_simple {
+	width:940px;
+	background:url(../images/sidebar_slider/simple/textBg_transparency.png);
+	padding:10px;
+
+}
+
+.textbg_simple_width {
+	width:280px;
+	height:354px;
+	background:url(../images/sidebar_slider/simple/textBg_transparency.png);
+	padding:15px;
+	color:#FFF;
+}
+
+.textbg_simple_width2 {
+	width:320px;
+	background:url(../images/sidebar_slider/simple/textBg_transparency.png);
+	padding:15px;
+	color:#FFF;
+}
+
+.textElement11_simple {
+	font: bold 24px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:3px 15px 3px 15px;
+	color:#ffffff;
+}
+.textElement12_simple {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:0px 15px 3px 15px;
+	color:#ffffff;
+}
+
+.textElement21_simple {
+	font: bold 32px/1.0em 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+}
+.textElement22_simple {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+}
+.textElement23_simple {
+	font: bold 12px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	line-height:1.3em;
+	color:#ffffff;
+}
+
+.textElement31_simple {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	padding:0px 15px 3px 15px;
+	color:#FFFFFF;
+}
+
+.textElement32_simple {
+	font: bold 26px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#FFFFFF;
+}
+
+.textElement33_simple {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	padding:4px 15px 6px 15px;
+	color:#FFFFFF;
+}
+
+
+.textElement41_simple {
+	font: bold 30px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+}
+.textElement42_simple {
+	font: bold 20px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+}
+
+
+
+.textElement51_simple {
+	font: bold 24px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:3px 15px 3px 15px;
+	color:#ffffff;
+}
+.textElement52_simple {
+	font: bold 18px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:0px 15px 3px 15px;
+	color:#ffffff;
+}
+
+
+
+.textElement53_simple a {
+	background:url(../images/sidebar_slider/simple/textBg_transparency.png);
+	font: bold 14px 'Cabin', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+	text-decoration:none;
+}
+
+.textElement53_simple a:hover {
+	background:#FFFFFF;
+	padding:6px 15px 6px 15px;
+	color:#512d5d;
+}
+
+
+
+
+
+
+/****CRAZY***/
+
+.textRibbonRight_crazy {
+	background:url(../images/sidebar_slider/crazy/backRibbonRight.png) top right no-repeat;
+}
+
+.textRibbonLeft_crazy {
+	background:url(../images/sidebar_slider/crazy/backRibbonLeft.png) top left no-repeat;
+}
+
+.textRibbonTopRight_crazy {
+	background:url(../images/sidebar_slider/crazy/backRibbonTopRight.png) top left no-repeat;
+}
+
+#topCrazyTextBgRight {
+	float:left;
+	background:#b0010c;
+	margin-left:13px;
+	margin-top:-19px;
+}
+
+.textRibbonTopLeft_crazy {
+	background:url(../images/sidebar_slider/crazy/backRibbonTopLeft.png) top right no-repeat;
+}
+
+
+#topCrazyTextBgLeft {
+	float:right;
+	width:320px;
+	background:url(../images/sidebar_slider/crazy/textBg_transparency.png);
+	margin-right:13px;
+	margin-top:-20px;
+	padding:14px 5px 20px 5px;
+}
+
+.float-block {
+	float:left;
+	display:block;
+}
+
+
+#textElement3_crazy_list {
+	padding: 0;
+}
+#textElement3_crazy_list ul {
+	padding-left: 15px;
+}
+
+#textElement3_crazy_list ul li {
+	color:#ffffff;
+	font: bold 14px/1.3em 'Droid Sans', Verdana, Helvetica, sans-serif;
+	font-style:italic;
+	padding:0 0 15px 30px;
+	list-style:none;
+	background:url(../images/sidebar_slider/crazy/listIcon.png) 0px 2px no-repeat;
+}
+
+
+
+.icon {
+	width:16px;
+	height:21px;
+	background:url(../images/sidebar_slider/crazy/listIcon.png) top left no-repeat;
+	padding:0;
+	margin-top:3px;
+
+}
+
+
+.textbg_crazy {
+	width:940px;
+	background:url(../images/sidebar_slider/crazy/textBg_transparency.png);
+	padding:10px;
+
+}
+
+.textbg_crazy_width {
+	width:280px;
+	height:354px;
+	background:url(../images/sidebar_slider/crazy/textBg_transparency.png);
+	padding:15px;
+	color:#FFF;
+}
+
+.textbg_crazy_width2 {
+	width:320px;
+	background:url(../images/sidebar_slider/crazy/textBg_transparency.png);
+	padding:15px;
+	color:#FFF;
+}
+
+.textElement11_crazy {
+	background:#03c9bd;
+	text-align:right;
+	width:350px;
+	font: bold 26px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	margin-left:44px;
+	margin-top:-6px;
+	padding:4px 20px 4px 15px;
+	color:#ffffff;
+}
+.textElement12_crazy {
+	background:#aa4778;
+	text-align:right;
+	width:310px;
+	margin-left:91px;
+	font: bold 18px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 20px 6px 8px;
+	color:#ffffff;
+}
+
+.textElement21_crazy {
+	background:#333333;
+	text-align:left;
+	width:460px;
+	font: bold 24px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	margin-right:44px;
+	margin-top:-6px;
+	padding:4px 4px 4px 20px;
+	color:#ffffff;
+}
+.textElement22_crazy {
+	background:#aa4778;
+	text-align:left;
+	width:320px;
+	margin-right:84px;
+	font: bold 20px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:4px 4px 10px 20px;
+	color:#ffffff;
+}
+
+.textElement31_crazy {
+	font: bold 16px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	padding:0px 15px 3px 15px;
+	color:#FFFFFF;
+}
+
+.textElement32_crazy {
+	font: bold 26px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#FFFFFF;
+}
+
+.textElement33_crazy {
+	font: bold 18px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	padding:4px 15px 6px 15px;
+	color:#FFFFFF;
+}
+
+
+.textElement41_crazy {
+	font: bold 30px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+}
+.textElement42_crazy {
+	font: bold 20px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:0px 15px 15px 15px;
+	color:#ffffff;
+}
+
+
+
+.textElement51_crazy {
+	font: bold 24px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:3px 15px 3px 15px;
+	color:#ffffff;
+}
+
+
+.textElement52_crazy {
+	font: bold 18px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:0px 15px 10px 15px;
+	color:#ffffff;
+}
+
+
+
+.textElement53_crazy a {
+	background:url(../images/sidebar_slider/crazy/textBg_transparency.png);
+	font: bold 14px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	text-transform:uppercase;
+	padding:6px 15px 6px 15px;
+	color:#ffffff;
+	text-decoration:none;
+}
+
+.textElement53_crazy a:hover {
+	background:#FFFFFF;
+	padding:6px 15px 6px 15px;
+	color:#512d5d;
+}
+
+
+
+
+
+.allinone_thumbnailsBanner_texts {
+	position:absolute;
+	z-index:3;
+	display: none;
+	width:100%;
+	text-align:left;
+}
+
+.allinone_thumbnailsBanner_text_line {
+	position:absolute;
+}
+
+
+
+.hideElement {
+	display:none;
+}
+

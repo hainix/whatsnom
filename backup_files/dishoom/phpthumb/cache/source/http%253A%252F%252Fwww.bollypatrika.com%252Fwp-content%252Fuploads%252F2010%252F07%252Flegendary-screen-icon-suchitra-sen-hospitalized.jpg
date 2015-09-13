@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=www.bollypatrika.com&fp=alZMHk31de%2FWTyRnm4ebY7zbuoxk7hc1l6oAC1mW%2BZSmZlb476Hy9%2BrjhhgqCj7U3WKiMPxpfe9%2FOrEyFahrjw%3D%3D&prvtof=j80ae53iA9HoLRw31%2F3yfTYdmqz3Yd3RWjpA0G3tFWE%3D&poru=OBp4lq8iSpHTUxvjfMq%2BFIpOyxvj7HYePcbgmYyfYsWU3bu09s6eBlaVscD60LoJBlghWuwmTFYVRi%2FMsSRE4iAMqVr8uLyxVVQ5VkkDgYWGDXOccMWXYj5Fzr4pLiEj&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=www.bollypatrika.com&fp=alZMHk31de%2FWTyRnm4ebY7zbuoxk7hc1l6oAC1mW%2BZSmZlb476Hy9%2BrjhhgqCj7U3WKiMPxpfe9%2FOrEyFahrjw%3D%3D&prvtof=fuebdzkgZArcbFMxJL%2FPboF0w%2F%2B2f8eLhWT4IXsovDc%3D&poru=AMLUJTIHC7ZoJ7KWPYV6BvBrmSzNrdnmdy3r7yALGWo2CQNm643DACf5aEPTvq43Y7g58bNzpRQ4V4EGFQnNsqo3xZybOHtk6pWF6ZMkWmOTYNSLOcardao%2FL1w9xB%2B%2F&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=www.bollypatrika.com&fp=alZMHk31de%2FWTyRnm4ebY7zbuoxk7hc1l6oAC1mW%2BZSmZlb476Hy9%2BrjhhgqCj7U3WKiMPxpfe9%2FOrEyFahrjw%3D%3D&prvtof=OL4QmVv4ymbiv0fy5i8OxM0dL6qgkiRiE%2FrPQFdtCDk%3D&poru=gVFWatFuzVo1rfQqz4jWnioTso4xKhuLz68TYug41KkGX3FOE5r%2BHG2gMIqk5%2Bu2pIu4bXxv3LxqOW2tjJoRLcfnUP1j1MV5XAxhrdz8PVRQORx9oMHhSRHjTvHTFBrS&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=www.bollypatrika.com&fp=alZMHk31de%2FWTyRnm4ebY7zbuoxk7hc1l6oAC1mW%2BZSmZlb476Hy9%2BrjhhgqCj7U3WKiMPxpfe9%2FOrEyFahrjw%3D%3D&prvtof=fonDsrVR9adgiu%2FZ8agisyFylyX0bD59KgRB9mcppSc%3D&poru=lRlrrd%2BsnEZQo3rpv7qhyz4pNir4CNwV1KILo2cFbYAhIJf3Q8ZaaMd4phbgy7x3GzpsAqaLTQHaZWhPGaMhwLUHyR0ixO3fBZvi5izSaMacgehNkV%2FD2s8yw1zfTT%2FP&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

@@ -1,0 +1,130 @@
+table.search-table, table.search-table th, table.search-table td {
+    vertical-align: middle;
+}
+
+div.ss-wrap *
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    background-color: transparent;
+    background-image: none;
+    background-position: 0 0;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: none !important;
+}
+
+input.ss-input
+{
+	display: block;
+}
+
+input.ss-input-thinking
+{
+	background-image: url(../images/jquery-smartsuggest/indicator.gif) !important;
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+ul.ss-box{
+	/* Will be absolutely positioned in the JavaScript */
+  _margin: 0 0 0 -40px  !important;
+	padding: 0 !important;
+	width: 254px;
+	z-index: 999999;
+	border: 1px solid #919191;
+	font-size: 11px;
+	background: #fff;
+	-moz-box-shadow: 2px 2px 5px 0 #c5c5c5;
+	list-style: none;
+}
+
+	ul.ss-box li
+	{
+		width: 100%;
+		clear: both;
+	}
+
+	ul.ss-box li,
+	ul.ss-box li *
+	{
+		cursor: pointer;
+	}
+
+	ul.ss-box li.ss-header
+	{
+		height: 13px;
+		overflow: hidden;
+		padding: 5px 0;
+		color: #fff;
+		background: #dbdbdb;
+    padding-bottom: 10px;
+	}
+
+		ul.ss-box li.ss-header p.ss-header-text
+		{
+			margin: 0 !important;
+			padding: 0 0 0 10px !important;
+			float: left;
+			font-size: 14px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		ul.ss-box li.ss-header p.ss-header-limit
+		{
+			margin: 0 !important;
+			padding: 0 10px 0 0 !important;
+			float: right;
+			font-size: 11px;
+			font-weight: normal;
+		}
+
+	ul.ss-box li.ss-result
+	{
+		margin: 0 !important;
+		padding: 0 !important;
+		border-bottom: 1px solid #c5c5c5;
+	}
+
+		ul.ss-box li.ss-result a
+		{
+			display: block;
+			padding: 5px 10px;
+			text-decoration: none !important;
+			background: #fff;
+		}
+
+		ul.ss-box li.ss-result a:hover
+		{
+		    background: #f5f5f5; /* url(../images/jquery-smartsuggest/search-item-hover.gif) repeat-x top; /* Also is set in JavaScript file for IE6 compatibility */
+		}
+
+		ul.ss-box li.ss-result img
+		{
+			margin-right: 12px;
+			margin-top: 3px;
+		}
+
+		ul.ss-box li.ss-result p
+		{
+			margin: 0 !important;
+			padding: 0 !important;
+			color: #444;
+			font-weight: normal;
+			font-size: 12px;
+		}
+
+		ul.ss-box li.ss-result p span { color: #a3a3a3;}
+
+			ul.ss-box li.ss-result p span.ss-result-title
+			{
+				display: inline !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				font-size: 16px;
+				font-weight: bold;
+				color: #535353;
+			}

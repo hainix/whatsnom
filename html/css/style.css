@@ -1,0 +1,581 @@
+ /** Base **/
+ h1, h2 {
+   font-family: 'Pacifico', cursive;
+ }
+
+ a, a:visited {
+   color: #6f5499;
+ }
+
+ body {
+   font-family: 'Lato', sans-serif;
+ }
+
+ h4 {
+   font-weight: 700;
+ }
+
+ .subtle {
+  color: #9e9e9e;
+ }
+
+ .inline {
+     display:inline-block;
+ }
+
+table td, table td * {
+    vertical-align: top;
+}
+
+
+/** Flex **/
+
+  .flex-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      width: 100%;
+  }
+.flex-box {
+-webkit-box-flex: 1;
+-moz-box-flex: 1;
+-webkit-flex: 1;
+-ms-flex: 1;
+flex: 1;
+}
+
+ /** Containers **/
+
+ .container {
+   padding-top: 10px;
+ }
+
+ div.bubble-container {
+   margin: 0 0 30px 0;
+   background: #fff;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+   -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+   box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+   border: 1px solid #d0beed;
+ }
+
+div.primary-container {
+    _border: 1px solid #d0beed;
+}
+
+ div.inline-actions-container {
+     text-align: center;
+     margin: 18px 0;
+ }
+
+ ul.horizontal {
+     margin: 0;
+}
+ ul.horizontal li {
+    display: inline;
+    list-style-type: none;
+ }
+
+
+ /** Form **/
+ .x-out {
+     background: url('../images/delete-hover.png') bottom;
+     display: inline-block;
+     height: 15px;
+     margin-left: 4px;
+     text-indent: -99999px;
+     width: 15px;
+ }
+ .x-out:hover {
+     background-position: 0 0;
+ }
+
+ .button {
+     text-decoration: none;
+     color: #fff;
+     border: none;
+     background: #6f5499;
+     -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+     border-radius: 6px;
+ }
+
+ .error {
+     color: #D8000C;
+ }
+
+ .success {
+     color: #4F8A10;
+ }
+
+ .form-response {
+     text-align: center;
+     margin: 30px 0;
+ }
+ .form-submit-button {
+width: 100%;
+height: 60px;
+}
+
+/** Add Spot Container **/
+
+div.add-spot-container h4 {
+    margin: 10px 0 0 0;
+    line-height: auto;
+}
+
+div.add-spot-container img.rating-stars {
+    margin: 6px 6px 0 0;
+}
+
+div.add-spot-container img.small-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 8px 12px 0 0;
+}
+
+/** Mobile Header **/
+#mobile-header {
+  color: #e2cfff;
+  left: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  _position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 14;
+background: linear-gradient(#6f5499, #634199);
+height: 42px;
+border-bottom: 1px #634199 solid;
+overflow: hidden;
+}
+
+#mobile-header  div.mobile-logo {
+    position: absolute;
+    width: 80px;
+    margin-left: 10px;
+}
+
+#mobile-header  div.mobile-logo h1 {
+    font-size: 26px;
+    line-height: 44px;
+}
+
+#mobile-header div.mobile-search-container {
+    margin: 5px 0 6px 84px;
+}
+
+#mobile-header div.mobile-search-container div.mobile-search-form {
+border: 1px #634199 solid;
+border-radius: 6px;
+height: 29px;
+background: #fff;
+position: relative;
+overflow: hidden;
+_-webkit-box-sizing: border-box;
+_-moz-box-sizing: border-box;
+_box-sizing: border-box;
+width: 98%;
+}
+
+#mobile-header div.mobile-search-container div.mobile-search-form img.search-icon {
+    width: 18px;
+    height: 18px;
+    margin: 6px;
+}
+
+#mobile-header div.mobile-search-container div.mobile-search-form div.search-summary {
+position: absolute;
+width: 100%;
+color: #222220;
+white-space: nowrap;
+overflow: hidden;
+font-size: 16px;
+margin: 3px;
+}
+
+#mobile-header div.mobile-search-container div.mobile-search-form div.search-summary div.overlay-right-fade {
+background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #fff);
+background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+height: 20px;
+position: absolute;
+right: 0;
+top: 0;
+width: 24px;
+}
+
+#mobile-header div.mobile-logo h1 a, #mobile-header div.mobile-logo h1 a:visited, #mobile-header h1 a:hover {
+    color: white;
+}
+/** Desktop Header **/
+#header {
+	background: #6f5499 0 25px repeat-x; /* #6f5499 purple, #ea4c89 pink */
+	color: #e2cfff;
+	padding: 4px 10px;
+	left: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 13;
+	top: 0;
+}
+
+.header-with-overlay {
+	height: 160px;
+}
+
+#header a, #header a:visited, #header div.logo h1 a:hover, #header div.logo div.logo-subtitle {
+	color: #e2cfff;
+}
+
+#header div.logo h1 a, #header div.logo h1 a:visited, #header a:hover {
+	color: white;
+}
+
+#header div.logo {
+	float: left;
+	padding: 20px 0 0 24px;
+	width: 280px;
+}
+
+#header div.logo div.logo-subtitle {
+	position: absolute;
+	float: left;
+	margin-left: 290px;
+	text-transform:uppercase;
+	line-height: 74px;
+}
+
+#header div.login-module {
+	float: right;
+	padding: 4px 8px;
+}
+
+#header div.login-module img {
+	width: 40px;
+	height: 40px;
+  border-radius: 5px;
+}
+
+/** Item Render **/
+
+div.item-container {
+	height: 150px;
+}
+ div.item-container div.item-details {
+	padding: 6px;
+	margin-left: 174px;
+	font-size: 12px;
+}
+
+ div.item-container div.item-details .item-title {
+	margin-top: 4px;
+}
+
+ div.item-container div.item-details .item-tip {
+     font-size: 14px;
+     margin: 10px 0;
+}
+
+ div.item-container div.right-actions {
+	width: 120px;
+	margin: 8px 4px 0 0;
+	float: right;
+  text-align: center;
+}
+
+ div.item-container div.right-actions table.right-actions-table {
+     float: right;
+}
+
+ div.item-container div.right-actions div.add-bookmark {
+     cursor: pointer;
+     height: 20px;
+     margin: 0 0 0 8px;
+     width: 20px;
+}
+
+ div.item-container div.right-actions div.add-bookmark img.add-bookmark-image{
+     width: 20px;
+     height: 20px;
+
+}
+
+ div.item-container img.item-profile-pic {
+ 	border-top-left-radius: 9px;
+ 	border-bottom-left-radius: 9px;
+  position: absolute;
+	height: 150px;
+  width: 160px;
+}
+
+div.item-container div.overlay-text {
+    background: #5890ff;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0 0 2px #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    left: 4px;
+    padding: 4px 6px;
+    position: absolute;
+    top: 4px;
+}
+
+
+
+/** Search Nav **/
+div.search-container {
+	margin-top: -80px;
+	padding: 16px;
+}
+
+div.title-form {
+	font-size: 16px;
+}
+
+form.table-form {
+	margin: 0 auto;
+}
+
+form.table-form:before, form.table-form:after {
+	content: " ";
+	display: table;
+}
+
+form.table-form:after {
+	clear: both;
+}
+
+form.table-form div.table-form-column {
+	float: left;
+	text-align: center;
+	padding: 8px 0;
+}
+
+form.table-form div.table-form-column-short {
+	padding: 0 14px;
+	float: left;
+	text-align: center;
+	line-height: 64px;
+	min-height: 50px;
+  min-width: 50px;
+}
+
+form.search-form div.styled-select {
+	background: url(../images/arrow.jpg) no-repeat right #ddd;
+	border: 1px solid #ccc;
+	margin: 8px 2px;
+	overflow: hidden;
+}
+
+form.search-form div.styled-select select {
+	-webkit-appearance: none;
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	font-size: 14px;
+	line-height: 1;
+	padding: 5px;
+	margin-left: 5px;
+}
+
+
+form.search-form div.select-category, form.search-form div.select-category select {
+	width: 110px;
+}
+
+form.search-form div.select-cuisine, form.search-form div.select-cuisine select {
+	  width: 140px;
+}
+
+form.search-form div.select-location, form.search-form div.select-location select {
+	  width: 110px;
+}
+
+
+/** Sidebar **/
+img.your_critic {
+	max-width: 100%;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+
+div.critic_description {
+	margin: -6px 0 25px 0; /* todo fix neg margin */
+	padding: 10px;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #777;
+	background: rgba(0,0,0,0.07);
+	font-style: normal;
+	text-align: center;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+div.about-us-container {
+    margin-bottom: 40px;
+}
+
+table.attribution-container {
+	margin: 30px 0;
+}
+
+table.attribution-container tr td {
+    vertical-align: middle;
+}
+table.attribution-container tr td.attribution-text {
+	padding: 0 6px;
+}
+
+div.sidebar h3 {
+    margin: 36px 0 6px 0;
+    font-size: 14px;color: #444;
+    background: url('../images/border-line.gif') repeat-x bottom left;
+}
+
+div.sidebar h3 span {
+  color: #999;
+}
+
+/** Profile List **/
+
+ul.profile-list {
+    margin: -8px 0 20px 0;
+}
+
+ul.profile-list li {
+    margin: 0;
+    padding: 8px 0;
+    _line-height: 1.6;
+}
+
+ul.profile-list li span {
+display: block;
+margin: 0;
+padding: 0;
+font-weight: normal;
+color: #999;
+}
+
+ul.profile-list li span i {
+margin: 0 4px;
+text-shadow: 1px 1px 1px #fff;
+color: #bbb;
+}
+
+
+ul.profile-list li img.round-profile {
+-webkit-border-radius: 25%;
+-moz-border-radius: 25%;
+border-radius: 25%;
+}
+
+ul.profile-list li img.list-profile {
+float: left;
+margin: 0 6px 0 0;
+vertical-align: middle;
+width: 32px;
+height: 32px;
+}
+
+ul.profile-list li img.small-icon {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: -4px 4px 0 0;
+}
+
+ul.profile-list li span.title-text {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+ul.profile-list li span.meta-text {
+    font-size: 14px;
+}
+
+/** Editable **/
+.grip {
+	display: none;
+}
+
+/** Yelp **/
+div.stars {
+    background-image:url('../images/stars_map.png');
+    height: 16px;
+    width: 83px;
+}
+
+
+
+/* Mobile CSS, keep at end */
+
+
+@media only screen and (max-width: 480px) {
+    div.bubble-container {
+        margin: 0 0 8px 0;
+        background: #fff;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+    }
+
+    div.sidebar {
+        padding: 0 30px;
+    }
+
+
+}
+
+@media only screen and (max-width: 959px) {
+
+    h4 {
+        line-height: 20px;
+        margin-bottom: 4px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    h4 {
+        margin-left: 10px;
+    }
+
+    div.search-container {
+        margin-top: -10px;
+    }
+
+	 div.item-container {
+		min-height: 110px;
+    height: auto;
+	}
+
+	 div.item-container div.item-details {
+		margin-left: 10px;
+	}
+
+	 div.item-container img.item-profile-pic {
+		   display:none;
+	}
+
+	#header div.logo div.logo-subtitle {
+		display: none;
+	}
+
+  form.search-form div.select-location, form.search-form div.select-location select {
+    width: 140px;
+}
+
+form.table-form div.table-form-column-short {
+    min-width: 0;
+}
+
+}

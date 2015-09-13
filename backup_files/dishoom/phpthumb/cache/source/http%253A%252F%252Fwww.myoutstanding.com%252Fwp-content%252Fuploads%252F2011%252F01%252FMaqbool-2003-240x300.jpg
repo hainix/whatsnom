@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=www.myoutstanding.com&fp=ddeN8fXr3AdsS%2FvFzzHYj9AXumummxFDYZotLHeAYreBzuhgGEQAHjsACKFKtYBrV2ZQk0015TnOtmTs5AVgSw%3D%3D&prvtof=jlHa8uZfMQvtatF1APe0g3skJz%2Bx0op3WPnSm3eaGK0%3D&poru=d8x%2FSFamuWSwzYaoYTqsmrNmt6lwUXgPKPEDqyBOIl43QKrMHddvK1WDMhotq4f3NXLIngyezK4ccLUHAKoo4UDkb2w3sVbdtC9VqfRYmLcJezTzoU5%2BLfADoPMVUP0g&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=www.myoutstanding.com&fp=ddeN8fXr3AdsS%2FvFzzHYj9AXumummxFDYZotLHeAYreBzuhgGEQAHjsACKFKtYBrV2ZQk0015TnOtmTs5AVgSw%3D%3D&prvtof=I6%2FT0SGZNBjWZI1d66qe1tmkp2BWAdJe56Y9QyGR2Rc%3D&poru=ea1J8B%2F3FisQtfgEx40yUbLgtJ1AqsnSyruXtBe04s6mIRqcIAdHJzfKOMBF0BhSi2JOOCOqcPRwGRj5mo3g6Uo7tKtVThkOQu7fAsmLIIm6NIZSj4JCP79xD0tCCbR9&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=www.myoutstanding.com&fp=ddeN8fXr3AdsS%2FvFzzHYj9AXumummxFDYZotLHeAYreBzuhgGEQAHjsACKFKtYBrV2ZQk0015TnOtmTs5AVgSw%3D%3D&prvtof=qE7G1xijpbj5IqNBvoaehZTEDcUlO7h6Vnrk4w7U02g%3D&poru=e7JHc46Wn7x0BodcLiLOz%2FhIQ2m%2BUTROeJLiyTm6hm1WA0JYo4xtw0%2F4YMvsE6LGx6TN2ssBkZ4Txfo7%2BJGSX7POT2qFdWWqZ%2BoWPWygijVhO04k7WqI1BcAd%2F80YJ85&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=www.myoutstanding.com&fp=ddeN8fXr3AdsS%2FvFzzHYj9AXumummxFDYZotLHeAYreBzuhgGEQAHjsACKFKtYBrV2ZQk0015TnOtmTs5AVgSw%3D%3D&prvtof=q0lsFXr9HTIM2DKNI8iuKxoU9c8FlpoT7p8x2K8rfio%3D&poru=1Ne5PS9rdVZT0bCZ1430liyhTX8Y7qEbA6HhKkixWwColvvXDIppahSGxj5g%2FO2Hbz1UE%2B7eimpENg6M3a0i83mTfwMwzG94dZuxlK5VCT7kg%2BSFcQgbqlENCWn8JCTw&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

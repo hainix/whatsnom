@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=www.pramanik.in&fp=ZQLNHz7sEQ05ljg2IeeiNlGKGlqKD6eNyjnfhfn%2BZBXcjuLMN6JfaPf1z7bQbKRLH6y8K75G0w1qI3MSHST%2BLw%3D%3D&prvtof=%2FTS5CwCzugJHUgIqSIukPsTNlIQBP1OFYr2NpUZIFnk%3D&poru=%2B4F1HhxyT%2Fw0YusnKFXu8WPsg5giIEOxbvM%2BNBRWlqu8jfoQxHYnp69AyKhz6DnoONT1ULOQk190u5WydG3Xou3He1fmj9%2B28XQWg6jGnZA%3D&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=www.pramanik.in&fp=ZQLNHz7sEQ05ljg2IeeiNlGKGlqKD6eNyjnfhfn%2BZBXcjuLMN6JfaPf1z7bQbKRLH6y8K75G0w1qI3MSHST%2BLw%3D%3D&prvtof=jK0J038TwJAaMBhAuxK1RXzE%2BlB0BverU6kyHu54WSE%3D&poru=QY66l5CF3YSFKsiD4XaBtxZQYuUpw13EXCvPJ3rqxdyjGyhamCR0c6WafkeK4R1cbZgBhHCbQxtPWohkZes1rnWfs7SInqKepuFw8kNFCh4%3D&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=www.pramanik.in&fp=ZQLNHz7sEQ05ljg2IeeiNlGKGlqKD6eNyjnfhfn%2BZBXcjuLMN6JfaPf1z7bQbKRLH6y8K75G0w1qI3MSHST%2BLw%3D%3D&prvtof=pAANWuO6xg2qwvEzT1yZYHFX8U9CN0qS9fqjypmG%2FEE%3D&poru=TSo7wp2NuckNpQh7itdjSTCMNlNzWBmJVxOLW%2FZbpterJTPcOldKPApp%2F8rtyLFnxEmSP6f3p4NtoNAslSd6qldbGH9YxNv7IZH%2F4NAvDgA%3D&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=www.pramanik.in&fp=ZQLNHz7sEQ05ljg2IeeiNlGKGlqKD6eNyjnfhfn%2BZBXcjuLMN6JfaPf1z7bQbKRLH6y8K75G0w1qI3MSHST%2BLw%3D%3D&prvtof=GYuFCWTlk52TSBMFnBcvuiPcU2%2FT2m1vZtEyw9toxU0%3D&poru=KQDgt1vfqQH77TntQ3b7D2qG4LFf83YiCnQhQ4E0T1YH%2BzRHU%2BbN5dXCab247SGqAqPWd8Jnwa2r0kzu3zvJpjA6SdKNK8cEZLOX5YES7Oc%3D&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

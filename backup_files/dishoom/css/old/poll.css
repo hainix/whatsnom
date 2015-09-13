@@ -1,0 +1,44 @@
+/* Bar Graphs */
+#poll-container {
+    min-height: 180px;
+}
+
+#poll-container h4 {
+    margin: 20px 0 20px 0;
+}
+
+.graph {
+  width: 250px;
+  _position: relative;
+  right: 30px;
+}
+.bar-title {
+  position: relative;
+  float: left;
+  width: 104px;
+  line-height: 20px;
+  margin-right: 17px;
+  font-weight: bold;
+  text-align: right;
+}
+.bar-container {
+  position: relative;
+  float: left;
+  width: 110px;
+  height: 10px;
+  margin: 0px 0px 15px;
+}
+
+.bar-container div {
+  background-color:#EF4832;
+  height: 20px;
+}
+.bar-container strong {
+  position: absolute;
+  right: -32px;
+  top: 0px;
+  overflow: hidden;
+}
+#poll-results p {
+  text-align: center;
+}

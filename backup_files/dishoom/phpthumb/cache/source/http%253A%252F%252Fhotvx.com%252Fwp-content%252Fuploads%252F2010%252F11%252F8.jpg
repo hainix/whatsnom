@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=hotvx.com&fp=AnanTNu%2B5LoiRjj8km7zUFgB4PglQ0iH24bU0SXdDbtrcTcI7H7L4JQeXLRK4bUfHvVRK3QyV8xZx%2B8Pj4vVUQ%3D%3D&prvtof=m0D3%2BL%2FHS5CR60wuhU9SrCx6ypvOVzbwuvRIFrRvx%2Bc%3D&poru=443mKYtvgT6SwVnXnxKeocfYFifpgu4%2FVEbxAss2JtlN4MF9DtEXiphQmqGgyGOIVuuiwOA%2BMRDmjozSegYyPiThEuzl%2Fg5lpkXMzqj%2FnEc%3D&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=hotvx.com&fp=AnanTNu%2B5LoiRjj8km7zUFgB4PglQ0iH24bU0SXdDbtrcTcI7H7L4JQeXLRK4bUfHvVRK3QyV8xZx%2B8Pj4vVUQ%3D%3D&prvtof=f7xOJrS%2FIVoWqOaVvOKWEPFNk%2BkDU3MPU062Jq1Klzg%3D&poru=clq82b584MS7GXkqhozdWC2IIOqyySc32YswykkOtlsRj1H1u4d1lSpaBZMA2hF04XCPSxzuF1B5NaD5Pi%2BIc6uy5yJcOJ87pg46Amn4MP8%3D&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=hotvx.com&fp=AnanTNu%2B5LoiRjj8km7zUFgB4PglQ0iH24bU0SXdDbtrcTcI7H7L4JQeXLRK4bUfHvVRK3QyV8xZx%2B8Pj4vVUQ%3D%3D&prvtof=ptDga3GSxyK2f5G09HyUMZYugyXy%2FTmFWsThmB5FZt0%3D&poru=I47l9Q4ppuZz5cUYzxwxOu6%2FBQMXKOBPrK1OBcPASgbYr2INOZHe2RDH9V8TWNxFmMO2sjFkxwsxG9SpVeXCLv4UKWgG5N%2F5l5SCb83V9qg%3D&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=hotvx.com&fp=AnanTNu%2B5LoiRjj8km7zUFgB4PglQ0iH24bU0SXdDbtrcTcI7H7L4JQeXLRK4bUfHvVRK3QyV8xZx%2B8Pj4vVUQ%3D%3D&prvtof=huUmtgUHfVYL0Y0GNu6ogQCD44kEn%2B14KSa67qGdKlE%3D&poru=wjGTr4rBzh5QO1UthNWbzuKMkYHGEQd8SFf0nGtv5QETOXNMBT4aj7hFrSKItB3%2FOyHQPK1kjQmKIlrEL6g4F59F7OOtZpPdS%2FvxvfZdOLE%3D&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

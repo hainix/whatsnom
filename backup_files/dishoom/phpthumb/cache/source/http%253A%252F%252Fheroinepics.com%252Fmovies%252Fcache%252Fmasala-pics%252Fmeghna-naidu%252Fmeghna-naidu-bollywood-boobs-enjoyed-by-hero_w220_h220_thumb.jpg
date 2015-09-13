@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=heroinepics.com&fp=MwipG6jsuLVrFyzNGjmfzGpjDu2Mm6A3ls8%2BmLlq6vY4WwyPK3zMhdmAn0L5AJ68okn2XRQHYxB5jFjQE%2Fpm6Q%3D%3D&prvtof=RokpdwKnSEjoblVEdBZFO75pSMJsjkd2YxMgAMpfBEU%3D&poru=jMFQoY5H9nKdCbjnnKG6zookHpa5R%2Fbamz46OUEs0zY1UjXlbb0KE9dFNeXqYNfeQxidG2AYryeDyDPKsxIAzvIKwc1lJDAlRkPbEodwnUg%3D&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=heroinepics.com&fp=MwipG6jsuLVrFyzNGjmfzGpjDu2Mm6A3ls8%2BmLlq6vY4WwyPK3zMhdmAn0L5AJ68okn2XRQHYxB5jFjQE%2Fpm6Q%3D%3D&prvtof=QwGBU8FrqL7jwAz8aKAOgtg4jj8h0hi3tU09q4WuCdw%3D&poru=0ypW7uLMxWrJHiKANLMr7%2FGYIPnihPyFt5Bph5K6rYj8kpL8fpJU6xbHQ45bHw%2B7ICU6cYimgh0kp3Fmz3%2BpFbtx5xX9%2BTva76F2E1A6pBk%3D&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=heroinepics.com&fp=MwipG6jsuLVrFyzNGjmfzGpjDu2Mm6A3ls8%2BmLlq6vY4WwyPK3zMhdmAn0L5AJ68okn2XRQHYxB5jFjQE%2Fpm6Q%3D%3D&prvtof=%2Bofjm%2BfDSsp2IwQa3wuCB5%2FuwKemRCmoEMEvHgeia6I%3D&poru=3ApRL8ZPrXOMQcnNXQnBXwuPhkgdCY0JZFdaGBC6Nk18HG6gZ1fISa79job9D7wdGHorZ3YAx29Yq4Hzc9kEJW69Gz5ykbHnRFjas6%2BAtCo%3D&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=heroinepics.com&fp=MwipG6jsuLVrFyzNGjmfzGpjDu2Mm6A3ls8%2BmLlq6vY4WwyPK3zMhdmAn0L5AJ68okn2XRQHYxB5jFjQE%2Fpm6Q%3D%3D&prvtof=vBugl3BJ9czPX3uFj3npNKHPXEXeEydr968VkWx5W3s%3D&poru=BZCiXpQaefgyta1nPopiJH9mfFESnbQUwCrH8wbPELIB6Wd3yxAJ2%2FFr%2B9uS6ik4hzpGnbcVkHErjpeNRQiqE5zblWzbflMmsSdCsZVilI0%3D&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

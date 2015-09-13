@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=chiggywiggy.com&fp=txAJ2lU6w0lo02fVOa6awv%2BhOlNa2EPpPK3IvyAGM%2F3UcjN0S4ealAGsqDHUvtOzuY9qd8WyfOslsd%2BHB6j4QA%3D%3D&prvtof=py5r3yRIs91%2Fb9guhdlidm2zjEi8Kownef%2FQlr6OMBo%3D&poru=l2%2FoSrfXQNuCBhg5nUPRxvn1E9tC%2FzxpmEHcjD%2FmZ2yUJgm2Ap6dw9om5KpOoqD5QvkoFYMjjlNQ2AVUz3PSq99C5jSMHOT40UmTXJHowxs%3D&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=chiggywiggy.com&fp=txAJ2lU6w0lo02fVOa6awv%2BhOlNa2EPpPK3IvyAGM%2F3UcjN0S4ealAGsqDHUvtOzuY9qd8WyfOslsd%2BHB6j4QA%3D%3D&prvtof=X8rQbJdg3NqGvAf4VQysyNko%2BRwG0LIbxYuCHwXDUc0%3D&poru=lGZWVr0n6twCoSgkIbhK8Vtf661flSWzx6tPqhcPp9%2FpeAtXi%2Bfw05ucvOrtebtRrAEDqJNr3LOA5cqWdoZ4%2Bixy6hgm8YYirTLViEONWrA%3D&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=chiggywiggy.com&fp=txAJ2lU6w0lo02fVOa6awv%2BhOlNa2EPpPK3IvyAGM%2F3UcjN0S4ealAGsqDHUvtOzuY9qd8WyfOslsd%2BHB6j4QA%3D%3D&prvtof=YGldBN1iVRz7DLDsgGzJ0tMSbB5BDHT3sN6CFi2cje8%3D&poru=K0hNDuiCPXvp3J4PVeAIW8TO%2BR8hXeEE%2Bbiges9m%2B7HGnQHRyX%2Few1wPMXzREeh8WRv0aXcVRSk4zG1ma3Pz%2Bmao31mJiP0EVP%2Ba1fFF6pQ%3D&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=chiggywiggy.com&fp=txAJ2lU6w0lo02fVOa6awv%2BhOlNa2EPpPK3IvyAGM%2F3UcjN0S4ealAGsqDHUvtOzuY9qd8WyfOslsd%2BHB6j4QA%3D%3D&prvtof=cl1TEVlHeSlnKkaWw%2BYD2biTukJYGYn%2FhJWW9tGDk1c%3D&poru=cUyOC%2BskreZFS5EpToR4YUQ5tsa8aO2t4qBwYLaIwxGksuVXHDauvdb9KYQRX3f9My6%2BvVAcugaUS1R1OzUNpXsqOf5RvDQHHMgbRUlj09M%3D&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

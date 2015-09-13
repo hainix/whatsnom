@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=bollywoodceleb.in&fp=Gvnn4rRSByNDhKmLSCaiyvvtUL6Q4uB7qbQ4PMXxPr%2FPyYbVfgRn56dx7UgYP9z7IJxhiIryN0tyu60fnsnMcw%3D%3D&prvtof=0dVSnznHEWie%2FZovX%2BpCuKP3zSiAUS4D6wG4uOA%2Fuds%3D&poru=iG8uPFUzVHF9AWpaveSwMQUHkOAzHd8lAl48O%2BnDbz0KGpKSdZUY%2FktD%2FG8KBdAu0K4g26Kp3TwnAk2erIQBzA1amZWOmaEIihAXoC6TWgSiyZah9ikhUBoWc0fTsGNo&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=bollywoodceleb.in&fp=Gvnn4rRSByNDhKmLSCaiyvvtUL6Q4uB7qbQ4PMXxPr%2FPyYbVfgRn56dx7UgYP9z7IJxhiIryN0tyu60fnsnMcw%3D%3D&prvtof=GBSwdRwFFtzhKMv7ju5qZ3NZy%2BMeLmVdTakEGvKsa%2B8%3D&poru=j9mqjAjUOWeacVYy0VeXoQwM7mA7PpUTa8GVuOjwVw42p69NS06W%2BoeMtJm4tuBrCfanv%2FPREFAhCw0idvCbTj8Q%2B08cwkSGBcKhpEz5dAkdOcviK6dlssIykPAqdQ7Q&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=bollywoodceleb.in&fp=Gvnn4rRSByNDhKmLSCaiyvvtUL6Q4uB7qbQ4PMXxPr%2FPyYbVfgRn56dx7UgYP9z7IJxhiIryN0tyu60fnsnMcw%3D%3D&prvtof=kGkRGGpdCtM61uejq9FG6OMOBtfJ9%2F4wE0%2BpdPqHpaI%3D&poru=Vlt8DUJnXMtLVrRudIyid5XnY2DnrYQwAHAhq2M%2ByJT5HBzYRQppiG7PnCQx%2FQ7cgIasraGKKoQ3iO26k3vf0je15POvdwbx0L5Tn5qRomf2JpCKXs63kyuMDHIPJmY2&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=bollywoodceleb.in&fp=Gvnn4rRSByNDhKmLSCaiyvvtUL6Q4uB7qbQ4PMXxPr%2FPyYbVfgRn56dx7UgYP9z7IJxhiIryN0tyu60fnsnMcw%3D%3D&prvtof=0l51cyBYXMuQn%2FPXJoN6ebQuPRCDTlDX%2BaUBToPALj0%3D&poru=YHWBq%2BQYmsusPMDXAunvXlVW4ltppeihTcbYlVb8cCWVyseg8Skt80WPy8oaZnmltkaqi9P6QX6acL2P0QHA%2BvE0iGBP%2BZcmFPKbOPJ8CQZfsWhPoYpo0jxaok4XrE%2B%2B&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

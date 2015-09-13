@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=ajitkumar.org&fp=y1jFaNUvTgckQ21NqviMWfy6on1zP8IY9jzWo%2FH1nL7XEFEDUFGpQUbKKZnXYrkdG6Va0gQCzvg8wr42bGePcg%3D%3D&prvtof=lSWCkXV5GiB5EElaVHe5UUYaxF9tkmvEof8WPu1evsQ%3D&poru=ISKna1ZOpe13dp5wUVoCA%2Bj3%2FvkAuaBJmjVNVC3P4XWWkLAhOMQjsYEtZHKLgN0Cprnc%2F3uxO1HWR283M5TrR4BXHnIs3zaNtZ59OC60Z5o%3D&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=ajitkumar.org&fp=y1jFaNUvTgckQ21NqviMWfy6on1zP8IY9jzWo%2FH1nL7XEFEDUFGpQUbKKZnXYrkdG6Va0gQCzvg8wr42bGePcg%3D%3D&prvtof=6tanqB8XIbqmvPyjro5Fj4tvSXU9Nj4C7Nb8xEplyFk%3D&poru=mF4PE8jokDdyFhxSnAwJQeqGIgEtrjpRf7nBqobUQRD3UQPvlzQRu%2FfZP0%2FNu6yIVyVYnbnn4M1R6mVKaZyNUru%2BmZYbmD4YqvxOYtwFeqw%3D&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=ajitkumar.org&fp=y1jFaNUvTgckQ21NqviMWfy6on1zP8IY9jzWo%2FH1nL7XEFEDUFGpQUbKKZnXYrkdG6Va0gQCzvg8wr42bGePcg%3D%3D&prvtof=PaqZlqu9Njx5NdtJ%2FWWp%2FbjUHbpICmaa1IKtWk7xaPk%3D&poru=YSEasDZDCIwk8GpoSa1rpVkbIgGxQivfDgQdBhf1e5CItrx03k5OWN2jz%2Fe737cU%2FnScgBpN9r%2BUAsoh0xnLoEyoop8IrRa%2Fhb7QE0uAOTc%3D&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=ajitkumar.org&fp=y1jFaNUvTgckQ21NqviMWfy6on1zP8IY9jzWo%2FH1nL7XEFEDUFGpQUbKKZnXYrkdG6Va0gQCzvg8wr42bGePcg%3D%3D&prvtof=XjJ4CkHkYE%2Bx2Hcwh%2BO3woUo8PbNXRA7TXKWu3q07S4%3D&poru=dDBpb%2FK91FsSFyXVnO74U1baNupyHLTjkTML5yq6OrjzOBBzVlyebm7oN8GXxR7fgquTVFRmbTgsXglJNOHlHuTAS9u48TJW6va3Q%2BQN4aA%3D&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

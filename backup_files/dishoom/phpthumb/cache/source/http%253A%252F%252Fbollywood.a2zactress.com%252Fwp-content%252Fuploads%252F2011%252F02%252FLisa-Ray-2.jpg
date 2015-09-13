@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=bollywood.a2zactress.com&fp=JGMVIxooS4mNqL1o5fybw7HaiBTJ1KEHd2W946i%2Fa3MAqA3Z2GwpUFqcLGJWsFoFRiL1RJg4lRyb7tqnwaqTcw%3D%3D&prvtof=0WOmlzDq%2BMDqeJkImZ3ovuirOoVMdF5cxBQmLiHqM3w%3D&poru=dlV%2FbjEcWQ4CMcJ4ohm5OfXxQKTIdTeG6V7dRh4lscqA3PtFdkvpNGamTN9tFVM%2Fg6ETh%2B0QK03FEFiCZQRxRs1WCme%2FcLrsVybYapfaSjINDBATNg2oU%2FF2aMCwpD9i&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=bollywood.a2zactress.com&fp=JGMVIxooS4mNqL1o5fybw7HaiBTJ1KEHd2W946i%2Fa3MAqA3Z2GwpUFqcLGJWsFoFRiL1RJg4lRyb7tqnwaqTcw%3D%3D&prvtof=kg0k0tM9%2FVnMfl%2FLMIIl8FiWu7Ypid1hRtUX6lo4nB8%3D&poru=qK9zRt0Qnkbfs0wex9KEvhMYrS%2B1St8KyzRDAoGNyZUM4S9%2FU%2BKBvE0KZwACcGl2MWTwBTMKkPUNUbhIXIE61qj1NGG6FKUTbFVwosUuPkKAgvVRk8vcSDI6O8ezmdUS&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=bollywood.a2zactress.com&fp=JGMVIxooS4mNqL1o5fybw7HaiBTJ1KEHd2W946i%2Fa3MAqA3Z2GwpUFqcLGJWsFoFRiL1RJg4lRyb7tqnwaqTcw%3D%3D&prvtof=vz%2FglyFClfNMQjuczZONnwNzG6d6V42F3G4ULWfZK0Q%3D&poru=yzK%2BIp%2Bw%2FcvbwM2B804iJ%2FDdR4%2F6bDHi2z1GtCYdJWyRE2nJQ5hm8oOW%2FvfdX3R0Ccgg1gvx1IqNSg8G%2FEM1RymiukoU5yLb1ejxsoxJDdX4Hku6BCCtiC%2B7e5PDRJJd&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=bollywood.a2zactress.com&fp=JGMVIxooS4mNqL1o5fybw7HaiBTJ1KEHd2W946i%2Fa3MAqA3Z2GwpUFqcLGJWsFoFRiL1RJg4lRyb7tqnwaqTcw%3D%3D&prvtof=6twLYGqnZJcQm4ObciEmFUycTqviO3WN%2FHLy224crRg%3D&poru=mnGGl7FHtRkmc4MyJ0H1iWPXVX5ndAzH%2F%2FBe%2FBEzGa%2FXDJwSPftxU12w3poIqwS5iX3keiKPyus3AQ0xoqx%2BoKlkNhRxzWf0xQv53GLPrvQ6BnsITBUAHwPYCgxbu20%2B&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

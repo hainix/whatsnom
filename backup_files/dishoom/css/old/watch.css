@@ -1,0 +1,266 @@
+   .tray-container {
+ display: inline-block;
+ width: 100%;
+ vertical-align: bottom;
+ }
+
+   .tray {
+ position: relative;
+ _margin: 23px auto 19px auto;
+margin: 20px 40px;
+
+    }
+
+   .tray .mask {
+ margin: 0 auto;
+ position: relative;
+overflow-x: visible;
+overflow-y: visible;
+    }
+
+   .tray .mask > .title {
+       margin-bottom: 14px;
+}
+
+   .tray .mask > .slider {
+ position: relative;
+ margin: 0;
+ padding: 0;
+    }
+
+   div.slider {
+ height: 288px;
+ }
+
+.tray h3 a {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    _color: #AAA;
+    font-size: 29px;
+    margin-bottom: 7px;
+    _margin-left: 4px;
+    _font-weight: 200;
+    _font-family: "Flama",Helvetica,Arial,Verdana,sans-serif;
+}
+
+.tray h3 a:hover {
+    color: #EF4832;
+}
+
+
+div.subtray {
+position: absolute;
+}
+
+div.grid div.item.size-3x2.editor, div.tray div.item.size-3x2.editor {
+width: 640px;
+height: 278px;
+background: white;
+}
+
+div.grid div.item.size-2x2, div.tray div.item.size-2x2 {
+width: 440px;
+height: 278px;
+}
+
+
+div.grid div.item.size-2x2 div.thumbnail, div.tray div.item.size-2x2 div.thumbnail {
+    width: 440px;
+    height: 278px;
+}
+
+div.grid div.item.size-2x2 div.thumbnail img.thumbnail, div.tray div.item.size-2x2 div.thumbnail img.thumbnail {
+    width: 440px;
+    height: 278px;
+    position: absolute;
+    top: 0px;
+    left: -8px;
+}
+
+
+div.grid div.item div.selected-background, div.tray div.item div.selected-background {
+display: none;
+position: absolute;
+top: -4px;
+right: -4px;
+  background-color: white;
+border: 5px solid #6A3;
+    border-bottom: 14px solid #6A3;
+    border-image: initial;
+}
+
+
+div.grid div.item.size-3x2.editor div.thumbnail, div.tray div.item.size-3x2.editor div.thumbnail {
+_width: 464px;
+_height: 272px;
+width: 400px;
+height: 272px;
+}
+
+
+div.grid div.item div.thumbnail, div.tray div.item div.thumbnail {
+overflow: hidden;
+display: inline-block;
+position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+border: 2px solid white;
+display: none;
+zoom: 1;
+  border-image: initial;
+}
+
+div.grid div.item.size-3x2.editor div.thumbnail img.thumbnail, div.tray div.item.size-3x2.editor div.thumbnail img.thumbnail {
+width: 476px;
+height: 268px;
+position: absolute;
+top: 0px;
+left: -8px;
+}
+
+div.grid div.item div.description, div.tray div.item div.description {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,0.4)), color-stop(90%, rgba(0,0,0,0.05)), color-stop(100%, rgba(0,0,0,0)));
+  background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0) 100%);
+  background-image: -moz-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0) 100%);
+  background-image: -ms-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0) 100%);
+  background-image: linear-gradient(bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.05) 90%,rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#B3000000,GradientType=0 );
+                                                   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 0 6px 10px;
+  color: white;
+                                                   }
+  div.grid div.item.size-3x2.editor div.thumbnail div.description div.link-title, div.grid div.item.size-3x2.editor div.thumbnail div.description div.title, div.grid div.item.size-3x2.editor div.thumbnail div.description div.subtitle, div.grid div.item.size-3x2.editor div.thumbnail div.description a, div.tray div.item.size-3x2.editor div.thumbnail div.description div.link-title, div.tray div.item.size-3x2.editor div.thumbnail div.description div.title, div.tray div.item.size-3x2.editor div.thumbnail div.description div.subtitle, div.tray div.item.size-3x2.editor div.thumbnail div.description a {
+  width: 446px;
+  }
+
+  div.grid div.item div.description div.link-title, div.grid div.item div.description div.title, div.grid div.item div.description a, div.tray div.item div.description div.link-title, div.tray div.item div.description div.title, div.tray div.item div.description a {
+    white-space: nowrap;
+  overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 17px;
+  color: white;
+  }
+
+  div.grid div.item div.description div.subtitle, div.tray div.item div.description div.subtitle {
+white-space: nowrap;
+overflow: hidden;
+-ms-text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+font-weight: normal;
+display: block;
+line-height: 16px;
+font-size: 11px;
+color: #DDD;
+}
+
+  white-space: nowrap;
+overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-weight: normal;
+display: block;
+  line-height: 16px;
+  font-size: 12px;
+color: #DDD;
+}
+
+div.description .duration {
+  margin-left: 6px;
+}
+
+div.grid div.item.editor div.editorial-panel, div.tray div.item.editor div.editorial-panel {
+position: absolute;
+top: 20px;
+bottom: 58px;
+right: 20px;
+width: 200px;
+overflow: hidden;
+}
+
+div.grid div.item.editor div.editorial-panel .title, div.tray div.item.editor div.editorial-panel .title {
+  font-family: "Flama",Helvetica,Arial,Verdana,sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+
+div.grid div.item.editor div.editorial-panel .desc, div.tray div.item.editor div.editorial-panel .desc {
+  font-family: "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 8px;
+}
+
+div.grid div.item.size-1x1, div.tray div.item.size-1x1 {
+    width: 224px;
+    height: 122px;
+}
+
+div.grid div.item.size-1x1 div.selected-background, div.tray div.item.size-1x1 div.selected-background {
+width: 222px;
+height: 132px;
+}
+
+
+div.grid div.item div.selected-background, div.tray div.item div.selected-background {
+display: none;
+position: absolute;
+top: -4px;
+right: -4px;
+  background-color: white;
+border: 5px solid #6A3;
+    border-bottom: 14px solid #6A3;
+    border-image: initial;
+}
+
+div.grid div.item.size-1x1 div.thumbnail, div.tray div.item.size-1x1 div.thumbnail {
+width: 224px;
+height: 134px;
+}
+
+
+
+.tray a.prev, .tray a.next {
+top: 153px;
+}
+
+.tray a.next {
+display: block;
+position: absolute;
+width: 64px;
+height: 64px;
+height: 64px;
+width: 64px;
+right: 0;
+}
+
+.tray a.prev {
+display: block;
+position: absolute;
+width: 64px;
+height: 64px;
+left: 0;
+height: 64px;
+width: 64px;
+}
+
+.tray div.filters {
+position: absolute;
+top: 0px;
+right: 10px;
+font-size: 14px;
+color: #888;
+}
+

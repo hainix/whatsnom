@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=wallpapers.tafreeh.net&fp=XiWLZCFwa45LZFMwmr10HVneW58072k0snB%2FBEB1UEbdUEFaUEA5GZ4mcUEoQVQdCRUfoibsP8EKEXFO9InUng%3D%3D&prvtof=zJ3QVVl6UjL3aKYNoT3egg1QD%2BB9QNUKnfiFEjt34pc%3D&poru=CnM%2B7xQZZK%2F28kRnp94UdhYEtEX1%2Fe7Gh%2BQ4CNDrC5T%2FKTsEO5%2BejPlWJ6vDIww%2FbF6ygdqwDwOq2yMnSBYIb%2Br7jryoM0IBYX25BeHgdD4HxHMNZndnGBCWqLoek1DF&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=wallpapers.tafreeh.net&fp=XiWLZCFwa45LZFMwmr10HVneW58072k0snB%2FBEB1UEbdUEFaUEA5GZ4mcUEoQVQdCRUfoibsP8EKEXFO9InUng%3D%3D&prvtof=5b%2FTC58LEANNiaR%2FF18WVbkHjiwqXzGsdX7uQlXwu%2Fo%3D&poru=EqDWLNM5W37f3yus58EG2dFelcFw14MR2imhPCx8Ck4gh1Z8gbhf45YlAzP3D2kz%2BGXVsw4ewyn6zjKqIO9rexZCcS4Ef8dXRtZYrPjCzHltSEwJ09hHAS19cGLKkoai&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=wallpapers.tafreeh.net&fp=XiWLZCFwa45LZFMwmr10HVneW58072k0snB%2FBEB1UEbdUEFaUEA5GZ4mcUEoQVQdCRUfoibsP8EKEXFO9InUng%3D%3D&prvtof=cRx8t00zFNP7EjLw5MlCNrd2KnvOdL2iK8Y9lYJniD4%3D&poru=QnOyZ43ykoFShnBOOeapudxnkNof%2F4iP%2FCPZ0SjcQFIYak05iSVytE%2BMk5%2Fcj01s8%2BTWlq9ju5s7e5gIlqQDSTSYrlXCa1gXsChm%2FGlobn78iWASKc4vtigb%2BZPoNMbL&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=wallpapers.tafreeh.net&fp=XiWLZCFwa45LZFMwmr10HVneW58072k0snB%2FBEB1UEbdUEFaUEA5GZ4mcUEoQVQdCRUfoibsP8EKEXFO9InUng%3D%3D&prvtof=0xIlmGyzoPyEHEG9JXiJsD87Du2D88gkJsUjiQcigI8%3D&poru=At2s2muQXbNDKZ5uLYs8O9e7H4bvkiwr5WonZahZyNCF3T7uHJZC7CGv%2BhVhCfb53rnkRdRnb2%2Bme%2FXIk0pQg7ZzpV45VoWt2WqX%2FgSNEavjn8CEL%2BNGcqwzcDKjbjt3&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

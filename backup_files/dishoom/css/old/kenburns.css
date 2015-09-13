@@ -1,0 +1,650 @@
+/*-----------------------------------------------------------------------------
+
+	-	kenburn slider -
+
+Screen Stylesheet
+
+version:   	1.0
+date:      	09/18/11
+author:		themepunch
+email:     	info@themepunch.com
+website:   	http://www.themepunch.com
+-----------------------------------------------------------------------------*/
+
+
+
+
+
+/***********************************************
+	-	THE BACKGROUND OF THE SLIDER	-
+************************************************/
+.bannercontainer{
+    max-width:960px;
+    _width: 960px;
+    height:330px;
+    background-color:#333;
+position: relative !important;
+}
+
+
+.light .kenburn-bg{
+	background:url(../images/kenburns/bg/white25.png) repeat;
+	padding:4px;
+	border:1px solid #fff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.dark .kenburn-bg{
+	background:url(../images/kenburns/bg/black25.png) repeat;
+	padding:4px;
+	border:1px solid #222;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+
+
+
+/*************************************************
+	-	THE PRELOADER OF THE BANNER 	-
+*************************************************/
+.kenburn-preloader{
+	background:url(../images/kenburns/loader/preloader.gif) no-repeat 50% 50%;
+	width:32px;
+	height:32px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	z-index:9999;
+	background-color: #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 10px;
+	margin-left: -14px;
+}
+
+
+.video_kenburn_wrap	{height:100%}
+
+
+/**********************************************************
+	-	CAPTION SETTINGS FOR THE PARADIGM SLIDER	-
+**********************************************************/
+
+.kb-fullsize .cp-right, .kb-fullsize .cp-top, .kb-fullsize .cp-left, .kb-fullsize .cp-bottom,
+.kb-smallsize .cp-right, .kb-smallsize .cp-top, .kb-smallsize .cp-left, .kb-smallsize .cp-bottom,
+.kb-mediumsize .cp-right, .kb-mediumsize .cp-top, .kb-mediumsize .cp-left, .kb-mediumsize .cp-bottom{
+
+	color:#fff;
+	background:url(../images/kenburns/bg/black65.png);
+	position:absolute;
+
+}
+
+.kb-minisize .cp-right, .kb-minisize .cp-top, .kb-minisize .cp-left, .kb-minisize .cp-bottom{
+	visibility:hidden;
+	width:0px;
+	height:0px;
+}
+
+
+/**************************
+	WIDHT >959px SIZING
+***************************/
+
+.kb-fullsize .cp-right	{ padding:30px 40px 30px 40px; top:0px;    right:0px; height:100%; width: 25%; }
+.kb-fullsize .cp-left	{ padding:30px 40px 30px 40px; top:0px;    left:0px;  height:100%; width:25%;}
+.kb-fullsize .cp-top	{ padding:15px 40px 15px 40px; top:0px;    left:0px;  width:100%;  }
+.kb-fullsize .cp-bottom	{ padding:15px 40px 15px 40px; bottom:0px; left:0px;  width:100%;  }
+
+.kb-fullsize .cp-title{
+	color:#ccc;
+	font-size:20px;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 0px 1px 0px #000000;
+}
+
+.kb-fullsize p{
+	font-family: Arial, sans-serif;
+	font-size:12px;
+	color:#777;
+	line-height:20px;
+	text-shadow: 0px 1px 0px #000000;
+}
+
+
+
+/*******	VIDEO SETTINGS	********/
+.kb-fullsize .video_clip{
+	width:60%;
+	height:100%;
+	top:0px;
+	left:0px;
+}
+
+.kb-fullsize .video_video{
+	width:100%;
+	height:100%;
+}
+
+.kb-fullsize .video_details{
+	width:34%;
+	padding:30px 3% 30px 3%;
+	top:0px;
+	right:0px;
+
+	position:absolute;
+}
+
+.kb-fullsize .video_kenburn h2{
+	color:#ccc;
+	font-size:26px;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 0px 1px 0px #000000;
+	font-family: 'Oswald', sans-serif;
+	margin: 0;
+	line-height:1;
+}
+
+.light.kb-fullsize .video_kenburn h2{
+	color:#999;
+	text-shadow: 0px 1px 0px #eee;
+}
+
+.light.kb-fullsize .video_kenburn .cp-title{
+	color:#999;
+	text-shadow: 0px 1px 0px #eee;
+}
+
+.light.kb-fullsize .video_kenburn p{
+	text-shadow: 0px 1px 0px #eee;
+}
+
+/**************************
+	WIDHT <=767px SIZING
+***************************/
+
+.kb-mediumsize .cp-right	{ padding:15px 15px 15px 15px; top:0px;    right:0px; height:100%; }
+.kb-mediumsize .cp-left	{ padding:15px 15px 15px 15px; top:0px;    left:0px;  height:100%; }
+.kb-mediumsize .cp-top	{ padding:0px 15px 0px 15px; top:0px;    left:0px;  width:100%;  }
+.kb-mediumsize .cp-bottom	{ padding:0px 15px 0px 15px; bottom:0px; left:0px;  width:100%;  }
+
+.kb-mediumsize .cp-title{
+	color:#ccc;
+	font-size:18px;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 0px 1px 0px #000000;
+}
+
+.kb-mediumsize p{
+	font-family: Arial, sans-serif;
+	font-size:12px;
+	color:#777;
+	line-height:18px;
+	text-shadow: 0px 1px 0px #000000;
+}
+
+/*******	VIDEO SETTINGS	********/
+.kb-mediumsize .video_clip{
+	width:60%;
+	height:100%;
+	top:0px;
+	left:0px;
+}
+
+.kb-mediumsize .video_video{
+	width:100%;
+	height:100%;
+}
+
+.kb-mediumsize .video_details{
+	width:34%;
+	padding:30px 3% 30px 3%;
+	top:0px;
+	right:0px;
+
+	position:absolute;
+}
+
+.kb-mediumsize .video_kenburn h2{
+	color:#ccc;
+	font-size:20px;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 0px 1px 0px #000000;
+	font-family: 'Oswald', sans-serif;
+	margin: 0;
+	line-height:1;
+}
+
+.light.kb-mediumsize .video_kenburn h2{
+	color:#999;
+	text-shadow: 0px 1px 0px #eee;
+}
+
+.light.kb-mediumsize .video_kenburn p{
+	text-shadow: 0px 1px 0px #eee;
+}
+
+
+/**************************
+	WIDHT <=570px SIZING
+***************************/
+
+.kb-smallsize .cp-right		{ padding:15px 15px 15px 15px; top:0px;    right:0px; height:100%; }
+.kb-smallsize .cp-left		{ padding:15px 15px 15px 15px; top:0px;    left:0px;  height:100%; }
+.kb-smallsize .cp-top		{ padding:15px 15px 15px 15px; top:0px;    left:0px;  width:100%;  }
+.kb-smallsize .cp-bottom	{ padding:15px 15px 15px 15px; bottom:0px; left:0px;  width:100%;  }
+
+.kb-smallsize .cp-title{
+	color:#ccc;
+	font-size:13px;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 0px 1px 0px #000000;
+}
+
+.kb-smallsize p{
+	font-family: Arial, sans-serif;
+	font-size:11px;
+	color:#777;
+	line-height:16px;
+	text-shadow: 0px 1px 0px #000000;
+}
+
+/*******	VIDEO SETTINGS	********/
+.kb-smallsize .video_clip{
+	width:60%;
+	height:100%;
+	top:0px;
+	left:0px;
+}
+
+.kb-smallsize .video_video{
+	width:100%;
+	height:100%;
+}
+
+.kb-smallsize .video_details{
+	width:34%;
+	padding:30px 3% 30px 3%;
+	top:0px;
+	right:0px;
+
+	position:absolute;
+}
+
+.kb-smallsize .video_kenburn h2{
+	color:#ccc;
+	font-size:15px;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 0px 1px 0px #000000;
+	font-family: 'Oswald', sans-serif;
+	margin: 0;
+	line-height:1;
+}
+
+.light.kb-smallsize .video_kenburn h2{
+	color:#999;
+	text-shadow: 0px 1px 0px #eee;
+}
+
+.light.kb-smallsize .video_kenburn p{
+	text-shadow: 0px 1px 0px #eee;
+}
+
+
+
+/**************************
+	WIDHT <=300px SIZING
+***************************/
+
+
+
+.kb-minisize .video_clip{
+	width:100%;
+	height:100%;
+	padding-right:0px;
+	top:0px;
+	left:0px;
+}
+
+/*******	VIDEO SETTINGS	********/
+.kb-minisize .video_clip{
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+}
+
+.kb-minisize .video_video{
+	width:100%;
+
+}
+
+.kb-minisize .video_details{
+	visibility:hidden
+}
+
+.kb-minisize .video_kenburn h2{
+	font-size:0px;
+	margin: 0;
+	line-height:0;
+}
+
+/****************************
+	-	DECORATIONS	-
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+	color: #ddd;
+}
+
+a:focus {
+    outline: none;
+}
+
+.clear{
+	clear:both;
+}
+****************************/
+
+
+
+
+
+
+
+
+/***********************************************
+	-	ALL  VIDEO SETTINGS	-
+************************************************/
+.kenburn-video-overlay{
+	background-color:#000;
+	opacity:0.25;
+	filter: alpha(opacity=25);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+	width:100%;
+	height:100%;
+	position:relative;
+	z-index:1000;
+}
+
+.kenburn-video-button{
+	background:url(../images/kenburns/player/play.png) no-repeat;
+	width:100px;
+	height:100px;
+	position:absolute;
+	z-index:1500;
+	opacity:0.85;
+	filter: alpha(opacity=85);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+	cursor:pointer;
+}
+
+.kenburn-video-button:hover {
+	opacity:1.0;
+}
+
+/*****************************************
+	-	VIDEO BACKGROUNDS	-
+******************************************/
+.dark .video_kenburn{
+		position:absolute;
+		top: 0; bottom: 0px;
+		width: 100%;
+		background: #111;
+		font-family: Arial, sans-serif;
+		font-size:12px;
+		line-height: 20px;
+		color: #777;
+		text-shadow: #fff 1px 1px 1px;
+	}
+
+
+.light .video_kenburn{
+		position:absolute;
+		top: 0; bottom: 0px;
+		width: 100%;
+		background: #ddd;
+		font-family: Arial, sans-serif;
+		font-size:12px;
+		line-height: 20px;
+		color: #222;
+		text-shadow: #eee 1px 1px 1px;
+	}
+
+
+
+
+/**************************
+	-	BUTTONS	-
+***************************/
+
+.kb-button {
+    margin-top: 6px;
+}
+.dark .kb-button {
+ font-family: 'Oswald', sans-serif;
+ float: left;
+ height: 31px;
+ line-height: 30px;
+ font-size: 12px;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius:3px;
+}
+
+.dark .kb-button:link, .dark .kb-button:visited {
+ color: #fff;
+ padding: 0 20px 0 20px;
+ text-align: center;
+ text-shadow: 0px 1px 0px #000000;
+ background: url('../images/kenburns/button/button_dark.png') repeat-x center top;
+ text-decoration: none;
+
+}
+
+.dark .kb-button:hover, .dark .comment-reply-link:hover {
+ background-position:bottom;
+ text-decoration: none;
+}
+
+
+.light .kb-button {
+ font-family: 'Oswald', sans-serif;
+ float: left;
+ height: 31px;
+ line-height: 30px;
+ font-size: 12px;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius:3px;
+}
+
+.light .kb-button:link, .light .kb-button:visited {
+ color: #333;
+ padding: 0 20px 0 20px;
+ text-align: center;
+ text-shadow: 0px 1px 0px #ccc;
+ background: url('../images/kenburns/button/button_light.png') repeat-x center top;
+ text-decoration: none;
+
+}
+
+.light .kb-button:hover, .light .comment-reply-link:hover {
+ background-position:bottom;
+ text-decoration: none;
+  color: #000;
+}
+
+
+/*********************************
+	-	VIDEO BUTTONS	-
+*********************************/
+.dark .video_kenburn .close{
+	width:30px;
+	height:30px;
+	position:absolute;
+	background:url(../images/kenburns/button/close_dark.png) no-repeat top;
+	right:10px;
+	top:10px;
+	cursor:pointer;
+}
+
+.dark .video_kenburn .close:hover{
+	background-position:bottom;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	cursor:pointer;
+}
+
+.light .video_kenburn .close{
+	width:30px;
+	height:30px;
+	position:absolute;
+	background:url(../images/kenburns/button/close.png) no-repeat top;
+	right:10px;
+	top:10px;
+	cursor:pointer;
+}
+
+.light .video_kenburn .close:hover{
+	background-position:bottom;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	cursor:pointer;
+}
+
+.kenburn_thumb_container .video{
+	width:30px;
+	height:30px;
+	background:url(../images/kenburns/player/play_small.png) no-repeat;
+	margin-top:-15px;
+	margin-left:-15px;
+	cursor:pointer;
+
+}
+
+
+/*************************************/
+/*		THUMBNAIL OPTIONS			*/
+/*************************************/
+
+.kenburn_thumb_container_bg {
+	background:url(../images/kenburns/bg/thumbs_bg.png);
+	padding:1px;
+	margin-top:-1px;
+	margin-left:-1px;
+	 -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 8px 2pxrgba(0, 0, 0, 0.80);
+    -moz-box-shadow:0px 0px 8px 2px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.80);
+}
+
+.dark .kenburn-thumbs .overlay{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:#000;
+}
+
+.light .kenburn-thumbs .overlay{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:#000;
+}
+
+/*************************************/
+/*		THUMBNAIL OPTIONS			*/
+/*************************************/
+.thumbbuttons{
+	background:url(../images/kenburns/button/navigdots_bgtile.png);
+	height:35px;
+	 -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	position:absolute;
+	bottom:-33px;
+	z-index:1000;
+	box-shadow: 0px 0px 8px 2pxrgba(0, 0, 0, 0.80);
+    -moz-box-shadow:0px 0px 8px 2px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.80);
+}
+
+.thumbbuttons .grainme{
+	background:url(../images/kenburns/bg/grain.png);
+	height:35px;
+	width:100%;
+}
+
+
+.thumbbuttons .leftarrow{
+	background:url(../images/kenburns/button/arrowleft.png) no-Repeat bottom left;
+	width:9px;
+	height:16px;
+	margin-left:9px;
+	margin-right:9px;
+	margin-top:9px;
+	float:left;
+	cursor:pointer;
+}
+
+
+.thumbbuttons .rightarrow{
+	background:url(../images/kenburns/button/arrowright.png) no-Repeat bottom left;
+	width:9px;
+	height:16px;
+	margin-top:9px;
+	margin-right:9px;
+	margin-left:18px;
+	float:left;
+	cursor:pointer;
+}
+
+
+.thumbbuttons .minithumb{
+	background:url(../images/kenburns/button/navigdots.png) no-Repeat bottom left;
+	width:15px;
+	height:15px;
+	margin-top:9px;
+	margin-left:9px;
+	float:left;
+	cursor:pointer;
+}
+
+.thumbbuttons .thumbs{
+	float:left;
+}
+
+.thumbbuttons .rightarrow:hover, .thumbbuttons .leftarrow:hover, .thumbbuttons .minithumb:hover, .thumbbuttons .thumbs .selected{
+	background-position:top left;
+}
+
+.creative_layer p {
+    color: white;
+    font-size: 18px;
+}
+.creative_layer a {
+    color: #EF4832;
+}
+.creative_layer h4 {
+    margin-bottom: 12px;
+}

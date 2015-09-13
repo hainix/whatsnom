@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* homepage list */
+ul.news_list {
+    margin-right: 8px;
+}
+
+ul.news_list li{
+    padding: 0 0 2px 7px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    background: transparent url(http://dishoomfilms.com/images/bullet.gif) 0 9px no-repeat;
+    color: #9A9A9A;
+}
+
+.news .news_item_small_pic {
+    float: left;
+    margin-right: 10px;
+}
+
+.news .news_item_large_pic {
+    margin: 12px 0 12px 0 !important;
+}
+
+.news .entry {
+margin-top: 8px;
+padding: 4px 8px 4px 0;
+_border-bottom: 1px solid #eee;
+min-height: 140px;
+}
+
+.news .entry h4 {
+  margin-bottom: 0;
+}
+
+.news .entry-without-border {
+  border-bottom: none;
+}
+
+p.article_summary {
+font-size: 13px;
+line-height: 18px;
+padding: 10px 0;
+}
+
+.news .entry a.read_post_link {
+    font-weight: bold;
+}
+
+.most_popular_entry {
+border-bottom: 1px #CCC;
+padding-bottom: 4px;
+margin-bottom: 5px;
+}
+
+.most_popular_entry img {
+    margin-right: 10px;
+}
+
+.most_popular_entry_title {
+    font-size: 16px;
+}
+
+.article_content > p {
+font-size: 18px;
+color: #333;
+margin-bottom: 15px;
+}
+
+.article-details { border: 1px solid #C9CACB; border-width: 1px 0; float: left; padding: 10px 0; margin: 0 20px 10px 0; width: 180px }
+.article-details p { line-height: 1em; _font-size: 11px; text-transform: uppercase; margin: 4px 0 4px 8px; }
+.article-details span { font-size: 18px;
+padding-right: 5px; text-transform: none }
+.article-details .share-buttons {
+margin-left: 8px;
+}
+.article-details .share-buttons .fb-like-container {
+margin-top: 0px;
+}

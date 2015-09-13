@@ -1,0 +1,71 @@
+
+/***********************************************************************
+******************* reset.css ******************************************
+************************************************************************/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;}
+
+table {border-collapse:separate; border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+th {color:#757475;line-height:40px;min-height:40px;text-align:center;padding:10px;font-weight:bold;}
+blockquote:before, blockquote:after, q:before, q:after { content:""; }
+blockquote, q { quotes:"" ""; }
+.clearer {height:0px;overflow:hidden;margin:0px;clear:both;}
+.center {text-align:center;}
+.float_left, .floatleft, .lfloat {float: left;}
+.float_right, .floatright, .rfloat {float: right;}
+
+/* self-clear floats */
+.group:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+/* ie.css */
+* html .group { /* IE6 */
+    height:1%;
+}
+*:first-child+html .group { /* IE7 */
+    min-height:1%;
+}
+img {
+    max-width: 100%;
+    border:0;
+}
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+/* Main Layout */
+
+html { min-height:100% }
+body {
+font-family: 'Muli', sans-serif;
+font-size: 14px;
+line-height: 1.4em;
+}
+
+
+/* typography */
+p, li, address, dd, blockquote {
+    color:#545252;
+    line-height:1.45em
+}
+
+li, address, dd, blockquote {
+    font-size:1em;
+
+}
+
+_p {font-size: 14px;}
+ul {list-style-type: none;}
+h1, h2, h3, h4, h5, h6, p, dl, ul, ol { _margin:1em 0 0.8em; }
+a, a:hover { text-decoration:none }
+a:visited {_color: #E0811B;}
+h1, h2, h3, h4, h5, h6 { font-weight:normal; color:#4A4A4A}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { color:#878686; }
+
+h1 { font-size:2.3em }
+h2 { font-size:2.154em; line-height: 1.05em; }
+h3 { font-size:1.7em; _line-height: 0.8em; font-weight: 700; margin-bottom: 0.3em;}
+h4 { font-size: 1.5em; line-height: 1.1em;}
+h6 { font-size:0.9em }
+#nav > ul > li > a { font-family: Calibri, "Lucida Sans Unicode", Helvetica, Arial, san-serif  !important; font-weight: bold;}
+
+h3 a {color:#2c2b2b;}
+h3 a:hover {color:#EF4832;}

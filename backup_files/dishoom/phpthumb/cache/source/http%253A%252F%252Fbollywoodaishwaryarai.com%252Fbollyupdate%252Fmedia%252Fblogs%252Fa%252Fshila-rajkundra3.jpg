@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=bollywoodaishwaryarai.com&fp=IRLTGPXDi6p%2BmuLjOfXGL91QiNVTDbwTMu2aBT4iYUk2cklmJhywC8w20cTAJ36%2FQkxbGd%2FAUexzgzxoZw1Svg%3D%3D&prvtof=%2BUoHw85rVIMipSp6LOtD%2BjLyTnXaBTNL9cTUgV%2BZjmE%3D&poru=GhYoMfMWXdsfmU90GrSRNg9Fvwerz8QpUeDVRaQXJO4RIhiXZKUPUtVbOOPT%2FfbJUKXtgO%2FfcCXXO2TpG%2FQ%2BtsNZVSr4zP9F5ctk6MYJO2H1g5go7PI%2FTlHsybdDqbl%2F&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=bollywoodaishwaryarai.com&fp=IRLTGPXDi6p%2BmuLjOfXGL91QiNVTDbwTMu2aBT4iYUk2cklmJhywC8w20cTAJ36%2FQkxbGd%2FAUexzgzxoZw1Svg%3D%3D&prvtof=V3u33RNep6UfiGASXTJjDpav7hIu0YBcsoqBJK4TIvg%3D&poru=JE4OilPDgo%2FzFzpw85RFefn5lbtaBJgdj6B%2F2ksoilLiN2ridn%2BOf9iJNBkk23uWMsZ6Hytzrka7HovBKpND%2BYdfSMgd%2B8LYQNiteVpUTLgWVWLGIhsKhilmhQ%2B4Owkb&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=bollywoodaishwaryarai.com&fp=IRLTGPXDi6p%2BmuLjOfXGL91QiNVTDbwTMu2aBT4iYUk2cklmJhywC8w20cTAJ36%2FQkxbGd%2FAUexzgzxoZw1Svg%3D%3D&prvtof=LqCnSlsTyiWhmfy6vZlWcGuuBR%2FA%2FCOyJ%2BtBEO6dLyg%3D&poru=KgpeLLLidNPOFiwp9aLH4hHGBRVP%2BhIP%2B2kZAKUpg%2FtqfSKyjXRQ8EED07u1nxUuEZscxPmAIMfDPzwy7bkA%2FGXTC1xthkPauOgMSWDyW%2B%2BQrrDAgoZxiK1uOHw7VK3O&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=bollywoodaishwaryarai.com&fp=IRLTGPXDi6p%2BmuLjOfXGL91QiNVTDbwTMu2aBT4iYUk2cklmJhywC8w20cTAJ36%2FQkxbGd%2FAUexzgzxoZw1Svg%3D%3D&prvtof=EP2uteCmsjTJuuYadX3eBUCtD0YXOERi2hQccEf8IfE%3D&poru=4rrAcYsgyUHDtXWeFNqhWYcYLOpRLH40mjFRiPFwhURAuti10lH2XHFIiikrP6%2F7UvWVRkwfFglont4n5bYcvrYps%2F5jyEA6Tr5G%2FQDpCSfe3VE534nHny78ZFwhDVVF&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

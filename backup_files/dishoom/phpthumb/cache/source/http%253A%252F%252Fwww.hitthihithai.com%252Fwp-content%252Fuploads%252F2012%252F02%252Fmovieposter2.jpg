@@ -1,0 +1,44 @@
+<!--
+	top.location="http://searchresultsguide.com/?dn=hitthihithai.com&fp=ycLFQ2g9x2PHbvKIZYE3wKADJ8oXge4KsPinDVc%2FcAVB7GnHs4faIUwxOqxF9WhwLyKLSiZXqqIyoux0a7jC%2Bw%3D%3D&prvtof=3aepe090T7epU0uU4F7e%2BcjmFUK72kTcm0FpOSX9ab8%3D&poru=SAQ6tzl28PUOsy2q6762YkQuWTiwa0Y%2B7kRYYiP8wYGFrvqHOmHzP%2F9IkueNOw6TDIzLP4wm0gztNRXJS%2FovfTpbqb1Xe%2F%2B1La2AOtnFxjywv%2FCsP9oT0RE2W4Y6BQjQ&cifr=1&_glst=0";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://searchresultsguide.com/?dn=hitthihithai.com&fp=ycLFQ2g9x2PHbvKIZYE3wKADJ8oXge4KsPinDVc%2FcAVB7GnHs4faIUwxOqxF9WhwLyKLSiZXqqIyoux0a7jC%2Bw%3D%3D&prvtof=jbn85PKLGyZiVZPwyHdxM%2BMN%2B4Zl%2BCEPLcOark8Tq4I%3D&poru=aqbLCMcjXUzT6PscPqfPqOUGkvWUfQqaN%2Bh2KbqAb%2BHHm1UnKF%2B3tPXgmNJAOz8L%2BaFnrr4rE0%2BTz6AvDhMgRCRItR9HlqOeOnwAJPZenEsOFB0MX5uH2HogYR2bOFBc&cifr=1&_glst=0";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://searchresultsguide.com/?dn=hitthihithai.com&fp=ycLFQ2g9x2PHbvKIZYE3wKADJ8oXge4KsPinDVc%2FcAVB7GnHs4faIUwxOqxF9WhwLyKLSiZXqqIyoux0a7jC%2Bw%3D%3D&prvtof=8VXNZXJFSsMo1eEUKiNdyj1nGErMuiSDfwBKfDLL6Eg%3D&poru=OJBnagKsbB254AKTfasAjLYzRTCXoAv9t2vuKQUu%2FNZMPCdP8GRPfsj0k72Sq%2FwwtzRRdYlGlaOHzTFRF0QQDdO0cCTt8%2F8l0q2WSkd5%2BVH2kYkWA0oytbaT9wvr4j4Q&_glst=0">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://searchresultsguide.com/?dn=hitthihithai.com&fp=ycLFQ2g9x2PHbvKIZYE3wKADJ8oXge4KsPinDVc%2FcAVB7GnHs4faIUwxOqxF9WhwLyKLSiZXqqIyoux0a7jC%2Bw%3D%3D&prvtof=Cquy9q1PQnslHrFl%2FJQT%2BJlqOUUMQLGI%2B59%2BYl9ZpjE%3D&poru=MqL1ZK%2BglUotT%2F5oJiiGEqdWVKGicnvPsCZTYhsNb82w31wJjybX3AV18i%2FrmjTDAe4Tsz%2BbWGXYaJ7y6ZLgrcvXbMc8OAu4ub%2B7G6H%2FUVcijpx5xFUTByqWFf%2FJPh2a&_glst=0">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

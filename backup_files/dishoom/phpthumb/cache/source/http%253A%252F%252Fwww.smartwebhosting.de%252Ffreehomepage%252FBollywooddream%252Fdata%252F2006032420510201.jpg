@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de-DE"><head>
+    <meta charset="utf-8">
+    <title>Webdesigner erstellen Homepages in Leipzig und Berlin</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+<link rel="stylesheet" href="./cssbox/navi_style.css" type="text/css" media="screen" />
+<script type="text/javascript" src="./jsbox/navi_superfish.js"></script>
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="style.responsive.css" media="all">
+
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="script.responsive.js"></script>
+
+
+<style>.content .postcontent-0 .layout-item-0 { color: #000000; background: #FFFFFF; padding-right: 10px;padding-left: 10px;  }
+.content .postcontent-0 .layout-item-1 { border-right-style:solid;border-right-width:1px;border-right-color:#B2D1D7; padding-right: 10px;padding-left: 10px;  }
+.content .postcontent-0 .layout-item-2 { padding-right: 10px;padding-left: 10px;  }
+.ie7 .post .layout-cell {border:none !important; padding:0 !important; }
+.ie6 .post .layout-cell {border:none !important; padding:0 !important; }
+
+</style></head>
+<body>
+<div id="main">
+<nav class="nav clearfix">
+    <ul class="hmenu"><li><a href="./" class="active">Home</a></li><li><a href="webdesign.html">Produkte</a><ul><li><a href="webdesign/webvisitenkarte-erstellen.html">Web Visitenkarten</a></li><li><a href="webdesign/homepage-erstellen.html">Homepage erstellen</a></li><li><a href="webdesign/auktionen-programmieren.html">Auktionen programmieren</a></li><li><a href="webdesign/onlineshop-programmieren.html">Onlineshop programmieren</a></li></ul></li><li><a href="templates.html">Templates</a><ul><li><a href="templates/magento-templates.html">Magento Templates</a></li><li><a href="templates/xt-commerce-templates.html">XT Commerce Templates</a></li><li><a href="templates/wordpress-templates.html">Wordpress Templates</a></li><li><a href="templates/joomla-templates.html">Joomla Templates</a></li></ul></li><li><a href="seo-dienst.html">Seo Dienst</a></li></ul> 
+    </nav>
+<div class="sheet clearfix">
+<header class="header clearfix">
+<div class="slider slidecontainerheader">
+    <div class="slider-inner">
+<div class="slide-item slideheader0">
+
+</div>
+<div class="slide-item slideheader1">
+
+</div>
+<div class="slide-item slideheader2">
+
+</div>
+<div class="slide-item slideheader3">
+
+</div>
+
+    </div>
+</div>
+<div class="slidenavigator slidenavigatorheader">
+<a href="#" class="slidenavigatoritem"></a><a href="#" class="slidenavigatoritem"></a><a href="#" class="slidenavigatoritem"></a><a href="#" class="slidenavigatoritem"></a>
+</div>
+
+
+
+    <div class="shapes">
+
+
+            </div>
+
+                
+                    
+</header>
+<div class="layout-wrapper clearfix">
+                <div class="content-layout">
+                    <div class="content-layout-row">
+                        <div class="layout-cell content clearfix"><article class="post article">
+                                
+                                                
+                <div class="postcontent postcontent-0 clearfix"><div class="content-layout">
+    <div class="content-layout-row">
+		<div class="layout-cell layout-item-0" style="width: 100%" >
+				                        <div id="header_tooltip"><!-- start .thumb_popup -->
+<div id="featured-thumbs"><a href="./webdesign/webvisitenkarte-erstellen.html"><img src="./bilder/webvisitenkarte.jpg" alt="Webvisitenkarte erstellen" height="108" width="135" /></a>
+<div class="thumb_popup p">
+<p class="heading">Webvisitenkarte<br>Der erste Internetauftritt schon ab 80 &euro;</p>
+</div>
+<!-- end .thumb_popup -->
+ <a href="./webdesign/homepage-erstellen.html"><img src="./bilder/homepage.png" alt="homepage erstellen" height="108" width="135" /></a>
+<div class="thumb_popup c1">
+<p class="heading">Eigene Homepage<br>Professionelle Homepage mit bis zu 5 Unterseiten schon ab 150 &euro;</p>
+</div>
+<!-- end .thumb_popup -->
+ <a href="./webdesign/auktionnen-programmieren.html"><img src="./bilder/auktion.png" alt="Auktionshaus programmieren" height="108" width="135" /></a>
+<div class="thumb_popup c1">
+<p class="heading">Auktionshaus<br>Auktionshaus mit fertigen Skriipt schon ab 500 &euro;</p>
+
+</div>
+<!-- end .thumb_popup -->
+ <a href="./webdesign/onlineshop-programmieren.html"><img src="./bilder/shop.png" alt="Onlineshop erstellen" height="108" width="135" /></a>
+<div class="thumb_popup c1">
+<p class="heading">Onlineshop<br>Der eigene Onlineshop mit CMS oder programmiert ab 500 &euro;</p>
+</div>
+<!-- end .thumb_popup -->
+ <a href="#"><img src="./bilder/social.png" alt="Social Network programmieren" height="109" width="135" /></a>
+<div class="thumb_popup c1">
+<p class="heading">Social Network<br>Ob Kontaktb&ouml;rse oder Social Network schon ab 1600 &euro;</p>
+</div></div>
+<!-- end .thumb_popup -->
+
+        <script type="text/javascript">
+
+
+                                        jQuery(window).load( function(){
+                                /* featured slider */
+
+                                var $featured_area = jQuery('#featured-slider'),
+                                        $feature_thumb = jQuery('#featured-thumbs img'),
+                                        $active_arrow = jQuery('div#active_item');
+                                        ordernum = 1,
+                                        $slider_control = jQuery('#featured-thumbs'), //div#featured-thumbs
+                                        $slider_control_tab = $feature_thumb.parent('a');
+
+                                if ( $featured_area.length ) {
+                                        et_featured_options = {
+                                                timeout: 0,
+                                                speed: 300,
+                                                cleartypeNoBg: true,
+                                                prev:   '#featured-area a#prevlink',
+                                                next:   '#featured-area a#nextlink',
+                                                before: function (currSlideElement, nextSlideElement, options, forwardFlag) {
+                                                        var $et_active_slide = jQuery(nextSlideElement),
+                                                                et_active_order = $et_active_slide.prevAll().length,
+                                                                $this_element = $slider_control.find('a').eq(et_active_order);
+
+                                                        $active_arrow.animate({"left": $this_element.find("img").position().left+55}, "slow");
+                                                },
+                                                fx: 'fade'
+                                        }
+
+
+                                                                                        et_featured_options.timeout = 5000;
+
+                                        $featured_area.css( 'backgroundImage', 'none' ).cycle(et_featured_options);
+
+                                        if ( $featured_area.find('.featitem').length == 1 ){
+                                                $featured_area.find('.featitem').css({'position':'absolute','top':'0','left':'0'}).show();
+                                                jQuery('#featured-area a#prevlink, #featured-area a#nextlink').hide();
+                                        }
+
+                                        $slider_control.find('.container').css( 'visibility', 'visible' );
+                                }
+
+                                $feature_thumb.hover(function(){
+                                        $next_div = jQuery(this).parent('a').next('div');
+
+                                        $next_div.css('bottom','106px')
+                                        $next_div.css({'left':jQuery(this).position().left-10});
+
+                                        jQuery(this).addClass('hover').fadeTo('fast',0.5);
+                                        $next_div.css('display','block').stop(true,true).animate({"bottom": "96px", "opacity": "1"}, "fast");
+                                },function(){
+                                        jQuery(this).removeClass('hover').fadeTo('fast',1);
+                                        $next_div.stop(true,true).animate({"bottom": "106px", "opacity": "0"}, "fast",function(){
+                                                jQuery(this).css('display','none');
+                                        });
+                                });
+
+                                $slider_control_tab.click(function() {
+                                        var et_ordernumber = jQuery(this).prevAll('a').length;
+                                        $featured_area.cycle(et_ordernumber);
+                                        return false;
+                                });
+                        } );
+
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+						<div style="height:20px;"></div>
+		</div>
+    </div>
+</div>
+<div class="content-layout">
+    <div class="content-layout-row">
+    <div class="layout-cell layout-item-1" style="width: 25%" >
+        <h4>Unsere Leistungen</h4>
+        <p>         </p>
+        <ul>
+        <li>Webdesign aus PSD Vorlagen<br></li>
+        <li>Homepages erstellen</li>
+        <li>PHP Programmierung<br></li>
+        <li>Java Programmierung</li>
+        <li>MYSQL Programmierung</li>
+        <li>Templateanpassung</li>
+        <li>Datenbank - Administration</li>
+        <li>Server - Administration</li>
+        <li>VB Programmierung</li>
+        <li>C ++ Programmierung</li>
+        <li>Erstellung mobiler Webseiten</li>
+        <li>SEO durch Partnerfirma</li>
+        </ul>
+    </div><div class="layout-cell layout-item-2" style="width: 75%" >
+        <h4>Homepage erstellen mit HTML, Jquery, Flash und Ajax</h4>
+        <p style="text-align: justify;">Unsere Webdesigner können auch ihre Homepage oder Webseite erstellen.Sie haben die Idee und wir setzen sie um. Viele Firmen und Privatkunden konnten das schon feststellen.<br></p>
+        <p style="text-align: justify;">Ihre Homepage gestalten gehöhrt für unsere Webdesigner zum Service genau wie das gestalten von grösseren Firmen Webseiten nach ihren Wünschen.</p>
+        Zu unseren Leistungen zählt auch die Gestaltung von Templates für CMS Systeme wie Joomla,Wordpress und Shoppingsysteme wie XT Commerce und Magento.
+        <p style="text-align: justify;">         </p>
+        <p style="text-align: justify;">Sie haben schon eine Homepage oder Firmen Webseite ? Unsere Webdesigner und Programmierer optimieren Ihre Homepage nach ihren Wünschen, so dass sie auch gefunden werden.</p>
+        <p style="text-align: justify;">Sie wollen kostenlos eine Homepage erstellen und haben keine Ahnung von HTML usw. Auch hier haben die Smartwebdesigner in Leipzig und Berlin wir eine Lösung für sie mit unseren kostenlosen Homepagemaker.</p>
+        <div style="height: 10px;"><br></div>
+    </div>
+    </div>
+</div>
+<div class="content-layout">
+    <div class="content-layout-row">
+    <div class="layout-cell layout-item-1" style="width: 25%" >
+        <h4>Kontaktinfos</h4>
+        <div>
+        <h4><span style="font-size: 13px;">Smartwebdesigner in Leipzig</span></h4>
+        Torsten Stecher<br>
+        Konradstrasse 56<br>
+        04315 Leipzig<br>
+        <br>
+        <h4><span style="font-size: 13px;">Smartwebdesigner in Berlin</span></h4>
+        Oliver Arendt<br>
+        Straßburger Str. 60<br>
+        10405 Berlin / Germany<br>
+        design(at)smartwebdesigner.de<br></div>
+    </div><div class="layout-cell layout-item-2" style="width: 75%" >
+        <h4>Serverseitige Programmierung mit PHP,MYSQL und Java<br></h4>
+        <img src="http://www.smartwebdesigner.de/images/img4.jpg" alt="serverseitige programmierung mit php mysql und java" title="" style="float: left; padding-right: 20px; padding-left: 0px;" class="">
+        <p>Die Smartwebdesigner in Berlin und Leipzig sind Ihr zuverlässiger Partner bei der Umsetzung von E-Commerce Projekten, Auktionshäusern und anderen Ideen die eine serverseitige Programmierung erfordern.</p>
+        <p>Sie können von der Idee bis zur Fertigstellung ihrer Projekte mitwirken und ihre Vorschläge einbringen oder einfach ihre Vorstellungen mitteilen und wir setzen ihre Projekte dann nach unseren Ideen um.</p>
+        <h4>Die Smartwebdesigner sind für Sie da.</h4>
+        <p>Auf Wunsch betreuen wir ihre individuellen Projekte auch nach der Fertigstellung oder erfolgreichen &nbsp;Übergabe weiter und übernehmen für sie Dienstleistungen wie die Betreuung ihres Projektes, Serveradministrationen und Datenbank-Service.</p>
+    </div>
+    </div>
+</div>
+</div>
+                                
+                </article></div>
+                    </div>
+                </div>
+            </div><footer class="footer clearfix">
+<div style="float: left; width: 150px; margin-left: 40px; text-align: left;"><span style="font-size: 14px; font-weight: bold;">Smartwebdesigner</span>
+<p style="margin-top: 15px;"><a href="javascript:kontakt();">Kontakt</a></p>
+<p><a href="http://www.smartwebdesigner.de/impressum.html">Impressum</a></p>
+<p style="margin-top: 20px; font-size: 16px; font-weight: bold;">0341 / 5806357</p>
+</div>
+<div style="float: left; width: 150px; margin-left: 80px; text-align: left;"><span style="font-size: 14px; font-weight: bold;">Quicklinks</span>
+<p style="margin-top: 15px;"><a href="http://www.smartwebdesigner.de/webdesign/webvisitenkarte-erstellen.html" title="webvisitenkarte erstellen">Webvisitenkarte</a></p>
+<p><a href="http://www.smartwebdesigner.de/webdesign/homepage-erstellen.html" title="homepage leipzig erstelllen">Homepage</a></p>
+<p><a href="http://www.smartwebdesigner.de/webdesign/auktionshaus-erstellen.html" title="Auktionshaus">Auktionshaus</a></p>
+<p><a href="http://www.smartwebdesigner.de/webdesign/onlineshop-erstellen.html" title="Onlineshop programmieren">Onlineshop</a></p>
+<p><a href="http://www.smartwebdesigner.de/webdesign/social_network-erstellen.html" title="social network">Social Network</a></p>
+<p><a href="http://www.leipzig-spart.de/energie/stromanbieter_wechseln.html" title="Stromanbieter wechseln">Stromanbieter wechseln</a></p>
+</div>
+<div style="float: left; width: 400px; margin-left: 70px; text-align: left;"><span style="font-size: 14px; font-weight: bold;">Meist gesucht</span>
+<p style="margin-top: 15px; text-align: left;"><a style="font-size: 20px; " href="http://www.smartwebdesigner.de/webdesign/homepage-erstellen.html" title="homepage erstellen">Homepage erstellen</a> <a href="http://www.smartwebdesigner.de/templates/magento_templates.html">Magento</a> <a style="font-size: 16px; font-style: italic;" href="http://www.smartwebdesigner.de/webdesign/webvisitenkarte-erstellen.html">Webvisitenkarte</a> <a href="http://www.smartwebdesigner.de/webdesign/auktionen-programmieren.html">Auktionshaus</a> <a style="font-size: 20px;" href="http://www.smartwebdesigner.de/webdesign/onlineshop-programmieren.html">Onlineshop</a> <a style="font-size: 12px;" href="javascript:void(0);">Social Network</a> <a style="font-size: 18px; font-style: italic;" href="http://www.smartwebdesigner.de/templates/xt-commerce-templates.html">XT Commerce</a> <a style="font-size: 24px; font-weight: bold;" href="http://www.smartwebdesigner.de/templates/joomla_templates.html">Joomla</a> <a style="font-size: 16px; font-weight: bold;" href="http://www.smartwebdesigner.de/seo-dienst.html">SEO</a> <a style="font-size: 12px; font-weight: bold;" href="http://www.smartwebdesigner.de/templates/wordpress_templates.html">Wordpress</a> <a style="font-size: 24px; font-weight: bold;" href="http://www.smartwebdesigner.de/webdesign.html">Webdesign</a> <a style="font-size: 16px;" href="http://www.smartwebdesigner.de/templates.html">Templates</a> <a style="font-size: 20px; " href="http://www.leipzig-spart.de/energie/strompreise-vergleichen.html" title="Strompreise vergleichen">Strompreise vergleichen</a></p>
+</div>
+</footer>
+
+    </div>
+</div>
+<script type="text/javascript" src="http://www.smartwebdesigner.de/jsbox/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="http://www.smartwebdesigner.de/jsbox/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="http://www.smartwebdesigner.de/jsbox/functions.js"></script>
+<script type="text/javascript" src="http://www.smartwebdesigner.de/jsbox/jquery.validate.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.smartwebdesigner.de/cssbox/colorbox.css" media="all" />
+<script type="text/javascript" language="JavaScript1.2">
+function kontakt()
+{
+
+        jQuery.fn.colorbox({href:'http://www.smartwebdesigner.de/ajax/kontakt.php',
+                                                innerWidth:'660px',
+                                                innerHeight:'420px'
+        });
+}
+function send_kontakt()
+{
+var uebersicht = jQuery("#kontakt").serialize();
+        jQuery.ajax({
+                url: "http://www.smartwebdesigner.de/ajax/sendkontakt.php",
+                type: "POST",
+                data: (jQuery("#kontakt").serialize()),
+                success: function(html)
+                {
+                        clearVertragColorbox();
+                        jQuery.fn.colorbox({href:'http://www.smartwebdesigner.de/ajax/sendkontakt.php?'+uebersicht, overlayClose:false, onCleanup:function(){clearVertragColorbox();}, innerWidth:'660px', maxHeight:'520px' });
+
+                }
+        });
+}
+</script>
+
+</body></html>

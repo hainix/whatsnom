@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteBase /
+RewriteRule    ^article/([a-zA-Z0-9-_]+)/?$    a/index.php?t=$1    [NC,L]
+RewriteRule    ^film/([a-zA-Z0-9-_]+)/?$    f/index.php?h=$1    [NC,L]

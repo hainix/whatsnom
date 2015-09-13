@@ -1,0 +1,59 @@
+/* ====================== START CHANNELS ====================== */
+#sidebar.tv-sidebar {margin-right: 8px;}
+
+table.tv-details td {
+    vertical-align: top;
+}
+table.tv-details td div.tv-like-box {
+    margin-top: 4px;
+}
+
+.tv-main {
+    margin: 0 0 0 20px;
+}
+.channel-list { margin-bottom: 25px;}
+.channel-list h2 {margin-left: 10px;}
+.channel-list ul { border-top:1px solid #DEDEDE; clear:both; margin:0 0 10px; list-style:none; }
+.channel-list ul li { border-bottom:1px solid #DEDEDE; padding: 3px 0 0 0; font-size: 15px;}
+.channel-list ul li:hover { background-color:#EF4822; }
+.channel-list ul li a { color: #444; display:block; margin:0 1px 0 2px; padding:3px 0 3px 3px; line-height: 18px;}
+.channel-list ul li a:hover, .channel-list ul li a:hover span.comments_number { color: white; text-decoration:none; }
+.channel-list ul li a:hover div.channel-subtitle { color: #F5E9E9; text-decoration:none; }
+.channel-list ul li a span.comments_number, .channel-list ul li a span.archdate { display:block; text-align:right; float:right; margin-right: 13px;}
+.channel-list ul li a div.channel-subtitle { color:#8B9091; font-size: 11px; margin: -3px 0 0 4px; }
+.channel-list ul li a span.comments_number { color:#777777; float:right; margin-right:7px; width:3em; font-weight: bold; font-size: 13px;}
+.channel-list ul li a span.archdate { color:#8B9091; float:left; letter-spacing:1px; margin-right:5px; padding:0 0 1em; width:20px; }
+
+.channel-list ul li ul.children { margin:0 0 -1px; padding-left:20px; }
+.channel-list .channel-list-header .channel-list-title span.channel-list-thumb {margin: 0 8px 0 8px; float: right;}
+.channel-list .channel-list-title {float: left; width:100%;}
+.channel-list .channel-list-title h5 {font-weight: bold; font-size: 1.14em;}
+.channel-list .channel-list-header {width: 100%; background-color:#BFB8BB;}
+.channel-list .channel-list-header {_margin-top: 20px;}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ====================== END CHANNELS ====================== */
+
+table.other-videos-table {
+margin-bottom: 10px;
+}
+
+.other-videos-table div.other-video-title {
+    font-size: 12px;
+    text-align: center;
+    margin-top: -7px;
+}

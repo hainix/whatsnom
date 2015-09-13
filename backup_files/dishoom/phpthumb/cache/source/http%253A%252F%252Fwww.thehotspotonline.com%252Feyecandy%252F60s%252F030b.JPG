@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head><meta name="tids" content="a='672' b='3297' c='thehotspotonline.com' d='auto_category'" /><title>Thehotspotonline.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<style type="text/css">
+*{margin:0;padding:0}
+li{list-style:none}
+body{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#838383;background:url(http://i4.cdn-image.com/__media__/pics/672/background-bg-top.jpg) #fff repeat-x}
+a{color:#044b7c;text-decoration:underline}
+a:hover{color:#f85b1e;text-decoration:none}
+a:focus{outline:none}
+.clear{clear:both;overflow:hidden;line-height:0;font-size:0;height:0}
+.img-pad{margin-bottom:-3px}
+img {border:none}
+a img {border:none; outline:none}
+#page-wrapper{width:945px;margin:0 auto}
+#head-wrapper{margin:0;padding:11px 0 0; height:89px}
+#domain{float:left;padding:28px 0 21px}
+.sprite {background:url(http://i4.cdn-image.com/__media__/pics/672/sprite.gif) 0 0 no-repeat}
+#domain a{font-size:28px;color:#67666b;background-position:0 0;padding:10px 0 20px 70px}
+#logo{float:right;width:300px;padding:15px 0 0}
+#logo p{text-align:right;clear:both;padding:3px 2px 0 0}
+#logo p a{color:#656565;font-size:11px;text-decoration:underline}
+#head-tab{height:40px}
+.sidebar-head-bg{background-position:0 -101px;width:311px;height:40px;float:left}
+.tab li{float:left;padding-left:4px;max-width:200px}
+.tab a{font-size:13px;color:#fff;font-weight:700;background:#83a952;height:40px;line-height:40px;display:block;border-radius:7px 7px 0 0;-moz-border-radius:7px 7px 0 0;-webkit-border-radius:7px 7px 0 0;-o-border-radius:7px 7px 0 0;-ms-border-radius:7px 7px 0 0;padding:0 10px; float:left}
+#main-container{background:#fff}
+#left-container{float:left;width:307px}
+#right-container{float:right;background:#fff;width:638px;padding-top:15px;border-radius:0 10px 0 0;-moz-border-radius:0 10px 0 0;-webkit-border-radius:0 10px 0 0;-o-border-radius:0 10px 0 0;-ms-border-radius:0 10px 0 0}
+#sidebar{background-position:0 -152px;width:307px;height:364px}
+#sidebar h2{color:#fff;font-size:27px;padding:5px 0 5px 30px}
+#sidebar ul{padding:12px 20px 0}
+#sidebar li{border-bottom:1px solid #de6737;border-top:1px solid #c44d1d;padding:1px 0 0}
+#sidebar li a{color:#fff;font-size:18px;font-weight:400;display:block;padding:7px 0 7px 10px}
+#sidebar li a:hover{background:#ab1f1e}
+.search-box{background:#fff;padding:15px}
+.search{background-position:0 -542px;width:268px;height:172px}
+.search p{color:#838383;font-size:16px;font-weight:700;padding:30px 0 10px 15px}
+.search .input-box{background:#fff;font-size:19px;font-weight:400;border:1px solid #bebebe;width:230px;margin-left:15px;padding:8px 2px}
+.search .button-box{background:#83a952;font-size:19px;color:#fff;font-weight:400;margin-left:15px;margin-top:10px;border:0;padding:5px 8px}
+#sub-list{padding:260px 20px 20px 0}
+.sub-list-left,.sub-list-right{width:301px;background:#eaebe9;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px;-ms-border-radius:10px; padding-bottom:15px}
+.sub-list-right{float:right}
+.img-box{width:120px;float:left;margin:25px 5px 0 10px}
+.list-right{width:150px;float:left}
+.list-right h3{color:#606060;font-size:16px;font-weight:700;padding:25px 0 3px}
+.list-right a{color:#2f6cb1;font-size:14px;font-weight:700;display:block;padding:4px 5px 4px 0}
+.head-img{position:absolute}
+#png-key{width:619px;height:104px;position:relative;top:223px}
+.png-left{float:left;width:211px;height:104px;background:url(http://i1.cdn-image.com/__media__/pics/672/left-tran-img.png) 0 0 no-repeat}
+.png-right{float:left;width:408px;height:104px;background:url(http://i4.cdn-image.com/__media__/pics/672/right-tran-img.png) 0 0 repeat-x;border-radius:0 0 6px 0;-moz-border-radius:0 0 6px;-webkit-border-radius:0 0 6px 0;-o-border-radius:0 0 6px 0;-ms-border-radius:0 0 6px 0}
+.png-right ul{padding:30px 0 0 10px}
+.png-right a{color:#2f6cb1;font-size:14px;font-weight:700;display:block;padding:3px 0}
+.png-left h4{color:#e6eedc;font-size:20px;font-weight:700;padding:41px 10px 0 15px}
+#footer-keys-top{text-align:center;padding:10px 0 30px}
+#footer-keys-bot{background:url(http://i4.cdn-image.com/__media__/pics/672/div-bg-top.gif) repeat-x top;text-align:center;padding:30px 0 10px}
+.custom-msg{background:#fdffec;border-top:1px solid #ffe594;border-bottom:1px solid #ffe594;color:#000;text-align:center;font-size:11px;width:100%;position:absolute;top:0;left:0}
+.custom-msg a{text-decoration:none;color:#C00;font-size:11px}
+.custom-msg a:hover{text-decoration:underline}
+.banner-img{width:728px;height:90px;padding-top:10px;margin:0 auto}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+.tab,.sub-list-left{float:left}
+.list-right li,.png-right li{padding:0 0 1px}
+.png-right .left-key,.png-right .right-key{float:left;width:190px}
+#footer-keys-top p,#footer-keys-bot p{color:#454545}
+#footer-keys-top p a,#footer-keys-bot p a{color:#454545;padding:0 10px}
+* html .clearfix,:first-child+html .clearfix{zoom:1}
+</style>
+<script language="JavaScript" type="text/javascript" src="http://i1.cdn-image.com/__media__/js/min.js?v1.6"></script>
+</head>
+<body onload="" onunload="shpp('ex');showPop=0;" onBeforeUnload="shpp('ex');showPop=0;"><div style="visibility:hidden;display:none;" id="divSponAds"><form name="frmSponsAds" id="frmSponsAds" method="post" action="" target="_top"><input type="hidden" name="params" id="params" /></form></div>    <div id="page-wrapper">
+    <div id="head-wrapper" class="clearfix">
+            <h1 id="domain"><a href="http://www.Thehotspotonline.com" class="sprite">Thehotspotonline.com</a></h1>         
+            <div id="logo">
+            	<a href="http://www.networksolutions.com/" target="_blank"><img src="http://i3.cdn-image.com/__media__/pics/672/netsol-logo.jpg" align="right" alt="network solutions" width="111" height="31" /></a> <br>                
+                <p>This Page Is Under Construction - Coming Soon!</p>                
+                                   <p><a href="http://www.thehotspotonline.com/__media__/design/underconstructionnotice.php?d=Thehotspotonline.com" onClick="return popup(this, 'notes')">Why am I seeing this 'Under Construction' page?</a></p>
+                  
+                     
+            </div>
+    </div>
+        <div id="head-tab" class="clearfix">
+    	<div class="sidebar-head-bg sprite"></div>        
+        	<ul class="tab">
+            	<li><a href="http://www.thehotspotonline.com/Migraine_Pain_Relief.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=19222924&ktd=0&kp=8" target="_top" onmouseover="changeStatus('Migraine Pain Relief');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Migraine Pain Relief" id="dk8" name="dk8" >Migraine Pain Relief</a></li>
+                <li><a href="http://www.thehotspotonline.com/Parental_Control.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=21796090&ktd=0&kp=9" target="_top" onmouseover="changeStatus('Parental Control');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Parental Control" id="dk9" name="dk9" >Parental Control</a></li>
+                <li><a href="http://www.thehotspotonline.com/High_Speed_Internet.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=13681481&ktd=0&kp=10" target="_top" onmouseover="changeStatus('High Speed Internet');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="High Speed Internet" id="dk10" name="dk10" >High Speed Internet</a></li>
+            </ul>       
+    </div>       
+    <div id="main-container">    	
+        <div id="left-container">
+        	<div id="sidebar" class="sprite">
+            	<!-- <h2>Popular Links</h2> -->
+                    <ul>
+                        <li style="border-top:0;"><a href="http://www.thehotspotonline.com/Online_College_Courses.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=21227423&ktd=0&kp=1" target="_top" onmouseover="changeStatus('Online College Courses');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Online College Courses" id="dk1" name="dk1" >Online College Courses</a></li>
+                        <li><a href="http://www.thehotspotonline.com/Free_Credit_Report.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=11539660&ktd=0&kp=2" target="_top" onmouseover="changeStatus('Free Credit Report');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Free Credit Report" id="dk2" name="dk2" >Free Credit Report</a></li>
+                        <li><a href="http://www.thehotspotonline.com/Health_Insurance.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=13437293&ktd=0&kp=3" target="_top" onmouseover="changeStatus('Health Insurance');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Health Insurance" id="dk3" name="dk3" >Health Insurance</a></li>
+                        <li><a href="http://www.thehotspotonline.com/Best_Mortgage_Rates.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=3477850&ktd=0&kp=4" target="_top" onmouseover="changeStatus('Best Mortgage Rates');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Best Mortgage Rates" id="dk4" name="dk4" >Best Mortgage Rates</a></li>
+                        <li><a href="http://www.thehotspotonline.com/Top_Smart_Phones.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=28656260&ktd=0&kp=5" target="_top" onmouseover="changeStatus('Top Smart Phones');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Top Smart Phones" id="dk5" name="dk5" >Top Smart Phones</a></li>
+                        <li><a href="http://www.thehotspotonline.com/Top_10_Luxury_Cars.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=28642044&ktd=0&kp=6" target="_top" onmouseover="changeStatus('Top 10 Luxury Cars');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Top 10 Luxury Cars" id="dk6" name="dk6" >Top 10 Luxury Cars</a></li>
+                        <li style="border-bottom:0;"><a href="http://www.thehotspotonline.com/Cheap_Air_Tickets.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=5645746&ktd=0&kp=7" target="_top" onmouseover="changeStatus('Cheap Air Tickets');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Cheap Air Tickets" id="dk7" name="dk7" >Cheap Air Tickets</a></li>
+                    </ul>               
+            </div>            
+            <div class="search-box">
+            <div class="search sprite">            	
+                <p>Search the Web:</p>
+                <form id="searchform1"   name="searchform1" style="visibility:hidden;display:none;" action="http://www.thehotspotonline.com/display.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=rYde%2Bygmsi9RIFYAqJj1WeXysHJPVNQJTSKzyPSOE98%3D&&amp;kt=1" method="post" target="_top" onsubmit="showPop=0;" >
+                    <input name="s" type="text" onClick="this.value='';"  class="input-box" /><br>
+                    <input type="submit" class="button-box" value="Search" />
+                </form>                
+            </div>
+            </div>
+        </div>
+        <div id="right-container">            
+            <img src='http://i2.cdn-image.com/__media__/images/4088_Art-NetSol-3-1.jpg'  width="619" height="327" class="head-img"   id='image1' alt='image1' title='image1' />
+            <div id="png-key">
+            	<div class="png-left">
+                <h4>Popular Links</h4>
+                </div>
+                <div class="png-right">
+                    <ul class="left-key">
+                         <li><a href="http://www.thehotspotonline.com/Health_Insurance.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=13437293&ktd=0&kp=3" target="_top" onmouseover="changeStatus('Health Insurance');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Health Insurance" id="dk3" name="dk3" >Health Insurance</a></li>
+                         <li><a href="http://www.thehotspotonline.com/Top_Smart_Phones.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=28656260&ktd=0&kp=5" target="_top" onmouseover="changeStatus('Top Smart Phones');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Top Smart Phones" id="dk5" name="dk5" >Top Smart Phones</a></li>
+                    </ul>
+                    <ul class="right-key">
+                         <li><a href="http://www.thehotspotonline.com/Free_Credit_Report.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=11539660&ktd=0&kp=2" target="_top" onmouseover="changeStatus('Free Credit Report');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Free Credit Report" id="dk2" name="dk2" >Free Credit Report</a></li>
+                         <li><a href="http://www.thehotspotonline.com/Online_College_Courses.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=21227423&ktd=0&kp=1" target="_top" onmouseover="changeStatus('Online College Courses');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Online College Courses" id="dk1" name="dk1" >Online College Courses</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="clear"></div>            
+            <div id="sub-list">            
+                <div class="sub-list-left">
+                    <div class="img-box"><img src='http://i2.cdn-image.com/__media__/images/4087_Art-NetSol-3-2.jpg'  width="117" height="117"   id='image2' alt='image2' title='image2' /></div>
+                    <div class="list-right">
+                        <h3>Quick Links</h3>
+                        <ul>
+                             <li><a href="http://www.thehotspotonline.com/Best_Penny_Stocks.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=3482138&ktd=0&kp=11" target="_top" onmouseover="changeStatus('Best Penny Stocks');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Best Penny Stocks" id="dk11" name="dk11" >Best Penny Stocks</a></li>
+                             <li><a href="http://www.thehotspotonline.com/10_Best_Mutual_Funds.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=72996&ktd=0&kp=12" target="_top" onmouseover="changeStatus('10 Best Mutual Funds');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="10 Best Mutual Funds" id="dk12" name="dk12" >10 Best Mutual Funds</a></li>
+                             <li><a href="http://www.thehotspotonline.com/Credit_Card_Application.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=7242435&ktd=0&kp=13" target="_top" onmouseover="changeStatus('Credit Card Application');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Credit Card Application" id="dk13" name="dk13" >Credit Card Application</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>                
+                <div class="sub-list-right">
+                    <div class="img-box"><img src='http://i3.cdn-image.com/__media__/images/4086_Art-NetSol-3-3.jpg'  width="117" height="117"   id='image3' alt='image3' title='image3' /></div>
+
+                    <div class="list-right">
+                        <h3>Our Picks</h3>
+                        <ul>
+                            <li><a href="http://www.thehotspotonline.com/Business_Schools.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=4605738&ktd=0&kp=14" target="_top" onmouseover="changeStatus('Business Schools');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Business Schools" id="dk14" name="dk14" >Business Schools</a></li>
+                            <li><a href="http://www.thehotspotonline.com/Contact_Lens.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=6837160&ktd=0&kp=15" target="_top" onmouseover="changeStatus('Contact Lens');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Contact Lens" id="dk15" name="dk15" >Contact Lens</a></li>
+                            <li><a href="http://www.thehotspotonline.com/Dental_Plans.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=8068050&ktd=0&kp=16" target="_top" onmouseover="changeStatus('Dental Plans');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Dental Plans" id="dk16" name="dk16" >Dental Plans</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>                
+            </div>                
+        </div>
+        <div class="clear"></div>        
+        <div id="footer-keys-top">
+            <p>
+                <strong>Popular Categories:</strong> <a href="http://www.thehotspotonline.com/Top_Smart_Phones.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=28656260&ktd=0&kp=5" target="_top" onmouseover="changeStatus('Top Smart Phones');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Top Smart Phones" id="dk5" name="dk5" >Top Smart Phones</a>  <a href="http://www.thehotspotonline.com/Best_Mortgage_Rates.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=3477850&ktd=0&kp=4" target="_top" onmouseover="changeStatus('Best Mortgage Rates');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Best Mortgage Rates" id="dk4" name="dk4" >Best Mortgage Rates</a> <a href="http://www.thehotspotonline.com/Top_10_Luxury_Cars.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=28642044&ktd=0&kp=6" target="_top" onmouseover="changeStatus('Top 10 Luxury Cars');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Top 10 Luxury Cars" id="dk6" name="dk6" >Top 10 Luxury Cars</a>  <a href="http://www.thehotspotonline.com/Migraine_Pain_Relief.cfm?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&maxads=0&prvtof=QmPC3fJ2kM9PhCuny82MsJVtpGbIXLsXIopx%2B6hk%2Fgs%3D&&&kt=112&&ki=19222924&ktd=0&kp=8" target="_top" onmouseover="changeStatus('Migraine Pain Relief');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Migraine Pain Relief" id="dk8" name="dk8" >Migraine Pain Relief</a>
+
+            </p>            
+             <!-- Banner 728x90 start  -->
+                            <!-- Banner 728x90 end  -->            
+        </div>       
+        <div id="footer-keys-bot">
+            <br>
+            <p>
+            	<a href="" onclick=" window.open('http://www.thehotspotonline.com/__media__/js/trademark.php?d=thehotspotonline.com&type=ns', 'netsoltrademark', 'directories=0,menubar=0,height=165,width=900');return false;">Trademark Free Zone</a>  
+				<a href="http://customersupport.networksolutions.com/article.php?id=306" target="_blank">Review our Privacy Policy</a>
+				<a href="http://www.networksolutions.com/legal/static-service-agreement.jsp" target="_blank">Service Agreement</a>
+				<a href="http://www.networksolutions.com/legal/legal-notice.jsp" target="_blank">Legal Notice</a>
+								<br>
+            </p>
+        </div>
+    </div>
+    </div>
+<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=520,height=400,scrollbars=yes,location=0');
+return false;
+}
+//-->
+</SCRIPT>
+<div style='display:none;visibility:hidden;'><script language="javascript" > function _ldpx_() { 
+var BU = "\"sk\"";
+var aAction = encodeURIComponent("incr_dm_land_frequency(" + BU + ")");
+var aI = new Image();
+aI.src = "http://ib.adnxs.com/pxj?bidder=96&action=" + aAction; }  try { if(typeof(_ldpx_) == 'function'){ _ldpx_(); } } catch(e){} </script><script language="javascript" > function _mldpx_() {  try { window.medianet_width="300";  window.medianet_height= "250";  window.medianet_crid="1253242"; var __elm=document.createElement("script");  var headID = document.getElementsByTagName("head")[0]; __elm.setAttribute("type","text/javascript"); __elm.setAttribute("id","mNSC"); __elm.setAttribute("src","http://contextual.media.net/dmpmedianet.js?cid=8CU213142&1384627674");  headID.appendChild(__elm); } catch(e){}; }  try { if(typeof(_mldpx_) == 'function'){ _mldpx_(); } } catch(e){} </script></div><script type="text/javascript">if(relplaceAllALinks) relplaceAllALinks(/(\/trf|\.cfm)\?/);</script><script language="javascript" type="text/javascript" > var __pp = {"kp":{"u":"http:\/\/searchtermresults.com\/popunder?fp=KGV3t%2FEiShZMJUF%2Ff1NFisT%2B2GqARnb3IMrZ9huiG%2Bc2vys%2F3mk5oG%2Fa%2BmweEgpTnLK%2Bqrw%2Fb%2FZBB%2BaHn8aAmOLDQMr776hi%2B9dRYkwQXXGy0hW64i7VIkPj1YZo5kAgMS8i5n4FzkGFXFxGhpq7VVl87ANnz71R%2BY%2FuVcNz6Lj4YBlNG%2BXGDZaJvlpuDno1&domain=thehotspotonline.com","pd":false,"w":-1,"h":-1,"p":"directories=0,menubar=0"},"dp":{"u":"http:\/\/searchmeaningful.com\/sk-disprdr.php?_dspr_=J191af%40%23%40zTtZHbTEZt%40%23%40tbTm5zFGzTFGTEZbGFzHE%40%23%40tbTmNzFGzTFGTEZbGFzHE%40%23%405XfXv59gv5vBaWBf.JvV%40%23%40G+nHLHEHH%40%23%40MR","pd":false,"w":720,"h":300,"p":"z-lock=yes,alwaysLowered=yes,status=0,location=1,toolbar=0,directories=0,resizable=0,scrollbars=0"}};  var dt = new Date(); var facsrc = 'http://www.thehotspotonline.com/faclnk.php?p_pt=pt2&fp=prddGxpuVGhlYrUggxobRSDlcmFSKbUYbTagtgjKd9bfj4DKuRtjc%2BBXWWwI8UdhQau1rjSQSDhxn3zDGdeZIwhEAq27Ye%2Bmcbgwt9hs83gAAbBxKaT4anIJ3wpvHElKcAZDNb9r2fgb%2FQCmej5wECTexw4HDba02UpWq5Q4%2FNQFjJV8o%2F8ynA%2FUWL5KOrii&q=Online+College+Courses&kt=104&kp=101&'+dt.getTime(); document.write('<scr'+'ipt type="text/javascript" language="javascript" src='+facsrc+'></scr'+'ipt>'); try{(function(dn){ var h1s = window.document.getElementsByTagName('h1');for (var h1 in h1s ){	var rgx= /http:\/\/www\.thehotspotonline\.com/i; var lnks = h1s[h1].getElementsByTagName('A'); for ( var lnk in lnks){	if( lnks[lnk].href.match( rgx )){ lnks[lnk].onclick = function(){showPop=0;return true;};return;}}}})();}catch(e){}; atevt();  </script><br /> </body>
+</html>

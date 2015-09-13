@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=thinkzones.com&fp=I6UT8dmrzSfFRLp0oPfkYp7EveyHBgIyLsLIRzKuTYuXdas%2BptBy69bHDcFdEkJDwvlnPw0dn3nfEKFvCOPy5g%3D%3D&prvtof=y3IJBul7JcR%2FndYwtx1Iw9NCYTgTNhTY%2FOkZwvf7MFA%3D&poru=F1Lovy5DrDtoAW1BOimFxVSyksy%2B6ezustrJwcEYZ84eE0Ledq6gTf4JOg2%2FqZKx%2FdJSnhT8RXzu4l0juwT3Th0NBDurCpBR7aDlvnoiWyY%3D&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=thinkzones.com&fp=I6UT8dmrzSfFRLp0oPfkYp7EveyHBgIyLsLIRzKuTYuXdas%2BptBy69bHDcFdEkJDwvlnPw0dn3nfEKFvCOPy5g%3D%3D&prvtof=3OpFzL%2B2Blk%2FkdyIS6N%2FQhMSW%2B8QH5It8gq76XaQ5sQ%3D&poru=0nilQ6szOqVIvn%2BDP%2BGrD20jcIsvXSShJZXDGV7rMQt10W%2BRzoApAoZnaQcQXSztk%2BSVy%2FaW0eh%2BSDUn6ocWrGVMmN7HT6buruSBC6TzmTI%3D&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=thinkzones.com&fp=I6UT8dmrzSfFRLp0oPfkYp7EveyHBgIyLsLIRzKuTYuXdas%2BptBy69bHDcFdEkJDwvlnPw0dn3nfEKFvCOPy5g%3D%3D&prvtof=HPAHghXXaHt8x4hk0siHhJeTPyhNBdV2L8l4cV%2BF9l8%3D&poru=Umq2YI3KGr8KYrmwIyjSmcVoBMwcyq35KBs8hI6KQTZwpOCuxwjXv1b1CHTXj%2BsQPO91RJQ%2BmTWAFywc7woQZqz7G439j7orjaunX2bivyM%3D&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=thinkzones.com&fp=I6UT8dmrzSfFRLp0oPfkYp7EveyHBgIyLsLIRzKuTYuXdas%2BptBy69bHDcFdEkJDwvlnPw0dn3nfEKFvCOPy5g%3D%3D&prvtof=jfBxd1IB6Tjix9UlMz6BXpGM4TR57NoERE9At0Y7v%2BE%3D&poru=skFF1iVTzqI%2B9TnCeXE6FfdLrxEAW266evWMWLtoU%2BFYejS%2Fo5JQoU1%2Bt3vo5HzezFL3FYfe3QT0JelMbjwJ%2FTPFNY8A0DlPfKNet%2FV3U0E%3D&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

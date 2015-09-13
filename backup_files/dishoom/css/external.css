@@ -1,0 +1,83 @@
+html, body {
+    height: 100% !important;
+    min-height: 100% !important;
+}
+
+#dish-external-frame {
+position: absolute;
+top: 60px;
+left: 0;
+}
+
+#dish-external-wrapper {
+height: 60px;
+background-color: #EF4832;
+position: relative;
+color: white;
+}
+
+.group {
+min-height: 1%;
+display: block;
+}
+
+.group::after {
+clear: both;
+content: ".";
+display: block;
+height: 0;
+visibility: hidden;
+}
+
+
+#dish-external-container {
+width: 100%;
+margin: 0 auto;
+position: relative;
+background-color: #EF4832;
+}
+
+#logo-wrap {
+padding-top: 7px;
+padding-left: 20px;
+border-left: 1px solid #134F89;
+width: 103px;
+height: 43px;
+}
+
+.float-left {
+float: left!important;
+}
+
+.dish-logo {
+background: url(http://www.dishoomfilms.com/images/logo/logo_100.png) no-repeat;
+display: block;
+height: 40px;
+margin: 3px 11px 0 0;
+text-indent: -9001em;
+width: 102px;
+}
+
+.close {
+float: right;
+height: 21px;
+width: 21px;
+margin-top: 15px;
+margin-left: 80px;
+}
+
+/* external page */
+.trouble-loading {
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+.trouble-loading a {
+    color: white;
+}
+
+.trouble-loading a:hover {
+    color: #1a1a1a;
+}
+
+

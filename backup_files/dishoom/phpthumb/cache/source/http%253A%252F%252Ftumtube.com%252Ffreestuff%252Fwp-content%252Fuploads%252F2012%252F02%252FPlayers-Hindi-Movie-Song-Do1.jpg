@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=tumtube.com&fp=fcC57s3nKxEGKF6mWfq0DRiucxQXRq%2F3ZhzG62OS%2FHOa%2F%2BXtCvpjtql2j%2FytkaVfyZCdaznu0qPnLt9b5GlDsw%3D%3D&prvtof=sPrv5Ty%2B0Yr4ababahBj5PZpxv5VCG4Quo7REYIIoLo%3D&poru=f9ksGlxqX2ycd0GLcBgtyZUIp5sDIBVfasyRcbSIQDvh2MBJAW8hp8Ram3SapZHE37le0q7zRkiLLWAI63rjtVGghfYw5lriH985yXw5SYE%3D&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=tumtube.com&fp=fcC57s3nKxEGKF6mWfq0DRiucxQXRq%2F3ZhzG62OS%2FHOa%2F%2BXtCvpjtql2j%2FytkaVfyZCdaznu0qPnLt9b5GlDsw%3D%3D&prvtof=vf5gYTzMaF64Say%2Bh2ckMljicfxzhJaJJVYIhlTWsvM%3D&poru=vQIfoFAjsGnm8Zdb9y6kXPRNcsXYb0aq%2F43HdJmb%2FtJWbCbl72Mkvq1c%2Brdowi%2FFhzkSu9Ok8%2FOfp7%2FWm5hv3xZcM3EtwvrIZ9d6g95%2FR1g%3D&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=tumtube.com&fp=fcC57s3nKxEGKF6mWfq0DRiucxQXRq%2F3ZhzG62OS%2FHOa%2F%2BXtCvpjtql2j%2FytkaVfyZCdaznu0qPnLt9b5GlDsw%3D%3D&prvtof=O7WJk%2FbOEGrTjv15XrTPlzY6P1HSqr1w7%2FtSuCiCeM4%3D&poru=UxlqTVpq6%2FgtH5DOZkYhpzUxjLW5baAPwg%2Fr7RTNy%2BgAcoEDNnICtLcnY92cwSH8pAAjv5axd7%2FCLTLTgCoPY4XSzZDLtkxWg2nLPjsJAEI%3D&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=tumtube.com&fp=fcC57s3nKxEGKF6mWfq0DRiucxQXRq%2F3ZhzG62OS%2FHOa%2F%2BXtCvpjtql2j%2FytkaVfyZCdaznu0qPnLt9b5GlDsw%3D%3D&prvtof=4epGFNT1Flf4MkNJqZqGGoO4f%2FqJw93zOB3hEI7BT2c%3D&poru=IOMddKdm6hRuGwQER3QFzfc6CuEwApWPLBoNRZ3Dlgx9ZrdvueW99koU9iy4uAA9W4ayoiOoM%2FC9y94KlG1iuK6LKNBAvUN5mgUIAd90YPM%3D&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->

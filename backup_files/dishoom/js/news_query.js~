@@ -1,0 +1,112 @@
+google.load('search', '1', {'nocss' : true});
+
+function searchComplete(search_target_id) {
+  // Check that we got results
+  var news_container = document.getElementById(search_target_id);
+  if (newsSearch.results && newsSearch.results.length > 0) {
+  	buzz_list = document.createElement('div');
+    for (var i = 0; i < newsSearch.results.length; i++) {
+
+	  if (newsSearch.results[i].language != 'en') {
+	  	continue;
+	  }
+
+      // Create HTML elements for search results
+	  var content_link = newsSearch.results[i].unescapedUrl; // TODO - drop on dishoom landing?
+
+      var news_item = document.createElement('div');
+      news_item.className = 'group';
+
+      var a = document.createElement('a');
+      a.href = content_link;
+      a.className = 'title';
+      a.target = '_blank';
+      a.title = newsSearch.results[i].titleNoFormatting;
+      a.innerHTML = newsSearch.results[i].titleNoFormatting;
+
+      var a2 = document.createElement('div');
+      a2.className = 'news_title';
+      a2.appendChild(a);
+
+      var author = document.createElement('span');
+      author.className = 'author';
+      author.innerHTML = newsSearch.results[i].publisher;
+
+      var posteddate = document.createElement('span');
+      posteddate.className = 'date';
+      posteddate.innerHTML = newsSearch.results[i].publishedDate;
+
+      var snippet = document.createElement('div');
+      snippet.className = 'news_excerpt';
+      snippet.innerHTML = newsSearch.results[i].content.replace('...', '');
+      snippet.innerHTML = newsSearch.results[i].content;
+      
+      if (newsSearch.results[i].image != undefined) {
+	  var thmb = document.createElement('img');
+	  thmb.className = 'news_item_image';
+	  thmb.src = newsSearch.results[i].image.tbUrl;
+	  thmb.align = 'right';
+	  news_item.appendChild(thmb);
+      }
+
+      news_item.appendChild(a2);
+      news_item.appendChild(snippet);
+
+      var p = document.createElement('p');
+      p.className = 'meta';
+      p.appendChild(posteddate);
+      p.appendChild(author);
+
+      news_item.appendChild(p);
+      if (search_target_id != 'film_buzz') {
+	  //news_item.appendChild(posteddate);
+      }
+      var box_post_item = document.createElement('div');
+      box_post_item.className = 'box-post group thumbnail';
+      box_post_item.appendChild(news_item);
+
+      var news_group_item = document.createElement('div');
+      news_group_item.className = 'last-news group';
+      news_group_item.appendChild(box_post_item);
+
+      buzz_list.appendChild(news_group_item);
+    }
+    news_container.appendChild(buzz_list);
+    
+    var loading_indicator = document.getElementById('news_loader');
+    loading_indicator.style.visibility = 'hidden';                
+  }
+
+}
+
+function initializeBuzzSearch() {
+	newsSearch = new google.search.NewsSearch();
+	newsSearch.setResultSetSize(8);
+	newsSearch.setSearchCompleteCallback(this, searchComplete, ['film_buzz']);
+	newsSearch.setRestriction(google.search.Search.RESTRICT_EXTENDED_ARGS,
+	 {  'ned' : 'in'});
+
+	// var search_term needs to have been declared globally before this
+	if (search_term) {
+		newsSearch.execute(search_term);
+	}
+}
+
+function initializeNewsSearch() {
+	newsSearch = new google.search.NewsSearch();
+	newsSearch.setResultSetSize(8);
+	newsSearch.setSearchCompleteCallback(this, searchComplete, ['bollywood_news']);
+	newsSearch.setRestriction(google.search.Search.RESTRICT_EXTENDED_ARGS, {'ned' : 'in'});
+	newsSearch.execute('bollywood');
+}
+
+
+function initializePersonSearch() {
+	newsSearch = new google.search.NewsSearch();
+	newsSearch.setResultSetSize(8);
+	newsSearch.setSearchCompleteCallback(this, searchComplete, ['actor_buzz']);
+	newsSearch.setRestriction(google.search.Search.RESTRICT_EXTENDED_ARGS, {'ned' : 'in'});
+	newsSearch.execute(actor_term);
+}
+
+

@@ -1,0 +1,44 @@
+<!--
+	top.location="http://mypageresults.com/?dn=www.mastionrocks.com&fp=LTc8lJFmO%2B2rL3DFjNliFx2X0R2r1AAERdpWRDh3LefFCPjpLmZFSgSXD72RmBePHoTLsHQCw8PaaLcAugmeYA%3D%3D&prvtof=7iVtwe6w9c9U33QbXYHbAI%2Bn%2BSpa83bt27FTrte4aG4%3D&poru=dPHBQ8SJBy%2F2n%2FII88KWLUtSkSLFNLVAoVTvIemFaMIbX29WUhniguP55O2SH57aNvJW3tZPpuKlC5Z4ckTqWg%2BnPBBNWEX3XYqlrKR1uDtbNPXS6e%2BmTrho%2BPkO7wfX&cifr=1&flrdr=yes&nxte=jpg";
+	/*
+-->
+<script type="text/javascript">
+	<!--
+	dimensionUpdated = 0;
+	function applyFrameKiller()
+	{
+		if(window.top != self)
+		{
+			cHeight = 0;
+			if( typeof( window.innerHeight ) != 'undefined' ) {
+			//Non-IE
+			cHeight = window.innerHeight;
+			dimensionUpdated = 1;
+			} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )  ) {
+			//IE 6+ in 'standards compliant mode'
+			cHeight = document.documentElement.clientHeight;
+			dimensionUpdated = 1;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			//IE 4 compatible
+			cHeight = document.body.clientHeight;
+			dimensionUpdated = 1;
+			}
+			if( cHeight <= 250 && dimensionUpdated == 1)
+			{
+				window.top.location = "http://mypageresults.com/?dn=www.mastionrocks.com&fp=LTc8lJFmO%2B2rL3DFjNliFx2X0R2r1AAERdpWRDh3LefFCPjpLmZFSgSXD72RmBePHoTLsHQCw8PaaLcAugmeYA%3D%3D&prvtof=IHJAgCL7vtEs7kOf4j8bCG1BmLl%2FZygxrcpY8130KJY%3D&poru=MjcfLUf5v4ULD446ua3FnpuINZ%2FiIa8%2FZaOojLKRVqiOWi0gsUm4WDQlH0l%2BstEzNeLSUbsXwhH%2FY6%2BKT5W7GZ2us9lwo61gUN5hllBh%2FGoqC1Q6CsihrqplqYZY%2FzTR&cifr=1&flrdr=yes&nxte=jpg";
+			}
+		}
+	}
+
+	applyFrameKiller();
+	// -->
+</script><frameset rows="100%,*" frameborder="no" border="0" framespacing="0">
+	<frame src="http://mypageresults.com/?dn=www.mastionrocks.com&fp=LTc8lJFmO%2B2rL3DFjNliFx2X0R2r1AAERdpWRDh3LefFCPjpLmZFSgSXD72RmBePHoTLsHQCw8PaaLcAugmeYA%3D%3D&prvtof=B4z6NR7uf7YUAXBoySN9GW9Rz6ciYsu52CQT1YYR4MI%3D&poru=4KL32oGFmQBinUGPcVJM0Jj8CV7yn6KXYKZRPLts4djh%2FyxVRFJ1EEfsW6qxGu2AMIBZjMTKLMR576nzRUUIoQgI99OnAi76nY%2BP77vUk15hF8qE7QDnHa81hRRsDoiK&flrdr=yes&nxte=jpg">
+</frameset>
+<noframes>
+	<body bgcolor="#ffffff" text="#000000">
+	<a href="http://mypageresults.com/?dn=www.mastionrocks.com&fp=LTc8lJFmO%2B2rL3DFjNliFx2X0R2r1AAERdpWRDh3LefFCPjpLmZFSgSXD72RmBePHoTLsHQCw8PaaLcAugmeYA%3D%3D&prvtof=PNmcdwYtMEyfi4rsaU7VRzaqhGYxC3zqGcytHvjCO58%3D&poru=dlxmLlTYMh%2B6Q58DLp6SxPnY6%2BAVk4JVfwP0yK5gS3kzxrrcFwTC%2BKLyRCZrBsV0YVGeSl7C7KVc2fiqIzj75s1MufuxgppUVO5dCT4TQA8pTgYrxSQwu5Bn0QrDUGqP&flrdr=yes&nxte=jpg">Click here to proceed</a>.
+	</body>
+</noframes><!--
+*/
+-->
