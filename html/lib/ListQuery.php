@@ -2,13 +2,11 @@
 
 final class ListQuery {
   private
-    $qualifier,
     $type,
     $city,
     $user = null,
     $count = null;
-  function __construct($qualifier, $type, $city) {
-    $this->qualifier = $qualifier;
+  function __construct($type, $city) {
     $this->type = $type;
     $this->city = $city;
   }
@@ -35,24 +33,15 @@ final class ListQuery {
     return $this->type;
   }
 
-  public function getQualifier() {
-    return $this->qualifier;
-  }
-
   public function getQueryString() {
-    return 'c='.$this->city.'&t='.$this->type.'&q='.$this->qualifier;
+    return 'c='.$this->city.'&t='.$this->type;
   }
 
   public function getPreHeader() {
     if ($this->user) {
       $pre_header = $this->user['first_name'].'\'s';
-      if ($this->qualifier) {
-        $pre_header .= ' Top';
-      }
     } else if ($this->count == 10) {
       $pre_header = 'Top '.$this->count;
-    } else if (!$this->qualifier) {
-      $pre_header = 'The';
     } else {
       $pre_header = 'Top';
     }
@@ -62,10 +51,6 @@ final class ListQuery {
   public function getShortTitle() {
    return
      ($this->user ?  $this->user['first_name'].'\'s Top ' : 'Top 10 ')
-     .($this->getQualifier()
-         ? ListQualifiers::getName($this->getQualifier())
-         : null)
-      .' '
       . ($this->getType()
          ? ListTypes::getName($this->getType())
          : 'Spots')
@@ -78,11 +63,7 @@ final class ListQuery {
   public function getTitle() {
     return
       $this->getPreHeader()
-      .' '
-      . ($this->getQualifier()
-         ? ListQualifiers::getName($this->getQualifier())
-         : 'Best')
-      .' '
+      .' Best '
       . ($this->getType()
          ? ListTypes::getName($this->getType())
          : 'Spots')

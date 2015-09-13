@@ -2,7 +2,6 @@
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/page.php';
 
 $list_id = idx($_GET, 'l');
-$qualifier_id = null;
 $type_id = null;
 $city_id = null;
 
@@ -26,18 +25,16 @@ $existing_list = $list_id ?  get_object($list_id, 'lists') : null;
 // By now we have either enough params to create/fetch a new list
 // or an existing list
 if (!$existing_list) {
-  $qualifier_id = idx($_GET, 'q');
   $type_id = idx($_GET, 't');
   $city_id = $_GET['c'];
 }
-if (!$qualifier_id && !$type_id && !$city_id && !$existing_list) {
+if (!$type_id && !$city_id && !$existing_list) {
   RenderUtils::go404();
 }
 
 if (!$existing_list) {
   $existing_list =
     DataReadUtils::getListForCreator(
-      $qualifier_id,
       $type_id,
       $city_id,
       $user['id']
@@ -46,7 +43,6 @@ if (!$existing_list) {
 
 $entries_keyed_on_position = null;
 if ($existing_list && $existing_list['creator_id'] == $user['id']) {
-  $qualifier_id = $existing_list['qualifier'];
   $type_id = $existing_list['type'];
   $city_id = $existing_list['city'];
   $entries = DataReadUtils::getEntriesForList($existing_list);
@@ -61,11 +57,10 @@ if ($existing_list && $existing_list['creator_id'] == $user['id']) {
     : null;
 }
 
-$query = new ListQuery($qualifier_id, $type_id, $city_id);
+$query = new ListQuery($type_id, $city_id);
 $query->setUser($user);
 $creator_id = $user['id'];
 
-$qualifier = $qualifier_id ? ListQualifiers::getName($qualifier_id) : null;
 $type = $type_id ? ListTypes::getName($type_id) : null;
 $city = Cities::getName($city_id);
 
@@ -119,7 +114,6 @@ for ($i = 1; $i <= 10; $i++) {
   $search_input =
     '<input type="text" id="spot_query_'.$i.'" '
     .'placeholder="'. ($i == 1 ? 'Best' : '#'.$i)
-    .($qualifier ? ' '.$qualifier : null)
     .($type ? ' '.$type : null)
     .' spot?" '
     .'/>';
@@ -215,8 +209,7 @@ if ($existing_list) {
     '<input type="hidden" name="list_id" value="'.$existing_list['id'].'" />';
 } else {
 $hidden_fields =
-  '<input type="hidden" name="qualifier_id" value="'.$qualifier_id.'" />'
-  .'<input type="hidden" name="type_id" value="'.$type_id.'" />'
+  '<input type="hidden" name="type_id" value="'.$type_id.'" />'
   .'<input type="hidden" name="city_id" value="'.$city_id.'" />';
 }
 $submit_script =

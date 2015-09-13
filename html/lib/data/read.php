@@ -69,9 +69,8 @@ final class DataReadUtils {
   public function getListsForQuery($query, $limit = 1) {
     $sql =
       sprintf(
-        "SELECT * FROM lists WHERE qualifier = %d AND type = %d AND city = %d "
+        "SELECT * FROM lists WHERE type = %d AND city = %d "
         ."AND deleted IS NULL ORDER BY upvotes DESC LIMIT %d",
-        $query->getQualifier(),
         $query->getType(),
         $query->getCity(),
         $limit
@@ -93,17 +92,15 @@ final class DataReadUtils {
     return get_objects_from_sql($sql);
   }
 
-  public static function getListForCreator($qualifier_id, $type_id, $city_id,
+  public static function getListForCreator($type_id, $city_id,
                                            $creator_id) {
     $sql =
       sprintf(
         "SELECT * from lists where "
-        ."qualifier = %d AND "
         ."type = %d AND "
         ."city = %d AND "
         ."creator_id = %.0f "
         ."AND deleted is null LIMIT 1",
-        (int) $qualifier_id,
         (int) $type_id,
         (int) $city_id,
          $creator_id
@@ -115,7 +112,6 @@ final class DataReadUtils {
     $sql =
       sprintf(
         "SELECT * FROM lists WHERE city = %d"
-        ." AND qualifier = 0"
         ." AND deleted IS NULL ORDER BY upvotes DESC LIMIT %d",
         $city_id,
         $limit
@@ -130,7 +126,6 @@ final class DataReadUtils {
     $sql =
       sprintf(
         "SELECT * FROM lists WHERE city = %d"
-        ." AND qualifier = 0 "
         ." AND deleted IS NULL ORDER BY created_time DESC LIMIT %d",
         $city_id,
         $limit

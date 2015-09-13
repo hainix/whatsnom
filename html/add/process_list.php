@@ -19,10 +19,8 @@ $list_id = (int) idx($_POST, 'list_id');
 if ($list_id) {
   unset($_POST['list_id']);
 } else {
-  $qualifier_id = (int) $_POST['qualifier_id'];
   $type_id = (int) $_POST['type_id'];
   $city_id = (int) $_POST['city_id'];
-  unset($_POST['qualifier_id']);
   unset($_POST['type_id']);
   unset($_POST['city_id']);
 }
@@ -68,25 +66,23 @@ if ($error) {
 if (!$list_id) {
   $existing_list =
     DataReadUtils::getListForCreator(
-      $qualifier_id,
       $type_id,
       $city_id,
       $creator_id
     );
   $list_id = idx($existing_list, 'id');
   if (ADD_SPOT_DEBUG) {
-    slog('got existing list id = '.$list_id.' for '.$qualifier_id.' '.$type_id.' '.$city_id);
+    slog('got existing list id = '.$list_id.' for '.$type_id.' '.$city_id);
   }
   if (!$list_id) {
     $list_id =
       DataWriteUtils::createList(
-        $qualifier_id,
         $type_id,
         $city_id,
         $creator_id
       );
     if (ADD_SPOT_DEBUG) {
-      slog('created new list id = '.$list_id.' for '.$qualifier_id.' '.$type_id.' '.$city_id);
+      slog('created new list id = '.$list_id.' for '.$type_id.' '.$city_id);
     }
   }
 } else if (ADD_SPOT_DEBUG) {

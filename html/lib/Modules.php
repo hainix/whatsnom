@@ -66,12 +66,7 @@ final class Modules {
         )
         .'<span class="title-text">'
         .RenderUtils::renderLink(
-          ((!$list['qualifier'] && !$list['type']) ? 'Top Overall' : null)
-          .( ((!$list['qualifier'] && $list['type'])
-              || (!$list['type'] && $list['qualifier']))
-            ? ' Top ' : null)
-          .ListQualifiers::getName($list['qualifier']).' '
-          .ListTypes::getName($list['type']),
+          'Top '.ListTypes::getName($list['type']),
           '?l='.$list['id']
         )
         .'</span>'
@@ -92,27 +87,14 @@ final class Modules {
   }
 
   public static function renderDesktopSearchForm($query = null) {
-    $current_qualifier = $query ? $query->getQualifier() : null;
     $pre_header = $query ? $query->getPreHeader() : null;
     $current_type = $query ? $query->getType() : null;
     $current_city = $query ? $query->getCity() : null;
-    $qualifer_render = $current_qualifier ?
-      '<div class="styled-select select-category table-form-column">
-      <select id="search-qualifier" class="auto-submit-item" name="q">'
-      .RenderUtils::renderSelectOptions(
-        ListQualifiers::getConstants(),
-        $current_qualifier,
-        'Best'
-      )
-      .'</select>
-      </div>'
-      : null;
 
     $web_form =
       '<div class="title-form">
         <form class="search-form table-form">
            <div class="table-form-column-short">'.$pre_header.'</div>'
-      .$qualifier_render
             .'<div class="styled-select select-cuisine table-form-column">
               <select id="search-type" class="auto-submit-item" name="t">'
       .RenderUtils::renderSelectOptions(

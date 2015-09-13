@@ -80,13 +80,12 @@ return false;
     return $new_votes;
   }
 
-  public static function createList($qualifier_id, $type_id, $city_id, $creator_id) {
+  public static function createList($type_id, $city_id, $creator_id) {
     $sql =
       sprintf(
         "INSERT IGNORE INTO lists "
-        ."(qualifier, type, city, creator_id, created_time) "
+        ."(type, city, creator_id, created_time) "
         ."VALUES (%d, %d, %d, %.0f, %d)",
-        $qualifier_id,
         $type_id,
         $city_id,
         $creator_id,

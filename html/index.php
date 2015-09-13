@@ -7,20 +7,17 @@ if ($list_id) {
   $primary_list = get_object($list_id, 'lists');
 }
 if ($primary_list) {
-  $qualifier_id = $primary_list['qualifier'];
   $type_id = $primary_list['type'];
   $city_id = $primary_list['city'];
 } else {
-  $qualifier_id = idx($_GET, 'q');
   $type_id = idx($_GET, 't', null);
   $city_id = idx($_GET, 'c', Cities::SF);
 }
 
 // Data Fetch START
-$qualifier_name = ListQualifiers::getName($qualifier_id);
 $type_name = ListTypes::getName($type_id);
 $city_name = $city_id ? Cities::getName($city_id) : null;
-$query = new ListQuery($qualifier_id, $type_id, $city_id);
+$query = new ListQuery($type_id, $city_id);
 
 $same_lists = DataReadUtils::getListsForQuery($query, 5);
 $city_lists = DataReadUtils::getTopListsForCity($city_id, 5);
@@ -82,7 +79,7 @@ if (!$primary_list || !$entries || !$spots) {
 
 /*
 if ($user) {
-  $add_url = 'add/?c='.$city_id.'&q='.$qualifier_id.'&t='.$type_id;
+  $add_url = 'add/?c='.$city_id.'&t='.$type_id;
   $add_link = RenderUtils::renderLink(
     'Add Your Own List',
     $add_url
@@ -121,7 +118,7 @@ if ($user) {
   $add_link_profile_item = RenderUtils::renderLink(
     $heart_icon
     .$add_text.'<span class="user-meta">Share The Nom!</span>',
-    'add/?c='.$city_id.'&q='.$qualifier_id.'&t='.$type_id
+    'add/?c='.$city_id.'&t='.$type_id
   );
 } else {
   $add_link_profile_item = RenderUtils::renderExternalLink(
@@ -132,7 +129,6 @@ if ($user) {
 }
 $same_lists_render =
   '<h3><span>Top </span>'.$city_name
-  .' '.$qualifier_name
   .' '.$type_name
   .' Lists</h3>'
   .Modules::renderProfileList($same_lists, $show_city = false, $primary_list['id'], array($add_link_profile_item));
