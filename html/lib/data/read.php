@@ -146,6 +146,21 @@ final class DataReadUtils {
     return get_objects_from_sql($sql);
   }
 
+
+  public function multigetEntriesForLists($lists, $fields = null) {
+    $sql =
+      sprintf(
+        "SELECT * FROM entries WHERE list_id IN (%s) AND DELETED IS NULL ORDER "
+        ."BY position ASC",
+        implode(array_pull($lists, 'id'), ',')
+      );
+    slog($sql);
+    return get_objects_from_sql($sql);
+  }
+
+
+
+
   public function getSpotsFromHandles($handles) {
     $sql = sprintf(
       "SELECT * FROM spots WHERE yelp_id in ('%s') AND DELETED IS NULL "

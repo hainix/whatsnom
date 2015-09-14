@@ -2,6 +2,10 @@
 abstract class ListGenreTypes extends Enum {
   const DRINK            = 1;
   const FOOD             = 2;
+
+  public static function getGenreFromListType($list_type) {
+    return ListTypeConfig::$config[$list_type][ListTypeConfig::GENRE];
+  }
 }
 
 abstract class ListTypes extends Enum {
@@ -59,11 +63,11 @@ abstract class ListTypes extends Enum {
 
 
 final class ListTypeConfig {
-  const ID          = 'i';
-  const LIST_NAME   = 'n';
-  const ENTRY_NAME  = 'e';
-  const ICON        = 'i';
-  const GENRE       = 'g';
+  const ID          = 'id';
+  const LIST_NAME   = 'readable_list_name';
+  const ENTRY_NAME  = 'readable_entry_name';
+  const ICON        = 'icon';
+  const GENRE       = 'genre';
 
   public static $config = array(
 
@@ -74,8 +78,21 @@ final class ListTypeConfig {
       self::ICON         => 'wine',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
+
     ListTypes::HAPPY_HOUR => array(
-      self::ID => ListTypes::HAPPY_HOUR,
+      self::ID           => ListTypes::HAPPY_HOUR,
+      self::LIST_NAME    => 'Happy Hour',
+      self::ENTRY_NAME   => 'Happy Hour Spot',
+      self::ICON         => 'beer',
+      self::GENRE        => ListGenreTypes::DRINK,
+    ),
+
+    ListTypes::RAMEN => array(
+      self::ID           => ListTypes::RAMEN,
+      self::LIST_NAME    => 'Ramen',
+      self::ENTRY_NAME   => 'Ramen Joint',
+      self::ICON         => 'chopsticks',
+      self::GENRE        => ListGenreTypes::FOOD,
     ),
 
   );

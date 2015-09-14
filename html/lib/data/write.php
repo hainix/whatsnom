@@ -92,7 +92,6 @@ return false;
         time()
       );
 
-    slog($sql);
     global $link;
     $r = mysql_query($sql);
     if (!$r) {
