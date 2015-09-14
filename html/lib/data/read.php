@@ -146,20 +146,15 @@ final class DataReadUtils {
     return get_objects_from_sql($sql);
   }
 
-
-  public function multigetEntriesForLists($lists, $fields = null) {
+  public function getEntryForListAndSpot($list, $spot) {
     $sql =
       sprintf(
-        "SELECT * FROM entries WHERE list_id IN (%s) AND DELETED IS NULL ORDER "
-        ."BY position ASC",
-        implode(array_pull($lists, 'id'), ',')
+        "SELECT * FROM entries WHERE list_id = %d AND spot_id = %d AND DELETED IS NULL LIMIT 1",
+        $list['id'],
+        $spot['id']
       );
-    slog($sql);
-    return get_objects_from_sql($sql);
+    return get_object_from_sql($sql);
   }
-
-
-
 
   public function getSpotsFromHandles($handles) {
     $sql = sprintf(
