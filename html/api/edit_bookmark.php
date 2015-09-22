@@ -5,18 +5,11 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/base.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/write.php';
 $user_id = idx($_GET, 'uid');
-$type = idx($_GET, 'type');
-$target_id = idx($_GET, 'target_id');
-$list_id = idx($_GET, 'list_id');
-if ($type != 'spot') {
-  echo 'unsupported type: '.$type;
-  die(1);
-}
+$entry_id = idx($_GET, 'entry_id');
 
-// Only support spot bookmarks for now
-$bookmark_type = ($type == 'spot') ? 'S' : null;
 $assoc_type = 'bookmarks';
-if (!$user_id || !$target_id || !$type
+
+if (!$user_id || !$entry_id
     || !DataReadUtils::isSupportedAssoc($assoc_type)) {
   echo 'exiting';
   exit(1);
@@ -25,15 +18,17 @@ if (!$user_id || !$target_id || !$type
 $existing_assoc =
   DataReadUtils::getAssoc(
     $user_id,
-    $list_id,
-    $assoc_type,
+    $entry_id,
+    $assoc_type
   );
+
+
 $response = false;
 if ($existing_assoc && !$existing_assoc['deleted']) {
-  DataWriteUtils::removeAssoc($user_id, $list_id, $assoc_type);
+  DataWriteUtils::removeAssoc($user_id, $entry_id, $assoc_type);
   $response = 'removed';
 } else {
-  DataWriteUtils::addAssoc($user_id, $list_id, $assoc_type);
+  DataWriteUtils::addAssoc($user_id, $entry_id, $assoc_type);
   $response = 'added';
 }
 

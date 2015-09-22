@@ -13,11 +13,8 @@ function cmpByPosition($a, $b)  {
   return strcmp($a["position"], $b["position"]);
 }
 
-/* DATA FETCH START */
 // Get all lists to show on homepage
 $lists = DataReadUtils::getTopListsForCity($city_id, 10);
-
-/* DATA FETCH END */
 
 // Start with the Genres
 $list_response = array();
@@ -76,30 +73,7 @@ foreach ($lists as $list) {
   $list_response[$list_genre]['items'][$list['id']] = $list;
 }
 
-
-$user_id = idx($_GET, 'uid');
-$bookmarks = null;
-if ($user_id && is_numeric($user_id)) {
-  $users_bookmarks_assocs = DataReadUtils::getAllOutgoingAssocs(
-    array('id' => $user_id),
-    'bookmarks'
-  );
-
-  $combined_bookmarks = array();
-  foreach ($users_bookmarks_assocs as $bookmark_key => $bookmark) {
-    if ($bookmark['type'] == 'S') {
-      $spot = get_object($bookmark['target_id'], 'spots');
-      $combined_bookmarks[$bookmark_key] = $bookmark;
-      $combined_bookmarks[$bookmark_key]['list_item_thumbnail']
-        = $spot['profile_pic'];
-      $combined_bookmarks[$bookmark_key]['place'] = $spot;
-    }
-  }
-  $bookmarks = $combined_bookmarks;
-}
-
 $response = array(
-  'bookmarks' => $bookmarks,
   'lists'     => $list_response,
 );
 
