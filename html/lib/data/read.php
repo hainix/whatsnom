@@ -16,11 +16,12 @@ final class DataReadUtils {
     $sql =
       sprintf(
         "SELECT * FROM %s WHERE creator_id = %.0f AND target_id = %d"
-        ." AND deleted is NULL LIMIT 1",
+        ." AND deleted is NULL",
         $type,
         $creator_id,
         $target_id
       );
+    $sql .= " LIMIT 1";
     return get_object_from_sql($sql);
   }
 

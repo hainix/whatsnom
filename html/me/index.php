@@ -28,8 +28,12 @@ $my_lists = DataReadUtils::getAllListsForCreator($user);
 $my_bookmarks_assocs = DataReadUtils::getAllOutgoingAssocs($user, 'bookmarks');
 $my_spots = null;
 if ($my_bookmarks_assocs) {
-  $my_spots = get_objects(
+  $my_bookmarked_entries = get_objects(
     array_pull($my_bookmarks_assocs, 'target_id'),
+    'entries'
+  );
+  $my_spots = get_objects(
+    array_pull($my_bookmarked_entries, 'spot_id'),
     'spots'
   );
 }
@@ -68,10 +72,10 @@ if (!$my_spots) {
     . ($user_is_me ? 'My' : $user['first_name'].'\'s')
     .' <span style="color: #444;">Favorites</span></h4>';
   $saved_render .= '<ul class="list">';
-  foreach ($my_spots as $spot) {
-    $fake_entry = array('position' => null);
+  foreach ($my_bookmarked_entries as $entry) {
+    $spot = $my_spots[$entry['spot_id']];
     $saved_render .=
-      '<li>'.Modules::listItem($fake_entry, $spot).'</li>';
+      '<li>'.Modules::listItem($entry, $spot).'</li>';
   }
   $saved_render .= '</ul>';
 }

@@ -202,7 +202,7 @@ final class Modules {
     $user = FacebookUtils::getUser();
     if ($user && !$placeholder && !$editable && $spot && $spot['name']) {
       $spot_id = $spot['id'];
-      $existing_bookmark = DataReadUtils::getAssoc($user['id'], $spot_id, 'bookmarks');
+      $existing_bookmark = DataReadUtils::getAssoc($user['id'], $entry['id'], 'bookmarks');
       $bookmark_icon_type = $existing_bookmark ? 'heart-saved.png' : 'heart.png';
       $ret .=
       '<td>'
@@ -216,7 +216,8 @@ final class Modules {
       ."<script>
        $(function() {
          $('#add-bookmark-container-".$spot_id."').click(function() {
-        var formURL = '".BASE_URL."ajax/add_assoc.php?type=bookmarks&target_id=".$spot_id."';
+        var formURL = '".BASE_URL."ajax/add_assoc.php?uid=".$user['id']
+        ."&type=bookmarks&target_id=".$entry['id']."';
         $.ajax({
           type: 'POST',
           url: formURL,

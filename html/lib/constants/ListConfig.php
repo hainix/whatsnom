@@ -63,11 +63,12 @@ abstract class ListTypes extends Enum {
 
 
 final class ListTypeConfig {
-  const ID          = 'id';
-  const LIST_NAME   = 'readable_list_name';
-  const ENTRY_NAME  = 'readable_entry_name';
-  const ICON        = 'icon';
-  const GENRE       = 'genre';
+  const ID            = 'id';
+  const LIST_NAME     = 'readable_list_name';
+  const ENTRY_NAME    = 'readable_entry_name';
+  const PLURAL_ENTRY  = 'plural_entry_name';
+  const ICON          = 'icon';
+  const GENRE         = 'genre';
 
   public static $config = array(
 
@@ -75,6 +76,7 @@ final class ListTypeConfig {
       self::ID           => ListTypes::DATE_BAR,
       self::LIST_NAME    => 'Date Bars',
       self::ENTRY_NAME   => 'Date Bar',
+      self::PLURAL_ENTRY => 'Date Bars',
       self::ICON         => 'wine',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
@@ -83,6 +85,7 @@ final class ListTypeConfig {
       self::ID           => ListTypes::HAPPY_HOUR,
       self::LIST_NAME    => 'Happy Hour',
       self::ENTRY_NAME   => 'Happy Hour Spot',
+      self::PLURAL_ENTRY => 'Happy Hour Spots',
       self::ICON         => 'beer',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
@@ -91,6 +94,7 @@ final class ListTypeConfig {
       self::ID           => ListTypes::RAMEN,
       self::LIST_NAME    => 'Ramen',
       self::ENTRY_NAME   => 'Ramen Joint',
+      self::PLURAL_ENTRY => 'Ramen Joints',
       self::ICON         => 'chopsticks',
       self::GENRE        => ListGenreTypes::FOOD,
     ),

@@ -36,11 +36,14 @@ final class DataWriteUtils {
     $sql =
       sprintf(
         "UPDATE %s SET deleted = 1 WHERE "
-        ."creator_id = %.0f AND target_id = %d limit 1",
+        ."creator_id = %.0f AND target_id = %d ",
         $type,
         $creator_id,
         $target_id
       );
+
+    $sql .= " LIMIT 1";
+
     global $link;
     $r = mysql_query($sql);
     if (!$r) {
