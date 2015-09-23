@@ -9,6 +9,7 @@ $city_id = Cities::NYC;
 $base_url = 'http://www.whatsnom.com/';
 
 $entry_id = idx($_GET, 'entry_id');
+$uid = idx($_GET, 'uid');
 if (!$entry_id || !is_numeric($entry_id)) {
   echo 'unsupported entry id '.$entry_id;
   die(1);
@@ -20,12 +21,17 @@ if (!$entry) {
   die(1);
 }
 
+$bookmark =
+  $uid
+  ? DataReadUtils::getAssoc($uid, $entry_id, 'bookmarks')
+  : null;
 $place = get_object($entry['spot_id'], 'spots');
 $list = get_object($entry['list_id'], 'lists');
 $response = array(
-  'entry' => $entry,
-  'place' => $place,
-  'list'  => $list
+  'bookmark' => $bookmark,
+  'entry'    => $entry,
+  'place'    => $place,
+  'list'     => $list
 );
 
 header('Cache-Control: no-cache, must-revalidate');
