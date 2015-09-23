@@ -1,9 +1,7 @@
 <?php
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/base.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/funcs.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/base.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
+include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/write.php';
+
 $user_id = idx($_GET, 'uid');
 $entry_id = idx($_GET, 'entry_id');
 

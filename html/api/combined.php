@@ -1,17 +1,13 @@
 <?php
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/base.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/funcs.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/constants.php';
-
-$city_id = Cities::NYC;
-$base_url = 'http://www.whatsnom.com/';
-
+include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 
 function cmpByPosition($a, $b)  {
   return strcmp($a["position"], $b["position"]);
 }
+
+// TODO - switch in the UI
+$city_id = Cities::NYC;
+
 
 // Get all lists to show on homepage
 $lists = DataReadUtils::getTopListsForCity($city_id, 10);
@@ -32,20 +28,8 @@ foreach ($lists as $list) {
   $list_id = $list['id'];
 
   // Merge render info about the list type into the response
-  $config_for_list = ListTypeConfig::$config[$list['type']];
-
-  $list_genre = $config_for_list[ListTypeConfig::GENRE];
-
-  $list['name'] = $config_for_list[ListTypeConfig::LIST_NAME];
-  $list['entry_name'] = $config_for_list[ListTypeConfig::ENTRY_NAME];
-  $list['plural_entry_name'] =
-    $config_for_list[ListTypeConfig::PLURAL_ENTRY];
-  $list['icon'] =
-    $base_url . 'icondir/'. $config_for_list[ListTypeConfig::ICON] .'.png';
-  $list['city_name'] = Cities::getName($list['city']);
-
+  $list = ApiUtils::addListConfigToList($list);
   $entries = DataReadUtils::getEntriesForList($list);
-
 
   // Parse and put the list items on the list
   $entries_keyed_by_spot_id = array();
@@ -70,7 +54,7 @@ foreach ($lists as $list) {
 
   $list['entries'] = $entries_keyed_by_spot_id;
 
-  $list_response[$list_genre]['items'][$list['id']] = $list;
+  $list_response[$list['list_genre']]['items'][$list['id']] = $list;
 }
 
 $response = array(
