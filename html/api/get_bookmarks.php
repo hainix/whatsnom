@@ -1,9 +1,6 @@
 <?php
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/base.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/funcs.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/constants.php';
+include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
+
 $user_id = idx($_GET, 'uid');
 $bookmarks = null;
 if ($user_id && is_numeric($user_id)) {
@@ -12,16 +9,25 @@ if ($user_id && is_numeric($user_id)) {
     'bookmarks'
   );
 
-  $combined_bookmarks = array();
+  $bookmarks_by_list = array();
   foreach ($users_bookmarks_assocs as $bookmark_key => $bookmark) {
     $entry_id = $bookmark['target_id'];
     $entry = get_object($entry_id, 'entries');
     $spot = get_object($entry['spot_id'], 'spots');
     $entry['list_item_thumbnail'] = $spot['profile_pic'];
     $entry['place'] = $spot;
-    $combined_bookmarks[$bookmark_key] = $entry;
+    $bookmarks_by_list[$entry['list_id']][$entry['position']] = $entry;
   }
-  $bookmarks = $combined_bookmarks;
+  $bookmarks = array();
+  foreach ($bookmarks_by_list as $bookmark_list_id => $_) {
+
+    $list = get_object($bookmark_list_id, 'lists');
+    $list = ApiUtils::addListConfigToList($list);
+    ksort($bookmarks_by_list[$bookmark_list_id]);
+    $bookmarks[$bookmark_list_id] = $list;
+    $bookmarks[$bookmark_list_id]['items'] =
+      $bookmarks_by_list[$bookmark_list_id];
+  }
 }
 
 $response = $bookmarks;

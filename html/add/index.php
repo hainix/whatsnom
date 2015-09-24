@@ -1,6 +1,8 @@
 <?php
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/page.php';
 
+$num_spots_to_show = ListTypeConfig::NUM_PER_LIST;
+
 $list_id = idx($_GET, 'l');
 $type_id = null;
 $city_id = null;
@@ -70,7 +72,7 @@ $close_icon = '<a class="x-out" href="#">x</a>';
 $search_script =
   "<script>
   jQuery(function(){
-    for (var ii = 1; ii <= 10; ii++) {
+    for (var ii = 1; ii <= ".$num_spots_to_show."; ii++) {
     (function() {
       var i = ii;
       var containerName = '#spot_' + i + '_container';
@@ -110,7 +112,7 @@ $search_script =
 </script>";
 
 $form_rows = array();
-for ($i = 1; $i <= 10; $i++) {
+for ($i = 1; $i <= $num_spots_to_show; $i++) {
   $search_input =
     '<input type="text" id="spot_query_'.$i.'" '
     .'placeholder="'. ($i == 1 ? 'Best' : '#'.$i)

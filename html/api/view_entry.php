@@ -23,6 +23,8 @@ $bookmark =
   : null;
 $place = get_object($entry['spot_id'], 'spots');
 $list = get_object($entry['list_id'], 'lists');
+$list = ApiUtils::addListConfigToList($list);
+
 $response = array(
   'bookmark' => $bookmark,
   'entry'    => $entry,

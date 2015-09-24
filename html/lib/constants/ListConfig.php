@@ -58,6 +58,12 @@ abstract class ListTypes extends Enum {
   const WINGS            = 40;
   const DATE_BAR         = 48;
   const HAPPY_HOUR       = 49;
+  const CHEAP_EATS       = 50;
+  const SPEAKEASIES      = 51;
+  const ROOFTOP_BARS     = 52;
+  const FIRST_DATE_BARS  = 53;
+  const FIRST_DATE_EATS  = 54;
+  const FANCY_DINNER_DATE  = 55;
 }
 
 
@@ -70,7 +76,66 @@ final class ListTypeConfig {
   const ICON          = 'icon';
   const GENRE         = 'genre';
 
+  const NUM_PER_LIST  = 30;
+
   public static $config = array(
+
+    ListTypes::SPEAKEASIES => array(
+      self::ID           => ListTypes::SPEAKEASIES,
+      self::LIST_NAME    => 'Speakeasies',
+      self::ENTRY_NAME   => 'Speakeasy',
+      self::PLURAL_ENTRY => 'Speakeasies',
+      self::ICON         => 'wine',
+      self::GENRE        => ListGenreTypes::DRINK,
+    ),
+    ListTypes::ASIAN => array(
+      self::ID           => ListTypes::ASIAN,
+      self::LIST_NAME    => 'Asian Food',
+      self::ENTRY_NAME   => 'Asian Spot',
+      self::PLURAL_ENTRY => 'Asian Spots',
+      self::ICON         => 'food',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
+    ListTypes::ROOFTOP_BARS => array(
+      self::ID           => ListTypes::ROOFTOP_BARS,
+      self::LIST_NAME    => 'Rooftop Bars',
+      self::ENTRY_NAME   => 'Rooftop Bar',
+      self::PLURAL_ENTRY => 'Rooftop Bars',
+      self::ICON         => 'wine',
+      self::GENRE        => ListGenreTypes::DRINK,
+    ),
+    ListTypes::FIRST_DATE_BARS => array(
+      self::ID           => ListTypes::FIRST_DATE_BARS,
+      self::LIST_NAME    => 'First Date Bars',
+      self::ENTRY_NAME   => 'First Date Bar',
+      self::PLURAL_ENTRY => 'First Date Bars',
+      self::ICON         => 'wine',
+      self::GENRE        => ListGenreTypes::DRINK,
+    ),
+    ListTypes::FIRST_DATE_EATS => array(
+      self::ID           => ListTypes::FIRST_DATE_EATS,
+      self::LIST_NAME    => 'First Date Eats',
+      self::ENTRY_NAME   => 'Casual First Date Spot',
+      self::PLURAL_ENTRY => 'Casual First Date Spots',
+      self::ICON         => 'food',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
+    ListTypes::FANCY_DINNER_DATE => array(
+      self::ID           => ListTypes::FANCY_DINNER_DATE,
+      self::LIST_NAME    => 'Fancy Dinner Date',
+      self::ENTRY_NAME   => 'Fancy Dinner Date Spot',
+      self::PLURAL_ENTRY => 'Fancy Dinner Date Spots',
+      self::ICON         => 'food',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
+    ListTypes::CHEAP_EATS => array(
+      self::ID           => ListTypes::CHEAP_EATS,
+      self::LIST_NAME    => 'Cheap Eats',
+      self::ENTRY_NAME   => 'Cheap Eats Spot',
+      self::PLURAL_ENTRY => 'Cheap Eats Spots',
+      self::ICON         => 'food',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
 
     ListTypes::DATE_BAR => array(
       self::ID           => ListTypes::DATE_BAR,

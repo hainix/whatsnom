@@ -4,6 +4,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/write.php';
 
 $user_id = idx($_GET, 'uid');
 $entry_id = idx($_GET, 'entry_id');
+$force_state = idx($_GET, 'force_state');
 
 $assoc_type = 'bookmarks';
 
@@ -22,7 +23,9 @@ $existing_assoc =
 
 
 $response = false;
-if ($existing_assoc && !$existing_assoc['deleted']) {
+if ($force_state == 'removed'
+    || ($force_state != 'added' && $existing_assoc
+        && !$existing_assoc['deleted'])) {
   DataWriteUtils::removeAssoc($user_id, $entry_id, $assoc_type);
   $response = 'removed';
 } else {

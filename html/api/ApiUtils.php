@@ -6,9 +6,12 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/base.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
 
+
 final class ApiUtils {
 
   const BASE_URL =  'http://www.whatsnom.com/';
+  const API_APC_TTL = 10000;
+  const API_SKIP_APC = false;
 
   public static function addListConfigToList($list) {
     $config_for_list = ListTypeConfig::$config[$list['type']];

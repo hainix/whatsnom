@@ -141,7 +141,7 @@ final class DataReadUtils {
     $sql =
       sprintf(
         "SELECT * FROM entries WHERE list_id = %d AND DELETED IS NULL ORDER "
-        ."BY position ASC LIMIT 10",
+        ."BY position ASC LIMIT ".ListTypeConfig::NUM_PER_LIST,
         $list['id']
       );
     return get_objects_from_sql($sql);
