@@ -25,7 +25,8 @@ if ($user_id && is_numeric($user_id)) {
     $list = ApiUtils::addListConfigToList($list);
     ksort($bookmarks_by_list[$bookmark_list_id]);
     $bookmarks[$bookmark_list_id] = $list;
-    $bookmarks[$bookmark_list_id]['items'] =
+    usort($bookmarks_by_list[$bookmark_list_id], "cmpByPosition");
+    $bookmarks[$bookmark_list_id]['entries'] =
       $bookmarks_by_list[$bookmark_list_id];
   }
 }

@@ -10,10 +10,6 @@ if ($apc_data !== false) {
   $response = unserialize($apc_data);
 } else {
 
-  function cmpByPosition($a, $b)  {
-    return (((int) $a['position']) > ((int) $b['position']));
-  }
-
   // TODO - switch in the UI
   $city_id = Cities::NYC;
 

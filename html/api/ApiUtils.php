@@ -7,6 +7,10 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
 
 
+function cmpByPosition($a, $b)  {
+  return (((int) $a['position']) > ((int) $b['position']));
+}
+
 final class ApiUtils {
 
   const BASE_URL =  'http://www.whatsnom.com/';
