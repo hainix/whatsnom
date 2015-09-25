@@ -37,7 +37,7 @@ header('content-type: application/json; charset=utf-8');
 
 // JSONP
 if (idx($_GET, 'format') == 'json') {
-  echo $_GET['callback'] . '('.json_encode($response).')';
+  echo $_GET['callback'] . '('.json_encode($response, JSON_NUMERIC_CHECK).')';
 } else {
   slog($response);
 }

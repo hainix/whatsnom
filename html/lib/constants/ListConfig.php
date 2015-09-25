@@ -2,6 +2,7 @@
 abstract class ListGenreTypes extends Enum {
   const DRINK            = 1;
   const FOOD             = 2;
+  const CUISINE          = 3;
 
   public static function getGenreFromListType($list_type) {
     return ListTypeConfig::$config[$list_type][ListTypeConfig::GENRE];
@@ -90,11 +91,19 @@ final class ListTypeConfig {
     ),
     ListTypes::ASIAN => array(
       self::ID           => ListTypes::ASIAN,
-      self::LIST_NAME    => 'Asian Food',
-      self::ENTRY_NAME   => 'Asian Spot',
-      self::PLURAL_ENTRY => 'Asian Spots',
+      self::LIST_NAME    => 'Asian',
+      self::ENTRY_NAME   => 'Asian Food',
+      self::PLURAL_ENTRY => 'Asian Food',
       self::ICON         => 'food',
-      self::GENRE        => ListGenreTypes::FOOD,
+      self::GENRE        => ListGenreTypes::CUISINE,
+    ),
+    ListTypes::INDIAN => array(
+      self::ID           => ListTypes::INDIAN,
+      self::LIST_NAME    => 'Indian',
+      self::ENTRY_NAME   => 'Indian Food',
+      self::PLURAL_ENTRY => 'Indian Food',
+      self::ICON         => 'food',
+      self::GENRE        => ListGenreTypes::CUISINE,
     ),
     ListTypes::ROOFTOP_BARS => array(
       self::ID           => ListTypes::ROOFTOP_BARS,
@@ -161,7 +170,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Ramen Joint',
       self::PLURAL_ENTRY => 'Ramen Joints',
       self::ICON         => 'chopsticks',
-      self::GENRE        => ListGenreTypes::FOOD,
+      self::GENRE        => ListGenreTypes::CUISINE,
     ),
 
   );
