@@ -54,6 +54,8 @@ if ($apc_data !== false) {
 
     $list['snippet'] = implode(array_slice($spot_names, 0, 5), ', ');
     $list['review_count'] = number_format($list_review_count);
+    $list['critic_count'] =
+      number_format($list_review_count % 5 + 1); // TODO: legitify
 
     // Sort entries by rank on list, and rekey to the positions for render
     usort($entries_keyed_by_spot_id, "cmpByPosition");
