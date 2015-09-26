@@ -1,9 +1,6 @@
 <?php
 include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 
-$city_id = Cities::NYC;
-$base_url = 'http://www.whatsnom.com/';
-
 $entry_id = idx($_GET, 'entry_id');
 $uid = idx($_GET, 'uid');
 if (!$entry_id || !is_numeric($entry_id)) {
