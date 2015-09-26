@@ -16,6 +16,8 @@ if ($user_id && is_numeric($user_id)) {
     $spot = get_object($entry['spot_id'], 'spots');
     $entry['list_item_thumbnail'] = $spot['profile_pic'];
     $entry['place'] = $spot;
+    $entry['name'] = $spot['name'];
+    $entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
     $bookmarks_by_list[$entry['list_id']][$entry['position']] = $entry;
   }
   $bookmarks = array();
