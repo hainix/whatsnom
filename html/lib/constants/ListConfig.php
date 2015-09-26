@@ -3,6 +3,7 @@ abstract class ListGenreTypes extends Enum {
   const DRINK            = 1;
   const FOOD             = 2;
   const CUISINE          = 3;
+  const ACTIVITIES       = 4;
 
   public static function getGenreFromListType($list_type) {
     return ListTypeConfig::$config[$list_type][ListTypeConfig::GENRE];
@@ -57,13 +58,13 @@ abstract class ListTypes extends Enum {
   const VEGETARIAN       = 46;
   const WINE             = 47;
   const WINGS            = 40;
-  const DATE_BAR         = 48;
-  const HAPPY_HOUR       = 49;
-  const CHEAP_EATS       = 50;
-  const SPEAKEASIES      = 51;
-  const ROOFTOP_BARS     = 52;
-  const FIRST_DATE_BARS  = 53;
-  const FIRST_DATE_EATS  = 54;
+  const DATE_BAR           = 48;
+  const HAPPY_HOUR         = 49;
+  const CHEAP_EATS         = 50;
+  const SPEAKEASIES        = 51;
+  const ROOFTOP_BARS       = 52;
+  const FIRST_DATE_IDEAS   = 53;
+  const FIRST_DATE_EATS    = 54;
   const FANCY_DINNER_DATE  = 55;
 }
 
@@ -75,6 +76,7 @@ final class ListTypeConfig {
   const ENTRY_NAME    = 'readable_entry_name';
   const PLURAL_ENTRY  = 'plural_entry_name';
   const ICON          = 'icon';
+  const COVER         = 'cover';
   const GENRE         = 'genre';
 
   const NUM_PER_LIST  = 30;
@@ -87,6 +89,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Speakeasy',
       self::PLURAL_ENTRY => 'Speakeasies',
       self::ICON         => 'wine',
+      self::COVER        => 'speakeasies.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
     ListTypes::ASIAN => array(
@@ -95,6 +98,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Asian Food',
       self::PLURAL_ENTRY => 'Asian Food',
       self::ICON         => 'food',
+      self::COVER        => 'asian.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
     ListTypes::INDIAN => array(
@@ -103,6 +107,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Indian Food',
       self::PLURAL_ENTRY => 'Indian Food',
       self::ICON         => 'food',
+      self::COVER        => 'indian.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
     ListTypes::ROOFTOP_BARS => array(
@@ -111,15 +116,17 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Rooftop Bar',
       self::PLURAL_ENTRY => 'Rooftop Bars',
       self::ICON         => 'wine',
+      self::COVER        => 'rooftop.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
-    ListTypes::FIRST_DATE_BARS => array(
-      self::ID           => ListTypes::FIRST_DATE_BARS,
-      self::LIST_NAME    => 'First Date Bars',
-      self::ENTRY_NAME   => 'First Date Bar',
-      self::PLURAL_ENTRY => 'First Date Bars',
+    ListTypes::FIRST_DATE_IDEAS => array(
+      self::ID           => ListTypes::FIRST_DATE_IDEAS,
+      self::LIST_NAME    => 'First Date Ideas',
+      self::ENTRY_NAME   => 'First Date Idea',
+      self::PLURAL_ENTRY => 'First Date Ideas',
       self::ICON         => 'wine',
-      self::GENRE        => ListGenreTypes::DRINK,
+      self::COVER        => 'firstdateideas.jpg',
+      self::GENRE        => ListGenreTypes::ACTIVITIES,
     ),
     ListTypes::FIRST_DATE_EATS => array(
       self::ID           => ListTypes::FIRST_DATE_EATS,
@@ -127,6 +134,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Casual First Date Spot',
       self::PLURAL_ENTRY => 'Casual First Date Spots',
       self::ICON         => 'food',
+      self::COVER        => 'firstdate.jpg',
       self::GENRE        => ListGenreTypes::FOOD,
     ),
     ListTypes::FANCY_DINNER_DATE => array(
@@ -135,6 +143,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Fancy Dinner Date Spot',
       self::PLURAL_ENTRY => 'Fancy Dinner Date Spots',
       self::ICON         => 'food',
+      self::COVER        => 'dinnerdate.jpg',
       self::GENRE        => ListGenreTypes::FOOD,
     ),
     ListTypes::CHEAP_EATS => array(
@@ -143,6 +152,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Cheap Eats Spot',
       self::PLURAL_ENTRY => 'Cheap Eats Spots',
       self::ICON         => 'food',
+      self::COVER        => 'cheapeats.jpg',
       self::GENRE        => ListGenreTypes::FOOD,
     ),
 
@@ -152,6 +162,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Date Bar',
       self::PLURAL_ENTRY => 'Date Bars',
       self::ICON         => 'wine',
+      self::COVER        => 'datebar.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
 
@@ -161,6 +172,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Happy Hour Spot',
       self::PLURAL_ENTRY => 'Happy Hour Spots',
       self::ICON         => 'beer',
+      self::COVER        => 'happyhour.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
 
@@ -170,6 +182,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Ramen Joint',
       self::PLURAL_ENTRY => 'Ramen Joints',
       self::ICON         => 'chopsticks',
+      self::COVER        => 'ramen.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
 

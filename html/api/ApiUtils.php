@@ -15,7 +15,7 @@ final class ApiUtils {
 
   const BASE_URL =  'http://www.whatsnom.com/';
   const API_APC_TTL = 10000;
-  const API_SKIP_APC = false; // this should always be false
+  const API_SKIP_APC = true; // this should always be false
 
   public static function addListConfigToList($list) {
     $config_for_list = ListTypeConfig::$config[$list['type']];
@@ -26,6 +26,8 @@ final class ApiUtils {
     $list['entry_name'] = $config_for_list[ListTypeConfig::ENTRY_NAME];
     $list['plural_entry_name'] =
       $config_for_list[ListTypeConfig::PLURAL_ENTRY];
+    $list['cover'] = self::BASE_URL . 'covers/'
+      . $config_for_list[ListTypeConfig::COVER];
     $list['icon'] =
       self::BASE_URL . 'icondir/'
       . $config_for_list[ListTypeConfig::ICON] .'.png';
