@@ -101,6 +101,15 @@ final class ListTypeConfig {
       self::COVER        => 'asian.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
+    ListTypes::THAI => array(
+      self::ID           => ListTypes::ASIAN,
+      self::LIST_NAME    => 'Thai',
+      self::ENTRY_NAME   => 'Thai Food',
+      self::PLURAL_ENTRY => 'Thai Food',
+      self::ICON         => 'food',
+      self::COVER        => 'thai.jpg',
+      self::GENRE        => ListGenreTypes::CUISINE,
+    ),
     ListTypes::INDIAN => array(
       self::ID           => ListTypes::INDIAN,
       self::LIST_NAME    => 'Indian',
