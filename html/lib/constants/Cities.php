@@ -27,11 +27,10 @@ abstract class Cities extends Enum {
   /* Override for short city names */
   public static function getName($id) {
     if ($id == self::SF) {
-      return 'SF';
+      return 'San Francisco';
     } else if ($id == self::NYC) {
-      return 'NYC';
+      return 'Manhattan';
     }
     return parent::getName($id);
   }
 }
-

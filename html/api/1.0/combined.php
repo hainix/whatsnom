@@ -1,7 +1,12 @@
 <?php
 include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 
-$apc_key = 'api:combined:response';
+$city_id = idx($_GET, 'city_id');
+if (!$city_id) {
+  $city_id = Cities::NYC;
+}
+
+$apc_key = 'api:combined:response:'.$city_id;
 $apc_data = false;
 if (!ApiUtils::API_SKIP_APC) {
   $apc_data = apc_fetch($apc_key);
@@ -9,9 +14,6 @@ if (!ApiUtils::API_SKIP_APC) {
 if ($apc_data !== false) {
   $response = unserialize($apc_data);
 } else {
-
-  // TODO - switch in the UI
-  $city_id = Cities::NYC;
 
   // Get all lists to show on homepage
   $lists = DataReadUtils::getTopListsForCity($city_id, 20);
@@ -49,4 +51,3 @@ if (idx($_GET, 'format') == 'json') {
 } else {
   slog($response);
 }
-
