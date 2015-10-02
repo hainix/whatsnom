@@ -32,7 +32,13 @@ if ($apc_data !== false) {
   foreach ($lists as $list) {
     $list = ApiUtils::addListDataToList($list);
     $list_response[$list['list_genre']]['items'][$list['id']] = $list;
+  }
 
+  // Remove empty categories
+  foreach ($list_response as $key => $genre_list) {
+    if (!$genre_list['items']) {
+      unset($list_response[$key]);
+    }
   }
 
   $response = array(

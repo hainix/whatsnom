@@ -20,9 +20,10 @@ if ($user_id && is_numeric($user_id)) {
     $entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
     $bookmarks_by_list[$entry['list_id']][$entry['position']] = $entry;
   }
+
+  $bookmark_count = 0;
   $bookmarks = array();
   foreach ($bookmarks_by_list as $bookmark_list_id => $_) {
-
     $list = get_object($bookmark_list_id, 'lists');
     $list = ApiUtils::addListConfigToList($list);
     ksort($bookmarks_by_list[$bookmark_list_id]);
@@ -30,10 +31,15 @@ if ($user_id && is_numeric($user_id)) {
     usort($bookmarks_by_list[$bookmark_list_id], "cmpByPosition");
     $bookmarks[$bookmark_list_id]['entries'] =
       $bookmarks_by_list[$bookmark_list_id];
+      $bookmark_count += count($bookmarks[$bookmark_list_id]['entries']);
   }
 }
 
-$response = $bookmarks;
+$response =
+  array(
+    'bookmarks' => $bookmarks,
+    'count'     => $bookmark_count
+  );
 
 header('Cache-Control: no-cache, must-revalidate');
 header('content-type: application/json; charset=utf-8');
