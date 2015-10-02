@@ -1,9 +1,9 @@
 <?php
 abstract class ListGenreTypes extends Enum {
   const DRINK            = 1;
+  const ACTIVITIES       = 4;
   const FOOD             = 2;
   const CUISINE          = 3;
-  const ACTIVITIES       = 4;
 
   public static function getGenreFromListType($list_type) {
     return ListTypeConfig::$config[$list_type][ListTypeConfig::GENRE];
@@ -23,7 +23,7 @@ abstract class ListTypes extends Enum {
   const CHINESE          = 8;
   //const CREPE            = 9;
   const DIM_SUM          = 10;
-  const DRINK            = 11;
+  //const DRINK            = 11;
   const FAST_FOOD        = 41;
   const FRENCH           = 12;
   const GERMAN           = 13;
@@ -242,6 +242,14 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Malaysian Food',
       self::PLURAL_ENTRY => 'Malaysian Food',
       self::COVER        => 'malaysian.jpg',
+      self::GENRE        => ListGenreTypes::CUISINE,
+    ),
+    ListTypes::MEXICAN => array(
+      self::ID           => ListTypes::MEXICAN,
+      self::LIST_NAME    => 'Mexican',
+      self::ENTRY_NAME   => 'Mexican Food',
+      self::PLURAL_ENTRY => 'Mexican Food',
+      self::COVER        => 'mexican.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
     ListTypes::PERUVIAN => array(
