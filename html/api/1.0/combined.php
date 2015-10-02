@@ -16,7 +16,7 @@ if ($apc_data !== false) {
 } else {
 
   // Get all lists to show on homepage
-  $lists = DataReadUtils::getTopListsForCity($city_id, 20);
+  $lists = DataReadUtils::getTopListsForCity($city_id, 50);
 
   // Start with the Genres
   $list_response = array();
