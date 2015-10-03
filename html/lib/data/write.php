@@ -156,8 +156,9 @@ return false;
       $sql =
         sprintf(
           "INSERT IGNORE into spots (name, rating, address, phone, profile_pic, "
-          ."yelp_id, type, review_count, last_updated, city_id, snippet, latitude, longitude, neighborhoods, cross_streets) "
-          ."values ('%s', %d, '%s', '%s', '%s', '%s', %d, %d, %d, %d, '%s', '%s', '%s', '%s', '%s')",
+          ."yelp_id, type, review_count, last_updated, city_id, snippet, latitude, "
+          ."longitude, neighborhoods, cross_streets, categories) "
+          ."values ('%s', %d, '%s', '%s', '%s', '%s', %d, %d, %d, %d, '%s', '%s', '%s', '%s', '%s', '%s')",
           DataReadUtils::cln($info['name']),
           $info['rating'],
           DataReadUtils::cln($info['address']),
@@ -172,7 +173,8 @@ return false;
           $info['lat'],
           $info['long'],
           DataReadUtils::cln($info['neighborhoods']),
-          DataReadUtils::cln($info['cross_streets'])
+          DataReadUtils::cln($info['cross_streets']),
+          DataReadUtils::cln($info['categories'])
         );
       $r = mysql_query($sql);
       if (!$r) {
@@ -194,8 +196,9 @@ return false;
       $sql =
         sprintf(
           "UPDATE spots set name = '%s', rating = %d, address = '%s', "
-          ."phone = '%s', profile_pic = '%s', review_count = %d, "
-          ."last_updated = %d "
+          ."phone = '%s', profile_pic = '%s', review_count = %d,"
+          ." categories = '%s',"
+          ." last_updated = %d "
           ."where id = %d  LIMIT 1",
           DataReadUtils::cln($info['name']),
           $info['rating'],
@@ -203,6 +206,7 @@ return false;
           $info['phone'],
           $info['profile_pic'],
           $info['review_count'],
+          DataReadUtils::cln($info['categories']),
           time(),
           $spot_id
         );

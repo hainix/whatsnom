@@ -71,7 +71,15 @@ function get_yelp_business_info($name, $info = null) {
   $data['snippet'] = property_exists($info, 'snippet_text')
     ? $info->snippet_text
     : null;
-
+  if (property_exists($info, 'categories')) {
+    $category_array = array();
+    foreach ($info->categories as $category) {
+      $category_array[] = head($category);
+    }
+    $data['categories'] = implode($category_array, ', ');
+  } else {
+    $data['categories'] = null;
+  }
 
   $image =
     property_exists($info, 'image_url')

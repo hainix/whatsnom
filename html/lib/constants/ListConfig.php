@@ -80,7 +80,7 @@ final class ListTypeConfig {
   const COVER         = 'cover';
   const GENRE         = 'genre';
 
-  const NUM_PER_LIST  = 30;
+  const NUM_PER_LIST  = 100;
 
   public static $config = array(
 

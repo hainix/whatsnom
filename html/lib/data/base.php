@@ -1,5 +1,5 @@
 <?php
-define('APC_TTL', 1000);
+define('APC_TTL', 5000);
 define('SKIP_APC_CACHE', false);
 
 define('SEC_IN_DAY', 86400);
