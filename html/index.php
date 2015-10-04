@@ -75,6 +75,22 @@ if (!$primary_list || !$entries || !$spots) {
       .'</div>';
   }
   $list_render = $my_list_edit . '<ul class="list">';
+
+/*
+// Used for baseline ranking
+$spots = array();
+foreach ($entries as $entry) {
+  $spots[$entry['spot_id']] = get_object($entry['spot_id'], 'spots');
+}
+$ordered = array();
+foreach ($spots as $spot_id => $spot) {
+  $ordering = (1000 * $spot['rating']) + $spot['review_count'];
+  $ordered[$ordering] = $spot['name'];
+}
+krsort($ordered);
+slog($ordered);
+*/
+
   foreach ($entries as $entry) {
     $list_render .=
       '<li>'.Modules::listItem($entry, $spots[$entry['spot_id']]).'</li>';

@@ -66,7 +66,8 @@ abstract class ListTypes extends Enum {
   const FIRST_DATE_IDEAS   = 53;
   const FIRST_DATE_EATS    = 54;
   const FANCY_DINNER_DATE  = 55;
-  const MICHELIN_STARS     = 56;
+  const MICHELIN_1_STAR         = 56;
+  const MICHELIN_2_AND_3_STARS     = 57;
 }
 
 
@@ -92,11 +93,19 @@ final class ListTypeConfig {
       self::COVER        => 'speakeasies.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
-    ListTypes::MICHELIN_STARS => array(
-      self::ID           => ListTypes::MICHELIN_STARS,
-      self::LIST_NAME    => 'Michelin Stars',
+    ListTypes::MICHELIN_1_STAR => array(
+      self::ID           => ListTypes::MICHELIN_1_STAR,
+      self::LIST_NAME    => 'Michelin 2016: 1 Star',
       self::ENTRY_NAME   => 'Michelin Star Restaurant',
       self::PLURAL_ENTRY => 'Michelin Star Restaurants',
+      self::COVER        => 'michelinone.jpg',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
+    ListTypes::MICHELIN_2_AND_3_STARS => array(
+      self::ID           => ListTypes::MICHELIN_2_AND_3_STARS,
+      self::LIST_NAME    => 'Michelin 2016: 2 and 3 Stars',
+      self::ENTRY_NAME   => 'Michelin 2 and 3 Star Restaurant',
+      self::PLURAL_ENTRY => 'Michelin 2 and 3 Star Restaurants',
       self::COVER        => 'michelin.jpg',
       self::GENRE        => ListGenreTypes::FOOD,
     ),
@@ -250,6 +259,14 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Mexican Food',
       self::PLURAL_ENTRY => 'Mexican Food',
       self::COVER        => 'mexican.jpg',
+      self::GENRE        => ListGenreTypes::CUISINE,
+    ),
+    ListTypes::MEDITERRANEAN => array(
+      self::ID           => ListTypes::MEDITERRANEAN,
+      self::LIST_NAME    => 'Mediterranean',
+      self::ENTRY_NAME   => 'Mediterranean Food',
+      self::PLURAL_ENTRY => 'Mediterranean Food',
+      self::COVER        => 'mediterranean.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
     ListTypes::PERUVIAN => array(

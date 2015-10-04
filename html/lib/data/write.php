@@ -198,6 +198,10 @@ return false;
           "UPDATE spots set name = '%s', rating = %d, address = '%s', "
           ."phone = '%s', profile_pic = '%s', review_count = %d,"
           ." categories = '%s',"
+          ." latitude = '%s',"
+          ." longitude = '%s',"
+          ." neighborhoods = '%s',"
+          ." cross_streets = '%s',"
           ." last_updated = %d "
           ."where id = %d  LIMIT 1",
           DataReadUtils::cln($info['name']),
@@ -207,6 +211,10 @@ return false;
           $info['profile_pic'],
           $info['review_count'],
           DataReadUtils::cln($info['categories']),
+          $info['lat'],
+          $info['long'],
+          DataReadUtils::cln($info['neighborhoods']),
+          DataReadUtils::cln($info['cross_streets']),
           time(),
           $spot_id
         );

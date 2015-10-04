@@ -113,6 +113,7 @@ final class DataReadUtils {
     $sql =
       sprintf(
         "SELECT * FROM lists WHERE city = %d"
+        ." AND type != 0"
         ." AND deleted IS NULL ORDER BY upvotes DESC LIMIT %d",
         $city_id,
         $limit
