@@ -12,7 +12,7 @@ final class DataReadUtils {
     return false;
   }
 
-  public function getAssoc($creator_id, $target_id, $type) {
+  public static function getAssoc($creator_id, $target_id, $type) {
     $sql =
       sprintf(
         "SELECT * FROM %s WHERE creator_id = %.0f AND target_id = %d"
@@ -36,7 +36,7 @@ final class DataReadUtils {
     return get_objects_from_sql($sql);
   }
 
-  public function getAllOutgoingAssocs($creator, $type, $limit = 500) {
+  public static function getAllOutgoingAssocs($creator, $type, $limit = 500) {
     if (!self::isSupportedAssoc($type)) {
       return false;
     }

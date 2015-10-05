@@ -1,4 +1,5 @@
 <?php
+include_once  $_SERVER['DOCUMENT_ROOT'].'/phpThumb/phpThumb.config.php';
 
 final class ImageUtils {
 
@@ -16,18 +17,17 @@ final class ImageUtils {
   public static function resizeCroppedSrc($src,  $dimensions) {
     $width = $dimensions['width'];
     $height = idx($dimensions, 'height');
-    //$src= rawurlencode($src);
-    //$src = urlencode($src);
-    $ret =
-      BASE_URL.'thmb/phpThumb.php?src='.$src;
-      //.'&zc=1';
+    $ret = rawurlencode($src);
+
     if ($dimensions['width']) {
       $ret .= '&w='.$width;
     }
     if ($dimensions['height']) {
       $ret .= '&h='.$height;
     }
-    return $ret;
+    $ret .= '&zc=1';
+
+    return phpThumbURL('src='.$ret, '/phpThumb/phpThumb.php');
   }
 
   public static function resizeSrc($src, $dimensions) {

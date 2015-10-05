@@ -5,7 +5,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/funcs.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/base.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
-
+include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ImageUtils.php';
 
 function cmpByPosition($a, $b)  {
   return (((int) $a['position']) > ((int) $b['position']));
@@ -28,9 +28,6 @@ final class ApiUtils {
       $config_for_list[ListTypeConfig::PLURAL_ENTRY];
     $list['cover'] = self::BASE_URL . 'covers/'
       . $config_for_list[ListTypeConfig::COVER];
-    $list['icon'] =
-      self::BASE_URL . 'icondir/'
-      . $config_for_list[ListTypeConfig::ICON] .'.png';
     $list['city_name'] = Cities::getName($list['city']);
     return $list;
   }
@@ -53,7 +50,12 @@ final class ApiUtils {
       $new_entry['place'] = $spot;
       $new_entry['name'] = $spot['name'];
       $new_entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
-      $new_entry['list_item_thumbnail'] = $spot['profile_pic'];
+      $src =
+        ImageUtils::resizeCroppedSrc(
+          $spot['profile_pic'],
+          array('width' => 450, 'height' =>150)
+        );
+      $new_entry['list_item_thumbnail'] = BASE_URL.$src;
       $entries_keyed_by_spot_id[$entry['spot_id']] = $new_entry;
       $spot_names[] = $spot['name'];
       $list_review_count += (int) $spot['review_count'];
