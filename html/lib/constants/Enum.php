@@ -27,6 +27,9 @@ abstract class Enum {
       return null;
     }
     $keys = array_flip(self::getConstants());
+    if (!isset($keys[$value])) {
+      return null;
+    }
     return self::renderConstant($keys[$value]);
   }
 

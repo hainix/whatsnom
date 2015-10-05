@@ -2,7 +2,7 @@
 
 final class YelpUtils {
   const YELP_BASE = 'http://www.yelp.com/';
-  public function renderYelpLink($spot, $text = null) {
+  public static function renderYelpLink($spot, $text = null) {
     $text = $text ?: idx($spot, 'name');
     if (!$text) {
       return null;
@@ -18,7 +18,7 @@ final class YelpUtils {
     return self::YELP_BASE.'biz/'.$handle;
   }
 
-  public function renderYelpStars($spot) {
+  public static function renderYelpStars($spot) {
     if (!idx($spot, 'rating')) {
       return null;
     }

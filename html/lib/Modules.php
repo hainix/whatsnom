@@ -135,7 +135,7 @@ final class Modules {
   }
 
   public static function listItem($entry, $spot, $placeholder = false, $editable = false) {
-    if ($spot['last_updated']
+    if (idx($spot, 'last_updated')
         && $spot['last_updated'] + (SEC_IN_DAY * 3) < time()) {
       DataWriteUtils::updateSpot($spot['id']);
     }

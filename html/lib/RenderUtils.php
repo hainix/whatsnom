@@ -2,11 +2,11 @@
 
 final class RenderUtils {
 
-  public function renderLink($text, $link, $extras = array()) {
+  public static function renderLink($text, $link, $extras = array()) {
     return self::_renderLink($text, $link, true, $extras);
   }
 
-  public function renderExternalLink($text, $link, $extras = array()) {
+  public static function renderExternalLink($text, $link, $extras = array()) {
     $extras['target'] = idx($extras, 'target', '_blank');
     return self::_renderLink($text, $link, false, $extras);
   }
@@ -24,7 +24,7 @@ final class RenderUtils {
     return '<a href="'.$link.'" '.$extra.'>'.$text.'</a>';
   }
 
-  public function renderSelectOptions($options, $default = null, $blank_option = '-') {
+  public static function renderSelectOptions($options, $default = null, $blank_option = '-') {
     $ret = $blank_option ? '<option value="">'.$blank_option.'</option>' : '';
     foreach ($options as $value => $key) {
       $ret .= '<option value="'.$key.'" ';
@@ -36,7 +36,7 @@ final class RenderUtils {
     return $ret;
   }
 
-  public function noQuotes($string) {
+  public static function noQuotes($string) {
     return str_replace('"', '', $string);
   }
 

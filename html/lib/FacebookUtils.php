@@ -28,7 +28,7 @@ if ($uid) {
 }
 
 final class FacebookUtils {
-  function getUser() {
+  public static function getUser() {
     global $fb_user;
     if ($fb_user && idx($fb_user, 'id')) {
       return self::addOrFetchUserFromFBUser($fb_user);
@@ -87,37 +87,37 @@ final class FacebookUtils {
     return $db_user;
   }
 
-  function getLoginURL() {
+  public static function getLoginURL() {
     global $facebook;
     return $facebook->getLoginUrl(
     );
   }
 
-  function getLogoutURL($params = array()) {
+  public static function getLogoutURL($params = array()) {
     global $facebook;
     return $facebook->getLogoutUrl($params);
   }
 
-  function getAppID() {
+  public static function getAppID() {
     return FB_APP_ID;
   }
 
-  public function renderLikeButton() {
+  public static function renderLikeButton() {
     return
       '<div class="fb-like" data-href="https://www.whatsnom.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>';
   }
 
-  function get_fb_session() {
+  public static function get_fb_session() {
     global $session;
     return $session ? json_encode($session) : null;
   }
 
-  function render_fb_comments($url, $posts = 20, $width = 550) {
+  public static function render_fb_comments($url, $posts = 20, $width = 550) {
     return
       '<div class="fb-comments" data-href="'.$url.'" data-num-posts="'.$posts.'" data-width="'.$width.'"></div>';
   }
 
-  function render_fb_like($url, $send_button = true) {
+  public static function render_fb_like($url, $send_button = true) {
     return
       '<div class="fb-like-container">'
       .'<fb:like href="'.$url.'" send="'.$send_button.'" layout="button_count" width="100"'
@@ -125,7 +125,7 @@ final class FacebookUtils {
       .'</div>';
   }
 
-  function render_fb_like_box($url) {
+  public static function render_fb_like_box($url) {
     return
       '<div style="margin-right: 15px;">'
       .'<fb:like href="'.$url.'" send="false" layout="box_count" width="80"'
@@ -133,23 +133,23 @@ final class FacebookUtils {
   }
 
 
-  function render_wide_fb_like($url) {
+  public static function render_wide_fb_like($url) {
     return
       '<div class="fb-like" data-href="'.$url.'" data-send="true" data-width="600" data-show-faces="false"></div>';
   }
 
-  function renderTwitterBox($url) {
+  public static function renderTwitterBox($url) {
     return
       '<a href="https://twitter.com/share" class="twitter-share-button" data-url="'.$url.'">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>';
   }
 
-  function render_fb_send($url) {
+  public static function render_fb_send($url) {
     return
       '<div class="fb-send" data-href="'.$url.'" data-font="arial"></div>';
   }
 
-  function render_share_box($url = null, $two_rows = false) {
+  public static function render_share_box($url = null, $two_rows = false) {
     if (!$url) {
       $url = BASE_URL;
     }
@@ -172,4 +172,3 @@ final class FacebookUtils {
 
 
 ?>
-
