@@ -13,6 +13,7 @@ function cmpByPosition($a, $b)  {
 
 final class ApiUtils {
 
+  const PROFILE_IMAGE_TYPE = 'SMALLER'; // ORIGINAL, SMALLER, PHPTHUMB
   const BASE_URL =  'http://www.whatsnom.com/';
   const API_APC_TTL = 10000;
   const API_SKIP_APC = false; // this should always be false
@@ -50,12 +51,26 @@ final class ApiUtils {
       $new_entry['place'] = $spot;
       $new_entry['name'] = $spot['name'];
       $new_entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
-      $src =
-        ImageUtils::resizeCroppedSrc(
-          $spot['profile_pic'],
-          array('width' => 450, 'height' =>150)
-        );
-      $new_entry['list_item_thumbnail'] = BASE_URL.$src;
+
+      $src = $spot['profile_pic'];
+      if (self::PROFILE_IMAGE_TYPE == 'PHPTHUMB') {
+        $src = $spot['profile_pic'];
+        $src =
+          ImageUtils::resizeCroppedSrc(
+            $src,
+            array('width' => 450, 'height' =>150)
+          );
+        $src = BASE_URL.$src;
+      } else if (self::PROFILE_IMAGE_TYPE == 'SMALLER') {
+        if (stripos($spot['profile_pic'], 'yelpcdn')
+            && stripos($spot['profile_pic'], 'o.jpg')) {
+          $src = str_replace('o.jpg', 'l.jpg', $spot['profile_pic']);
+        }
+      } else {
+        // Default to original image
+      }
+
+      $new_entry['list_item_thumbnail'] = $src;
       $entries_keyed_by_spot_id[$entry['spot_id']] = $new_entry;
       $spot_names[] = $spot['name'];
       $list_review_count += (int) $spot['review_count'];

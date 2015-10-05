@@ -25,7 +25,7 @@ final class DataReadUtils {
     return get_object_from_sql($sql);
   }
 
-  public function getAllBookmarksForUser($creator, $limit = 500) {
+  public static function getAllBookmarksForUser($creator, $limit = 500) {
     $sql =
       sprintf(
         "SELECT * FROM bookmarks WHERE creator_id = %.0f "
@@ -51,7 +51,7 @@ final class DataReadUtils {
     return get_objects_from_sql($sql);
   }
 
-  public function getGenericSpotsForQuery($query, $limit = 10) {
+  public static function getGenericSpotsForQuery($query, $limit = 10) {
     $sql =
       sprintf(
         "SELECT * FROM spots WHERE type = %d AND city_id = %d "
@@ -67,7 +67,7 @@ final class DataReadUtils {
     return get_objects_from_sql($sql);
   }
 
-  public function getListsForQuery($query, $limit = 1) {
+  public static function getListsForQuery($query, $limit = 1) {
     $sql =
       sprintf(
         "SELECT * FROM lists WHERE type = %d AND city = %d "
@@ -82,7 +82,7 @@ final class DataReadUtils {
       : get_objects_from_sql($sql);
   }
 
-  public function getAllListsForCreator($user, $limit = 500) {
+  public static function getAllListsForCreator($user, $limit = 500) {
     $sql =
       sprintf(
         "SELECT * FROM lists WHERE creator_id = %.0f "
@@ -109,7 +109,7 @@ final class DataReadUtils {
     return get_object_from_sql($sql);
   }
 
-  public function getTopListsForCity($city_id, $limit = 1) {
+  public static function getTopListsForCity($city_id, $limit = 1) {
     $sql =
       sprintf(
         "SELECT * FROM lists WHERE city = %d"
@@ -124,7 +124,7 @@ final class DataReadUtils {
       : get_objects_from_sql($sql);
   }
 
-  public function getRecentListsForCity($city_id, $limit = 1) {
+  public static function getRecentListsForCity($city_id, $limit = 1) {
     $sql =
       sprintf(
         "SELECT * FROM lists WHERE city = %d"
@@ -138,7 +138,7 @@ final class DataReadUtils {
       : get_objects_from_sql($sql);
   }
 
-  public function getEntriesForList($list) {
+  public static function getEntriesForList($list) {
     $sql =
       sprintf(
         "SELECT * FROM entries WHERE list_id = %d AND DELETED IS NULL ORDER "
@@ -148,7 +148,7 @@ final class DataReadUtils {
     return get_objects_from_sql($sql);
   }
 
-  public function getEntryForListAndSpot($list, $spot) {
+  public static function getEntryForListAndSpot($list, $spot) {
     $sql =
       sprintf(
         "SELECT * FROM entries WHERE list_id = %d AND spot_id = %d AND DELETED IS NULL LIMIT 1",
@@ -158,7 +158,7 @@ final class DataReadUtils {
     return get_object_from_sql($sql);
   }
 
-  public function getSpotsFromHandles($handles) {
+  public static function getSpotsFromHandles($handles) {
     $sql = sprintf(
       "SELECT * FROM spots WHERE yelp_id in ('%s') AND DELETED IS NULL "
       ."LIMIT %d",
