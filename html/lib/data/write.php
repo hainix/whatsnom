@@ -106,7 +106,7 @@ return false;
     return $list_id;
   }
 
-  function addEntryToList($list_id, $position, $spot_id, $tip) {
+  public static function addEntryToList($list_id, $position, $spot_id, $tip) {
     if (!$list_id || !$position || !$spot_id) {
       slog('trying to add entry with null params');
       return null;
@@ -134,7 +134,7 @@ return false;
     return true;
   }
 
-  function addNewSpot($yelp_id, $type_id = null, $city_id = null, $debug = false) {
+  public static function addNewSpot($yelp_id, $type_id = null, $city_id = null, $debug = false) {
     $existing_spot = get_object_from_sql(
       sprintf(
         "SELECT * from spots where yelp_id = '%s' AND deleted is null LIMIT 1",
@@ -187,7 +187,7 @@ return false;
     return true;
   }
 
-  function updateSpot($spot_id) {
+  public static function updateSpot($spot_id) {
     $spot = get_object($spot_id, 'spots');
     $yelp_id = $spot['yelp_id'];
     $info = get_yelp_business_info($yelp_id);

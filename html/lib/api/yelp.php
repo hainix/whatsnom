@@ -56,12 +56,14 @@ function get_yelp_business_info($name, $info = null) {
   $data['city'] = $location && $location->city
     ? $location->city
     : null;
-  $data['neighborhoods'] = $location && $location->neighborhoods
-    ? implode($location->neighborhoods, ', ')
-    : null;
-  $data['cross_streets'] = $location && $location->cross_streets
-    ? $location->cross_streets
-    : null;
+  $data['neighborhoods'] =
+    $location && property_exists($location, 'neighborhoods')
+      ? implode($location->neighborhoods, ', ')
+      : null;
+  $data['cross_streets'] =
+    $location && property_exists($location, 'cross_streets')
+      ? $location->cross_streets
+      : null;
   $data['lat'] = $location && $location->coordinate
     ? $location->coordinate->latitude
     : null;

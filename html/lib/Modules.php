@@ -200,7 +200,7 @@ final class Modules {
     $ret .= '</td>';
 
     $user = FacebookUtils::getUser();
-    if ($user && !$placeholder && !$editable && $spot && $spot['name']) {
+    if ($user && idx($user, 'id') && !$placeholder && !$editable && $spot && $spot['name'] && idx($spot, 'id') && $entry && idx($entry, 'id')) {
       $spot_id = $spot['id'];
       $existing_bookmark = DataReadUtils::getAssoc($user['id'], $entry['id'], 'bookmarks');
       $bookmark_icon_type = $existing_bookmark ? 'heart-saved.png' : 'heart.png';
