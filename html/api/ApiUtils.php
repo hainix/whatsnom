@@ -16,7 +16,7 @@ final class ApiUtils {
   const PROFILE_IMAGE_TYPE = 'SMALLER'; // ORIGINAL, SMALLER, PHPTHUMB
   const BASE_URL =  'http://www.whatsnom.com/';
   const API_APC_TTL = 10000;
-  const API_SKIP_APC = false; // this should always be false
+  const API_SKIP_APC = true; // this should always be false
 
   public static function addListConfigToList($list) {
     $config_for_list = ListTypeConfig::$config[$list['type']];

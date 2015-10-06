@@ -173,12 +173,28 @@ final class ListTypeConfig {
       self::COVER        => 'cheesesteak.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
+    ListTypes::CAFE => array(
+      self::ID           => ListTypes::CAFE,
+      self::LIST_NAME    => 'Cafés',
+      self::ENTRY_NAME   => 'Café',
+      self::PLURAL_ENTRY => 'Cafés',
+      self::COVER        => 'cafe.jpg',
+      self::GENRE        => ListGenreTypes::CUISINE,
+    ),
     ListTypes::DIM_SUM => array(
       self::ID           => ListTypes::DIM_SUM,
       self::LIST_NAME    => 'Dim Sum',
       self::ENTRY_NAME   => 'Dim Sum',
       self::PLURAL_ENTRY => 'Dim Sum',
       self::COVER        => 'dimsum.jpg',
+      self::GENRE        => ListGenreTypes::CUISINE,
+    ),
+    ListTypes::CHINESE => array(
+      self::ID           => ListTypes::CHINESE,
+      self::LIST_NAME    => 'Chinese',
+      self::ENTRY_NAME   => 'Chinese Food',
+      self::PLURAL_ENTRY => 'Chinese Food',
+      self::COVER        => 'chinese.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
     ListTypes::FRENCH => array(

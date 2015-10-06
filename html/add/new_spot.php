@@ -106,7 +106,6 @@ if ($api_response && $api_response->businesses) {
           YelpUtils::getYelpURLForHandle($business['yelp_id'])
         )
         .'</h4>'
-        .'<img class="rating-stars" src="'.$business['rating_image'].'" />'
         .$business['street_address']
         .'</td>'
         .'</tr>';
@@ -129,5 +128,3 @@ $page
 ->setType(PageTypes::DIALOG)
 ->setContent($content)
 ->render();
-
-
