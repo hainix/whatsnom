@@ -1,4 +1,6 @@
 <?php
+
+// These can be renumbered for ordering on the list
 abstract class ListGenreTypes extends Enum {
   const DRINK            = 1;
   const ACTIVITIES       = 2;
@@ -10,6 +12,7 @@ abstract class ListGenreTypes extends Enum {
   }
 }
 
+// Shouldn't renumber these
 abstract class ListTypes extends Enum {
   const ASIAN            = 1;
   const BARBEQUE         = 2;
@@ -68,6 +71,7 @@ abstract class ListTypes extends Enum {
   const FANCY_DINNER_DATE  = 55;
   const MICHELIN_1_STAR         = 56;
   const MICHELIN_2_AND_3_STARS     = 57;
+  const PARENTS_DINNER     = 58;
 }
 
 
@@ -92,6 +96,22 @@ final class ListTypeConfig {
       self::PLURAL_ENTRY => 'Speakeasies',
       self::COVER        => 'speakeasies.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
+    ),
+    ListTypes::PARENTS_DINNER => array(
+      self::ID           => ListTypes::PARENTS_DINNER,
+      self::LIST_NAME    => "Parent's Dinner",
+      self::ENTRY_NAME   => "Parent's Dinner",
+      self::PLURAL_ENTRY => "Parent's Dinner",
+      self::COVER        => 'parents.jpg',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
+    ListTypes::DESSERT => array(
+      self::ID           => ListTypes::DESSERT,
+      self::LIST_NAME    => 'Dessert',
+      self::ENTRY_NAME   => 'Dessert Spot',
+      self::PLURAL_ENTRY => 'Dessert Spots',
+      self::COVER        => 'dessert.jpg',
+      self::GENRE        => ListGenreTypes::FOOD,
     ),
     ListTypes::MICHELIN_1_STAR => array(
       self::ID           => ListTypes::MICHELIN_1_STAR,
@@ -157,14 +177,7 @@ final class ListTypeConfig {
       self::COVER        => 'cajun.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
-    ListTypes::DESSERT => array(
-      self::ID           => ListTypes::DESSERT,
-      self::LIST_NAME    => 'Dessert',
-      self::ENTRY_NAME   => 'Dessert Spot',
-      self::PLURAL_ENTRY => 'Dessert Spots',
-      self::COVER        => 'dessert.jpg',
-      self::GENRE        => ListGenreTypes::FOOD,
-    ),
+
     ListTypes::CHEESESTEAK => array(
       self::ID           => ListTypes::CHEESESTEAK,
       self::LIST_NAME    => 'Cheesesteak',
@@ -362,7 +375,7 @@ final class ListTypeConfig {
       self::LIST_NAME    => 'Steak',
       self::ENTRY_NAME   => 'Steakhouse',
       self::PLURAL_ENTRY => 'Steakhouses',
-      self::COVER        => 'steakhouse.jpg',
+      self::COVER        => 'steak.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
     ListTypes::SUSHI => array(
