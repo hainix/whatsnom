@@ -1,9 +1,9 @@
 <?php
 abstract class ListGenreTypes extends Enum {
   const DRINK            = 1;
-  const ACTIVITIES       = 4;
-  const FOOD             = 2;
-  const CUISINE          = 3;
+  const ACTIVITIES       = 2;
+  const FOOD             = 3;
+  const CUISINE          = 4;
 
   public static function getGenreFromListType($list_type) {
     return ListTypeConfig::$config[$list_type][ListTypeConfig::GENRE];
@@ -95,7 +95,7 @@ final class ListTypeConfig {
     ),
     ListTypes::MICHELIN_1_STAR => array(
       self::ID           => ListTypes::MICHELIN_1_STAR,
-      self::LIST_NAME    => 'Michelin 2016: 1 Star',
+      self::LIST_NAME    => 'Michelin: 1 Star',
       self::ENTRY_NAME   => 'Michelin Star Restaurant',
       self::PLURAL_ENTRY => 'Michelin Star Restaurants',
       self::COVER        => 'michelinone.jpg',
@@ -103,7 +103,7 @@ final class ListTypeConfig {
     ),
     ListTypes::MICHELIN_2_AND_3_STARS => array(
       self::ID           => ListTypes::MICHELIN_2_AND_3_STARS,
-      self::LIST_NAME    => 'Michelin 2016: 2 and 3 Stars',
+      self::LIST_NAME    => 'Michelin: 2 & 3 Stars',
       self::ENTRY_NAME   => 'Michelin 2 and 3 Star Restaurant',
       self::PLURAL_ENTRY => 'Michelin 2 and 3 Star Restaurants',
       self::COVER        => 'michelin.jpg',

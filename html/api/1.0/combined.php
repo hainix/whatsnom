@@ -41,8 +41,18 @@ if ($apc_data !== false) {
     }
   }
 
+  $supported_cities = array(Cities::SF, Cities::NYC);
+  $cities = array();
+  foreach ($supported_cities as $supported_city_id) {
+    $cities[] = array(
+      'id'    => $supported_city_id,
+      'label' => Cities::getName($supported_city_id)
+    );
+  }
+
   $response = array(
-    'lists'     => $list_response,
+    'cities'    => $cities,
+    'lists'     => $list_response
   );
 
   apc_store($apc_key, serialize($response), ApiUtils::API_APC_TTL);
