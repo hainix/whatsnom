@@ -72,6 +72,7 @@ abstract class ListTypes extends Enum {
   const MICHELIN_1_STAR         = 56;
   const MICHELIN_2_AND_3_STARS     = 57;
   const PARENTS_DINNER     = 58;
+  const PICKUP_BARS       = 59;
 }
 
 
@@ -424,6 +425,14 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Wine Bar',
       self::PLURAL_ENTRY => 'Wine Bars',
       self::COVER        => 'wine.jpg',
+      self::GENRE        => ListGenreTypes::DRINK,
+    ),
+    ListTypes::PICKUP_BARS => array(
+      self::ID           => ListTypes::PICKUP_BARS,
+      self::LIST_NAME    => 'Pickup Bars',
+      self::ENTRY_NAME   => 'Pickup Bar',
+      self::PLURAL_ENTRY => 'Pickup Bars',
+      self::COVER        => 'pickup.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
     ListTypes::WINGS => array(
