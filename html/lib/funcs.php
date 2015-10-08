@@ -1,5 +1,6 @@
 <?php
 
+
 function shuffle_assoc($list) {
   if (!is_array($list)) return $list;
 
@@ -10,7 +11,7 @@ function shuffle_assoc($list) {
     $random[$key] = $list[$key];
   }
   return $random;
-  }
+}
 
 function array_sort($array, $on, $order=SORT_ASC) {
   $new_array = array();

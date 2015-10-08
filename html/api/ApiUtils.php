@@ -33,6 +33,17 @@ final class ApiUtils {
     return $list;
   }
 
+  public static function getSpotFieldsNeededForListView() {
+    return array(
+      'latitude',
+      'longitude',
+      //'name',
+      'neighborhoods',
+      //'profile_pic',
+      'categories',
+    );
+  }
+
   public static function addListDataToList($list) {
     $list_id = $list['id'];
 
@@ -48,10 +59,8 @@ final class ApiUtils {
       $spot = get_object($entry['spot_id'], 'spots');
       $spot['city_name'] = Cities::getName($spot['city_id']);
       $new_entry = $entry;
-      $new_entry['place'] = $spot;
       $new_entry['name'] = $spot['name'];
-      $new_entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
-
+      //$new_entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
       $src = $spot['profile_pic'];
       if (self::PROFILE_IMAGE_TYPE == 'PHPTHUMB') {
         $src = $spot['profile_pic'];
@@ -69,8 +78,15 @@ final class ApiUtils {
       } else {
         // Default to original image
       }
-
       $new_entry['list_item_thumbnail'] = $src;
+
+      // Only essential fields to display in the list view are
+      // sent back with the spot.
+      $new_entry['place'] =
+        array_select_keys(
+          $spot,
+          self::getSpotFieldsNeededForListView()
+        );
       $entries_keyed_by_spot_id[$entry['spot_id']] = $new_entry;
       $spot_names[] = $spot['name'];
       $list_review_count += (int) $spot['review_count'];

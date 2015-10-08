@@ -3,6 +3,8 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 
 $user_id = idx($_GET, 'uid');
 $bookmarks = null;
+$bookmark_count = null;
+
 if ($user_id && is_numeric($user_id)) {
   $users_bookmarks_assocs = DataReadUtils::getAllOutgoingAssocs(
     array('id' => $user_id),
