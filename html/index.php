@@ -47,7 +47,7 @@ $my_list_edit = null;
 $big_add_list_message = null;
 if (!$primary_list || !$entries || !$spots) {
   $yelp_list_render = '';
-  if (is_admin()) {
+  if (false && is_admin()) {
     $yelp_list_render .= '<h3 align="center">FALLBACK QUERY</h3><br/><hr/>';
   }
   $yelp_list_render .= '<ul class="list">';

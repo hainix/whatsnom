@@ -41,7 +41,7 @@ if ($apc_data !== false) {
     }
   }
 
-  $supported_cities = array(Cities::SF, Cities::NYC);
+  $supported_cities = array(Cities::NYC, Cities::SF);
   $cities = array();
   foreach ($supported_cities as $supported_city_id) {
     $cities[] = array(

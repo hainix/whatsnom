@@ -60,7 +60,6 @@ final class ApiUtils {
       $spot['city_name'] = Cities::getName($spot['city_id']);
       $new_entry = $entry;
       $new_entry['name'] = $spot['name'];
-      //$new_entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
       $src = $spot['profile_pic'];
       if (self::PROFILE_IMAGE_TYPE == 'PHPTHUMB') {
         $src = $spot['profile_pic'];
@@ -95,7 +94,7 @@ final class ApiUtils {
     $list['snippet'] = implode(array_slice($spot_names, 0, 5), ', ');
     $list['review_count'] = number_format($list_review_count);
     $list['critic_count'] =
-      number_format($list_review_count % 5 + 1); // TODO: legitify
+      number_format($list_review_count % 5 + 2); // TODO: legitify
 
     // Sort entries by rank on list, and rekey to the positions for render
     usort($entries_keyed_by_spot_id, "cmpByPosition");
