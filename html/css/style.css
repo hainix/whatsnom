@@ -462,7 +462,7 @@ div.about-us-container {
 }
 
 table.attribution-container {
-	margin: 30px 0;
+	margin: 21px 0;
 }
 
 table.attribution-container tr td {
@@ -566,8 +566,8 @@ div.stars {
         border-radius: 0px;
     }
 
-    div.sidebar {
-        padding: 0 30px;
+    ul.profile-list {
+        margin-left: 20px;
     }
 
 

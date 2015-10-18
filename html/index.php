@@ -141,13 +141,13 @@ $yelp_attribution =
   .'</div>';
 
 $about_us =
-  '<h3 style="margin-top: 0;"><span>What Is This?</span></h3>'
+  '<ul class="profile-list"><h3 style="margin-top: 0;"><span>What Is This?</span></h3>'
   .'<div class="about-us-container">Here, you\'ll find curated lists by '
   .'local experts.'
     .'<div align="left" style="margin: 10px 0 0 0; width: 100%;">'
       .FacebookUtils::render_share_box()
     .'</div>'
-  .'</div>';
+  .'</div></ul>';
 
 $add_link_render = '<ul class="profile-list"><li>'.$add_link_profile_item.'</li></ul>';
 
@@ -163,13 +163,14 @@ $content =
 .$list_render
 .'</div>
 		<div class="four columns sidebar">'
+    .$yelp_attribution
     .$filter_render
     .$city_lists_render
     .$recent_city_lists_render
-    .$yelp_attribution
     .$about_us
     .$add_link_render
     .RenderUtils::renderContactForm()
+
 		.'</div>
 	</div><!-- container -->
 ';
