@@ -15,9 +15,9 @@
 .filter .title {
   color: #fff;
   background-color: #4017B0;
-  -moz-border-radius: 3px 3px 0 0;
-  -webkit-border-radius: 3px;
-  border-radius: 3px 3px 0 0;
+  _-moz-border-radius: 3px 3px 0 0;
+  _-webkit-border-radius: 3px;
+  _border-radius: 3px 3px 0 0;
 }
 .filter .title_items {
   color: #94a4c3;
@@ -45,9 +45,9 @@
 .filter .title_items:before, .filter .title_items:after {
   content: "";
   position: absolute;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  _-moz-border-radius: 3px;
+  _-webkit-border-radius: 3px;
+  _border-radius: 3px;
   background-color: #c3d0e8;
   -moz-transition: linear 0.3s all;
   -o-transition: linear 0.3s all;

@@ -20,7 +20,7 @@ $city_name = $city_id ? Cities::getName($city_id) : null;
 $query = new ListQuery($type_id, $city_id);
 
 $same_lists = DataReadUtils::getListsForQuery($query, 5);
-$city_lists = DataReadUtils::getTopListsForCity($city_id, 10);
+$city_lists = DataReadUtils::getTopListsForCity($city_id, 50);
 $recent_city_lists = DataReadUtils::getRecentListsForCity($city_id, 5);
 $primary_list = $primary_list ?: head((array) $same_lists);
 
@@ -47,21 +47,22 @@ $my_list_edit = null;
 $big_add_list_message = null;
 if (!$primary_list || !$entries || !$spots) {
   $yelp_list_render = '';
-  if (false && is_admin()) {
-    $yelp_list_render .= '<h3 align="center">FALLBACK QUERY</h3><br/><hr/>';
-  }
   $yelp_list_render .= '<ul class="list">';
   $spots = DataReadUtils::getGenericSpotsForQuery($query);
-  $position = 1;
-  foreach ($spots as $spot) {
-    $fake_entry = array('position' => $position);
-    $yelp_list_render .=
-      '<li>'.Modules::listItem($fake_entry, $spot).'</li>';
-    $position++;
+  if ($spots) {
+    $position = 1;
+    foreach ($spots as $spot) {
+      $fake_entry = array('position' => $position);
+      $yelp_list_render .=
+        '<li>'.Modules::listItem($fake_entry, $spot).'</li>';
+      $position++;
+    }
+    $yelp_list_render .= '</ul>';
+    $list_render = $yelp_list_render;
+  } else {
+    $list_render =
+    '<div class="error-box"><h4>Oops! We don\'t have a curator for this list yet.</h4><p>Can we interest you in one of our other popular lists?</p></div>';
   }
-  $yelp_list_render .= '</ul>';
-  $list_render = $yelp_list_render;
-
 } else {
   if ($user && $primary_list['creator_id'] == $user['id']) {
     $my_list_edit =
@@ -141,7 +142,7 @@ $yelp_attribution =
   .'</div>';
 
 $about_us =
-  '<ul class="profile-list"><h3 style="margin-top: 0;"><span>What Is This?</span></h3>'
+  '<ul class="profile-list" style="margin-top: 20px"><h3><span>What Is This?</span></h3>'
   .'<div class="about-us-container">Here, you\'ll find curated lists by '
   .'local experts.'
     .'<div align="left" style="margin: 10px 0 0 0; width: 100%;">'
