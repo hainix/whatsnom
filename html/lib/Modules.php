@@ -4,6 +4,34 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/write.php';
 
 final class Modules {
 
+  public static function renderCoverList($lists) {
+    $ret = '<div class="lists-detail-container">';
+    foreach ($lists as $list) {
+      $type = $list['type'];
+      $cover_url = null;
+      if (idx(ListTypeConfig::$config, $type)) {
+        $type_config = ListTypeConfig::$config[$type];
+        $cover_handle = $type_config[ListTypeConfig::COVER];
+        $cover_url = BASE_URL.'covers/'.$cover_handle;
+      } else {
+        slog('no cover for type '.ListTypes::getName($type));
+        continue;
+      }
+      $row = '<div class="list-detail-row" style="background: url('.$cover_url.'); background-position: center; background-size: cover;">';
+      $row .= '<div class="list-detail-row-overlay">
+                 <h4>'.$type_config[ListTypeConfig::LIST_NAME].'</h4>
+               </div>';
+      $row .= '</div>';
+
+        $ret .= RenderUtils::renderLink(
+        $row,
+          '?l='.$list['id']
+        );
+    }
+    $ret .= '</div>';
+    return $ret;
+  }
+
   public static function renderProfileList($lists, $show_city = false, $featured_list_id = null, $extra_list_items = array()) {
     $me = FacebookUtils::getUser();
 
@@ -81,11 +109,11 @@ final class Modules {
     return $ret;
   }
 
-  public static function renderDesktopFilter($query = null) {
+  public static function renderFilter($query = null) {
     $city_offset = 1000; // because inputs need unique ids
     $list_type_options = ListTypes::getConstants();
     $city_options = Cities::getConstants();
-    $ret = "<form><div class='filter'>";
+    $ret = "<form id='filter-form'><div class='filter'>";
     $ret .= "<p class='title'>Browse</p>";
     $city_label = 'City';
     $lists_label = 'Lists';

@@ -103,13 +103,13 @@ slog($ordered);
 // City Lists START
 $city_lists_render =
 '<h3><span>Popular </span>'.$city_name.' Lists</h3>'
-  .Modules::renderProfileList($city_lists);
+  .Modules::renderCoverList($city_lists);
 // City Lists END
 
 // Recent City Lists START
 $recent_city_lists_render =
 '<h3><span>New </span>'.$city_name.' Lists</h3>'
-  .Modules::renderProfileList($recent_city_lists);
+  .Modules::renderCoverList($recent_city_lists);
 // Recent City Lists END
 
 // Same Lists START
@@ -127,11 +127,6 @@ if ($user) {
     FacebookUtils::getLoginURL()
   );
 }
-$same_lists_render =
-  '<h3><span>Top </span>'.$city_name
-  .' '.$type_name
-  .' Lists</h3>'
-  .Modules::renderProfileList($same_lists, $show_city = false, $primary_list['id']);
 // Same Lists END
 
 
@@ -159,7 +154,7 @@ $add_link_render = '<ul class="profile-list"><li>'.$add_link_profile_item.'</li>
 
 $query->setCount(count($spots));
 
-$filter_render = Modules::renderDesktopFilter($query);
+$filter_render = Modules::renderFilter($query);
 
 
 $content =
@@ -168,13 +163,11 @@ $content =
 .'</div>
 		<div class="four columns sidebar">'
     .$filter_render
-  .$yelp_attribution
-
-//    .$same_lists_render
     .$city_lists_render
     .$recent_city_lists_render
-    .$add_link_render
+    .$yelp_attribution
     .$about_us
+    .$add_link_render
     .RenderUtils::renderContactForm()
 		.'</div>
 	</div><!-- container -->

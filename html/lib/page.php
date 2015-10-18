@@ -230,8 +230,9 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
     $js =
       '<script>
          $("#mobile-search-container").click(function(e) {
-           $("#search-container").fadeIn(200);
-           $("#mobile-search-container").fadeOut(200);
+           $("html, body").animate({
+             scrollTop: $("#filter-form").offset().top
+           }, 200);
          });
       </script>';
     return $ret . $js;

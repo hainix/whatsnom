@@ -114,30 +114,13 @@
 .filter ul li:last-child label {
   border-bottom: none;
 }
-.filter ul li:nth-child(1) label:before, .filter ul li:nth-child(1) label:after {
-  border-color: #5db6e2;
+.filter ul li:nth-child(odd) label:before, .filter ul li:nth-child(odd) label:after {
+  border-color: #A384F5;
 }
-.filter ul li:nth-child(2) label:before, .filter ul li:nth-child(2) label:after {
-  border-color: #c0a2f1;
+.filter ul li:nth-child(even) label:before, .filter ul li:nth-child(even) label:after {
+  border-color: #6F44E3;
 }
-.filter ul li:nth-child(3) label:before, .filter ul li:nth-child(3) label:after {
-  border-color: #f7a238;
-}
-.filter ul li:nth-child(4) label:before, .filter ul li:nth-child(4) label:after {
-  border-color: #f6d04d;
-}
-.filter ul li:nth-child(5) label:before, .filter ul li:nth-child(5) label:after {
-  border-color: #40c9a1;
-}
-.filter ul li:nth-child(6) label:before, .filter ul li:nth-child(6) label:after {
-  border-color: #ea8b8b;
-}
-.filter ul li:nth-child(7) label:before, .filter ul li:nth-child(7) label:after {
-  border-color: #fe8ae0;
-}
-.filter ul li:nth-child(8) label:before, .filter ul li:nth-child(8) label:after {
-  border-color: #abb6d2;
-}
+
 .filter input[type="radio"] {
   display: none;
 }

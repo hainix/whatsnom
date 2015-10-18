@@ -61,12 +61,19 @@ final class ListQuery {
   }
 
   public function getTitle() {
+  $noun = 'Spots';
+  if ($this->getType()) {
+    $type = $this->getType();
+    if (idx(ListTypeConfig::$config, $type)) {
+      $type_config = ListTypeConfig::$config[$type];
+      $noun = $type_config[ListTypeConfig::PLURAL_ENTRY];
+    } else {
+      $noun = ListTypes::getName($this->getType());
+    }
+  }
+
     return
-      $this->getPreHeader()
-      .' Best '
-      . ($this->getType()
-         ? ListTypes::getName($this->getType())
-         : 'Spots')
+      $noun
       . ($this->getCity()
          ? ' in '.Cities::getName($this->getCity())
          : null)
