@@ -174,50 +174,6 @@ final class Modules {
     return $ret .$web_form_js;
   }
 
-  public static function renderDesktopSearchForm($query = null) {
-    $pre_header = $query ? $query->getPreHeader() : null;
-    $current_type = $query ? $query->getType() : null;
-    $current_city = $query ? $query->getCity() : null;
-
-    $web_form =
-      '<div class="title-form">
-        <form class="search-form table-form">'
-            .'<div class="styled-select select-cuisine table-form-column">
-              <select id="search-type" class="auto-submit-item" name="t">'
-      .RenderUtils::renderSelectOptions(
-        ListTypes::getConstants(),
-        $current_type
-      )
-      .'</select>
-            </div>
-            <div class="table-form-column-short"> in </div>
-            <div class="styled-select select-location table-form-column">
-              <select id="search-location" class="auto-submit-item" name="c">';
-
-    foreach (Cities::getConstants() as $value => $key) {
-      $web_form .= '<option value="'.$key.'" ';
-      if ($current_city && $current_city == $key) {
-        $web_form .= 'selected="true" ';
-      }
-      $web_form .= '>'.Cities::getName($key).'</option>';
-    }
-
-    $web_form .= '</select>
-            </div>
-          </form></div>';
-    $web_form_js =
-      '<script>
-      $(".auto-submit-item").change(function() {
-          $(this).parents("form").submit();
-        });
-      </script>';
-    return
-        '<div class="twelve columns">'
-      .'<div id="search-container" class="bubble-container search-container hide-on-mobile">'
-      .$web_form . $web_form_js
-      .'</div>'
-      .'</div>';
-  }
 
   public static function listItem($entry, $spot, $placeholder = false, $editable = false) {
     if (idx($spot, 'last_updated')

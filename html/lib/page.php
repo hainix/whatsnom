@@ -272,16 +272,6 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
       .$this->getHeader()
       .'<div class="container">';
 
-    // These need search forms and are hidden on mobile
-    if ($this->pageType == PageTypes::ADD
-        || $this->pageType == PageTypes::BROWSE) {
-/*
-      $html .=
-        Modules::renderDesktopSearchForm(
-          $this->query
-        );
-*/
-    }
     $html .= $this->content
       .'</div>';
     $html .= $this->getFBMarkup();

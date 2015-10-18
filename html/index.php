@@ -156,15 +156,15 @@ $add_link_render = '<ul class="profile-list"><li>'.$add_link_profile_item.'</li>
 $query->setCount(count($spots));
 
 $filter_render = Modules::renderFilter($query);
-
+$list_title =  '<h4 class="list-title hide-on-mobile">'.$query->getTitle().'</h4>';
 
 $content =
 '<div class="twelve columns" style="margin-top: 20px;">'
- .'<h4 class="list-title">'.$query->getTitle().'</h4>'
+.$list_title
 .$list_render
 .'</div>
 		<div class="four columns sidebar">'
-    .$yelp_attribution
+    .'<div class="hide-on-mobile">'.$yelp_attribution.'</div>'
     .$filter_render
     .$city_lists_render
     .$recent_city_lists_render
