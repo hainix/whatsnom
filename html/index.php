@@ -159,6 +159,7 @@ $filter_render = Modules::renderFilter($query);
 
 $content =
 '<div class="twelve columns" style="margin-top: 20px;">'
+ .'<h4 class="list-title">'.$query->getTitle().'</h4>'
 .$list_render
 .'</div>
 		<div class="four columns sidebar">'

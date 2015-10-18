@@ -86,6 +86,13 @@ div.primary-container {
     list-style-type: none;
  }
 
+ h4.list-title {
+    font-size: 27px;
+    line-height: 42px;
+    margin-bottom: 21px;
+    font-weight: 400;
+}
+
 /** Covers **/
 .lists-detail-container .list-detail-row {
     height: 90px;

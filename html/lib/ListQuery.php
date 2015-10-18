@@ -45,7 +45,7 @@ final class ListQuery {
     } else {
       $pre_header = 'Top';
     }
-    return $pre_header;
+    return $pre_header.' ';
   }
 
   public function getShortTitle() {
@@ -73,7 +73,8 @@ final class ListQuery {
   }
 
     return
-      $noun
+    $this->getPreHeader()
+     .$noun
       . ($this->getCity()
          ? ' in '.Cities::getName($this->getCity())
          : null)
