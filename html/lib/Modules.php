@@ -68,24 +68,82 @@ final class Modules {
         */
         .'<span class="title-text">'
         .RenderUtils::renderLink(
-          'Top '.ListTypes::getName($list['type']),
+          ListTypes::getName($list['type']),
           '?l='.$list['id']
         )
         .'</span>'
-        .'<span class="meta-text">'
-        .($list['id'] == $featured_list_id
-          ? '<strong>Featured List</strong> <i>|</i>'
-          : null)
-        .$city_render
-        .$upvote_render
-        .'</span>
-     </li>';
+     .'</li>';
     }
     foreach ($extra_list_items as $extra_list_item) {
       $ret .= '<li>'.$extra_list_item.'</li>';
     }
     $ret .= '</ul>';
     return $ret;
+  }
+
+  public static function renderDesktopFilter($query = null) {
+    $city_offset = 1000; // because inputs need unique ids
+    $list_type_options = ListTypes::getConstants();
+    $city_options = Cities::getConstants();
+    $ret = "<form><div class='filter'>";
+    $ret .= "<p class='title'>Browse</p>";
+    $city_label = 'City';
+    $lists_label = 'Lists';
+    $city_default = 0;
+    $list_default = 0;
+    if ($query) {
+      if ($query->getCity()) {
+        $city_default = $query->getCity();
+        $city_label = Cities::getName($query->getCity());
+      }
+      if ($query->getType()) {
+        $list_default = $query->getType();
+        $lists_label = ListTypes::getName($query->getType());
+      }
+    }
+
+    $ret .=
+    "<p class='title_items'>".$city_label."</p>
+       <ul>";
+    foreach ($city_options as $option => $key) {
+      $ret .=
+    "<li>
+      <input id='".($city_offset + $key)."' name='city' type='radio' class='city-item'>
+      <label for='".($city_offset + $key)."'>".Cities::getName($key)."</label>
+    </li>";
+    }
+    $ret .= '</ul>';
+    $ret .= "<p class='title_items'>".$lists_label."</p><ul>";
+    foreach ($list_type_options as $option => $key) {
+      $ret .=
+      "<li>
+        <input id='".$key."' name='type' type='radio' class='type-item'>
+        <label for='".$key."'>".ListTypes::getName($key)."</label>
+      </li>";
+    }
+    $ret .= '</ul>';
+    $ret .= '</div>';
+
+    $ret .= "<input id='city-input' name='c' type='hidden' value='".$city_default."'>";
+    $ret .= "<input id='type-input' name='t' type='hidden' value='".$list_default."'>";
+    $ret .= '</form>';
+
+    $web_form_js =
+      '<script>
+       $(".city-item").change(function() {
+          console.log($(this).context.id);
+          $(\'input[id="city-input"]\').val($(this).context.id - '.$city_offset.');
+          $(this).parents("form").submit();
+       });
+       $(".type-item").change(function() {
+          console.log($(this).context.id);
+          $(\'input[id="type-input"]\').val($(this).context.id);
+          $(this).parents("form").submit();
+       });
+      </script>';
+
+
+    return $ret .$web_form_js;
   }
 
   public static function renderDesktopSearchForm($query = null) {
@@ -95,8 +153,7 @@ final class Modules {
 
     $web_form =
       '<div class="title-form">
-        <form class="search-form table-form">
-           <div class="table-form-column-short">'.$pre_header.'</div>'
+        <form class="search-form table-form">'
             .'<div class="styled-select select-cuisine table-form-column">
               <select id="search-type" class="auto-submit-item" name="t">'
       .RenderUtils::renderSelectOptions(
@@ -105,7 +162,7 @@ final class Modules {
       )
       .'</select>
             </div>
-            <div class="table-form-column-short">spots in</div>
+            <div class="table-form-column-short"> in </div>
             <div class="styled-select select-location table-form-column">
               <select id="search-location" class="auto-submit-item" name="c">';
 
@@ -162,15 +219,15 @@ final class Modules {
     }
 
     $tags = null;
-    if (idx($spot, 'type')) {
-      $render_type = ListTypes::getName($spot['type']);
-      if (idx($spot, 'tags')) {
-        // TODO add tags
-        $render_type .= '';
-      }
-      if ($render_type) {
-        $tags ='<span class="subtle">'.$render_type.'</span>';
-      }
+    $tags_array = array();
+    $tags_array[] = idx ($spot, 'neighborhoods');
+    $tags_array[] = idx($spot, 'categories');
+
+    if (array_filter($tags_array)) {
+      $tags =
+      '<span class="subtle">'
+      .implode($tags_array, ' · ')
+      .'</span>';
     }
 
     $primary_class = null;
@@ -263,7 +320,7 @@ final class Modules {
         .'</div>';
     } else {
       $ret .= idx($entry, 'tip')
-        ? '<div class="item-tip"><span class="subtle">order:</span> '
+        ? '<div class="item-tip"><span class="subtle">Tip:</span> '
         . $entry['tip'].'</div>'
         : '<div class="tip-holder"></div>';
     }

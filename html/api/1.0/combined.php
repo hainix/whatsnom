@@ -2,13 +2,14 @@
 include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 
 $city_id = idx($_GET, 'city_id');
+$force = idx($_GET, 'force');
 if (!$city_id) {
   $city_id = Cities::NYC;
 }
 
 $apc_key = 'api:combined:response:'.$city_id;
 $apc_data = false;
-if (!ApiUtils::API_SKIP_APC) {
+if (!ApiUtils::API_SKIP_APC && !$force) {
   $apc_data = apc_fetch($apc_key);
 }
 if ($apc_data !== false) {
@@ -16,7 +17,7 @@ if ($apc_data !== false) {
 } else {
 
   // Get all lists to show on homepage
-  $lists = DataReadUtils::getTopListsForCity($city_id, 50);
+  $lists = DataReadUtils::getTopListsForCity($city_id, 100);
 
   // Start with the Genres
   $list_response = array();

@@ -64,10 +64,10 @@ function get_yelp_business_info($name, $info = null) {
     $location && property_exists($location, 'cross_streets')
       ? $location->cross_streets
       : null;
-  $data['lat'] = $location && $location->coordinate
+  $data['lat'] = $location && property_exists($location, 'coordinate')
     ? $location->coordinate->latitude
     : null;
-  $data['long'] = $location && $location->coordinate
+  $data['long'] = $location && property_exists($location, 'coordinate')
     ? $location->coordinate->longitude
     : null;
   $data['snippet'] = property_exists($info, 'snippet_text')

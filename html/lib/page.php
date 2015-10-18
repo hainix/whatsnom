@@ -3,7 +3,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/base.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/funcs.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/FacebookUtils.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/constants.php';
+include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/include_constants.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/YelpUtils.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ImageUtils.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/Modules.php';
@@ -101,7 +101,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
       <meta property="og:url" content="'.$this->getURL().'" />'
 .'<!-- JS -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- <script src="'.BASE_URL.'js/jquery.dropit.js"></script> -->
+<script src="'.BASE_URL.'js/filter.js"></script>
 <script src="'.BASE_URL.'js/jquery.fancybox.pack.js"></script>'
       .'<script>$(".lightbox").fancybox({
     openEffect: \'fade\',
@@ -117,7 +117,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
   <link rel="stylesheet" href="'.BASE_URL.'css/base.css">
   <link rel="stylesheet" href="'.BASE_URL.'css/skeleton.css">
   <link rel="stylesheet" href="'.BASE_URL.'css/layout.css">
-<!--  <link rel="stylesheet" href="'.BASE_URL.'css/dropit.css"> -->
+  <link rel="stylesheet" href="'.BASE_URL.'css/filter.css">
   <link rel="stylesheet" href="'.BASE_URL.'css/jquery.fancybox.css">
   <link rel="stylesheet" href="'.BASE_URL.'css/style.css">
   <!-- END CSS -->
@@ -241,7 +241,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
     $ret = '<div id="header" class="hide-on-mobile ';
     if ($this->pageType == PageTypes::BROWSE
         || $this->pageType == PageTypes::ADD) {
-      $ret .= ' header-with-overlay ';
+      //$ret .= ' header-with-overlay ';
     }
     $ret .= '" >
     <div class="logo">
@@ -274,10 +274,12 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
     // These need search forms and are hidden on mobile
     if ($this->pageType == PageTypes::ADD
         || $this->pageType == PageTypes::BROWSE) {
+/*
       $html .=
         Modules::renderDesktopSearchForm(
           $this->query
         );
+*/
     }
     $html .= $this->content
       .'</div>';

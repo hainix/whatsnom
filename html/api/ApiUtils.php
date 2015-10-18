@@ -1,5 +1,5 @@
 <?php
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/constants.php';
+include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/include_constants.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/base.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/funcs.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/base.php';

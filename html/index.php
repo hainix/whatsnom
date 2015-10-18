@@ -10,8 +10,8 @@ if ($primary_list) {
   $type_id = $primary_list['type'];
   $city_id = $primary_list['city'];
 } else {
-  $type_id = idx($_GET, 't', null);
-  $city_id = idx($_GET, 'c', Cities::SF);
+  $type_id = idx($_GET, 't', ListTypes::CHEAP_EATS);
+  $city_id = idx($_GET, 'c', Cities::NYC);
 }
 
 // Data Fetch START
@@ -20,7 +20,7 @@ $city_name = $city_id ? Cities::getName($city_id) : null;
 $query = new ListQuery($type_id, $city_id);
 
 $same_lists = DataReadUtils::getListsForQuery($query, 5);
-$city_lists = DataReadUtils::getTopListsForCity($city_id, 5);
+$city_lists = DataReadUtils::getTopListsForCity($city_id, 10);
 $recent_city_lists = DataReadUtils::getRecentListsForCity($city_id, 5);
 $primary_list = $primary_list ?: head((array) $same_lists);
 
@@ -98,27 +98,6 @@ slog($ordered);
   $list_render .= '</ul>';
 }
 
-/*
-if ($user) {
-  $add_url = 'add/?c='.$city_id.'&t='.$type_id;
-  $add_link = RenderUtils::renderLink(
-    'Add Your Own List',
-    $add_url
-  );
-} else {
-  $add_link = RenderUtils::renderExternalLink(
-    'Log In and Add Your Own List',
-    FacebookUtils::getLoginURL()
-  );
-}
-$list_render .=
-  RenderUtils::renderMessage(
-    $add_link,
-    'add-favorite.png',
-    $header = true
-  );
-*/
-
 // Primary List END
 
 // City Lists START
@@ -152,7 +131,7 @@ $same_lists_render =
   '<h3><span>Top </span>'.$city_name
   .' '.$type_name
   .' Lists</h3>'
-  .Modules::renderProfileList($same_lists, $show_city = false, $primary_list['id'], array($add_link_profile_item));
+  .Modules::renderProfileList($same_lists, $show_city = false, $primary_list['id']);
 // Same Lists END
 
 
@@ -175,18 +154,27 @@ $about_us =
     .'</div>'
   .'</div>';
 
+$add_link_render = '<ul class="profile-list"><li>'.$add_link_profile_item.'</li></ul>';
+
 
 $query->setCount(count($spots));
+
+$filter_render = Modules::renderDesktopFilter($query);
+
+
 $content =
-'<div class="twelve columns">'
+'<div class="twelve columns" style="margin-top: 20px;">'
 .$list_render
 .'</div>
 		<div class="four columns sidebar">'
+    .$filter_render
   .$yelp_attribution
-    .$about_us
-    .$same_lists_render
+
+//    .$same_lists_render
     .$city_lists_render
     .$recent_city_lists_render
+    .$add_link_render
+    .$about_us
     .RenderUtils::renderContactForm()
 		.'</div>
 	</div><!-- container -->
