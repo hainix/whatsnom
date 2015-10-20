@@ -29,6 +29,7 @@
   -o-transition: linear 0.2s background-color;
   -webkit-transition: linear 0.2s background-color;
   transition: linear 0.2s background-color;
+  font-size: 14px;
 }
 .filter .title_items:hover {
   background-color: #f4f4f4;

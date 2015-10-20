@@ -21,7 +21,6 @@ $query = new ListQuery($type_id, $city_id);
 
 $same_lists = DataReadUtils::getListsForQuery($query, 5);
 $city_lists = DataReadUtils::getTopListsForCity($city_id, 50);
-$recent_city_lists = DataReadUtils::getRecentListsForCity($city_id, 5);
 $primary_list = $primary_list ?: head((array) $same_lists);
 
 $entries =
@@ -103,15 +102,8 @@ slog($ordered);
 
 // City Lists START
 $city_lists_render =
-'<h3><span>Popular </span>'.$city_name.' Lists</h3>'
-  .Modules::renderCoverList($city_lists);
+  Modules::renderCoverList($city_lists);
 // City Lists END
-
-// Recent City Lists START
-$recent_city_lists_render =
-'<h3><span>New </span>'.$city_name.' Lists</h3>'
-  .Modules::renderCoverList($recent_city_lists);
-// Recent City Lists END
 
 // Same Lists START
 $add_text = $my_list_edit ? 'Edit Your List' : 'Add Your Own List';
@@ -165,13 +157,11 @@ $content =
 .'</div>
 		<div class="four columns sidebar">'
     .'<div class="hide-on-mobile">'.$yelp_attribution.'</div>'
-    .$filter_render
     .$city_lists_render
-    .$recent_city_lists_render
+    .$filter_render
     .$about_us
-    .$add_link_render
     .RenderUtils::renderContactForm()
-
+    .$add_link_render
 		.'</div>
 	</div><!-- container -->
 ';

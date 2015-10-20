@@ -122,11 +122,11 @@ final class Modules {
     if ($query) {
       if ($query->getCity()) {
         $city_default = $query->getCity();
-        $city_label = Cities::getName($query->getCity());
+        //$city_label = Cities::getName($query->getCity());
       }
       if ($query->getType()) {
         $list_default = $query->getType();
-        $lists_label = ListTypes::getName($query->getType());
+        //$lists_label = ListTypes::getName($query->getType());
       }
     }
 
@@ -177,7 +177,7 @@ final class Modules {
 
   public static function listItem($entry, $spot, $placeholder = false, $editable = false) {
     if (idx($spot, 'last_updated')
-        && $spot['last_updated'] + (SEC_IN_DAY * 3) < time()) {
+        && $spot['last_updated'] < time() - (SEC_IN_DAY * 3)) {
       DataWriteUtils::updateSpot($spot['id']);
     }
 

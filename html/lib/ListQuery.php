@@ -50,31 +50,34 @@ final class ListQuery {
 
   public function getShortTitle() {
    return
-     ($this->user ?  $this->user['first_name'].'\'s Top ' : 'Top 10 ')
-      . ($this->getType()
-         ? ListTypes::getName($this->getType())
-         : 'Spots')
+     ($this->user ?  $this->user['first_name'].'\'s Top ' : 'Top ')
+     .$this->getNoun()
+
       . ($this->getCity()
          ? ' <span class="subtle">'.Cities::getName($this->getCity()).'</span>'
          : null)
       ;
   }
 
-  public function getTitle() {
-  $noun = 'Spots';
-  if ($this->getType()) {
-    $type = $this->getType();
-    if (idx(ListTypeConfig::$config, $type)) {
-      $type_config = ListTypeConfig::$config[$type];
-      $noun = $type_config[ListTypeConfig::PLURAL_ENTRY];
-    } else {
-      $noun = ListTypes::getName($this->getType());
+  private function getNoun() {
+    $noun = 'Spots';
+    if ($this->getType()) {
+      $type = $this->getType();
+      if (idx(ListTypeConfig::$config, $type)) {
+        $type_config = ListTypeConfig::$config[$type];
+        $noun = $type_config[ListTypeConfig::PLURAL_ENTRY];
+      } else {
+        $noun = ListTypes::getName($this->getType());
+      }
     }
+    return $noun;
   }
+
+  public function getTitle() {
 
     return
     $this->getPreHeader()
-     .$noun
+     .$this->getNoun()
       . ($this->getCity()
          ? ' in '.Cities::getName($this->getCity())
          : null)

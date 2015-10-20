@@ -1,4 +1,5 @@
 <?php
+include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/FacebookUtils.php';
 
 
 function shuffle_assoc($list) {
@@ -166,7 +167,6 @@ function clean_address($address) {
 }
 
 function is_admin() {
-  return true;
   $user = FacebookUtils::getUser();
   return ($user && $user['id'] == get_admin());
 }

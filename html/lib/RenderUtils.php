@@ -71,11 +71,11 @@ return
 
   public static function renderContactForm() {
     return
-      '<h3><span>Contact</span> Us</h3>'
+      '<h3><span>Get</span> Involved</h3>'
       .'<ul class="profile-list"><li id="contact-us-link">'
       .RenderUtils::renderLink(
         '<img class="list-profile" src="'.BASE_URL.'/images/paper_plane.png" />'
-        .'Thoughts? Feedback?<span class="user-meta">Let us know!</span>',
+        .'Be a critic, we need you!<span class="user-meta">Feedback? Thoughts?</span>',
         '#'
       )
       .'</li></ul>';
