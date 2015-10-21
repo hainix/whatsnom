@@ -74,6 +74,9 @@ abstract class ListTypes extends Enum {
   const PARENTS_DINNER              = 58;
   const PICKUP_BARS                 = 59;
   const GROUP_BARS                  = 60;
+  const GROUP_DINNER                = 61;
+  const BIRTHDAY_DINNER             = 62;
+
 }
 
 
@@ -105,6 +108,22 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => "Parent's Dinner",
       self::PLURAL_ENTRY => "Parent's Dinner",
       self::COVER        => 'parents.jpg',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
+    ListTypes::GROUP_DINNER => array(
+      self::ID           => ListTypes::GROUP_DINNER,
+      self::LIST_NAME    => "Group Dinner",
+      self::ENTRY_NAME   => "Group Dinner Spot",
+      self::PLURAL_ENTRY => "Group Dinner Spots",
+      self::COVER        => 'groupdinner.jpg',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
+    ListTypes::BIRTHDAY_DINNER => array(
+      self::ID           => ListTypes::BIRTHDAY_DINNER,
+      self::LIST_NAME    => "Birthday Dinner",
+      self::ENTRY_NAME   => "Birthday Dinner Spot",
+      self::PLURAL_ENTRY => "Birthday Dinner Spots",
+      self::COVER        => 'birthdaydinner.jpg',
       self::GENRE        => ListGenreTypes::FOOD,
     ),
     ListTypes::DESSERT => array(

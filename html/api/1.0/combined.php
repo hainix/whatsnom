@@ -3,6 +3,9 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 
 $city_id = idx($_GET, 'city_id');
 $force = idx($_GET, 'force');
+//$force = true; // TODO remove
+
+
 if (!$city_id) {
   $city_id = Cities::NYC;
 }
@@ -40,6 +43,13 @@ if ($apc_data !== false) {
     if (!$genre_list['items']) {
       unset($list_response[$key]);
     }
+  }
+
+  // Reindex everything, so client considers these as arrays and not objects
+  $list_response = array_values($list_response);
+  foreach ($list_response as $key => $val) {
+    $list_response[$key]['items'] =
+      array_values($list_response[$key]['items']);
   }
 
   $supported_cities = array(Cities::NYC, Cities::SF);

@@ -176,8 +176,7 @@ final class Modules {
 
 
   public static function listItem($entry, $spot, $placeholder = false, $editable = false) {
-    if (idx($spot, 'last_updated')
-        && $spot['last_updated'] < time() - (SEC_IN_DAY * 3)) {
+    if ($spot && isset($spot['id']) && $spot['id'] && (is_admin() || mt_rand(1, 100) == 100)) {
       DataWriteUtils::updateSpot($spot['id']);
     }
 
