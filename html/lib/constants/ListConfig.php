@@ -76,6 +76,7 @@ abstract class ListTypes extends Enum {
   const GROUP_BARS                  = 60;
   const GROUP_DINNER                = 61;
   const BIRTHDAY_DINNER             = 62;
+  const HALLOWEEN_PARTIES           = 63;
 
 }
 
@@ -94,6 +95,14 @@ final class ListTypeConfig {
 
   public static $config = array(
 
+    ListTypes::HALLOWEEN_PARTIES => array(
+      self::ID           => ListTypes::HALLOWEEN_PARTIES,
+      self::LIST_NAME    => 'Halloween Parties',
+      self::ENTRY_NAME   => 'Halloween Party',
+      self::PLURAL_ENTRY => 'Halloween Parties',
+      self::COVER        => 'halloween.jpg',
+      self::GENRE        => ListGenreTypes::ACTIVITIES,
+    ),
     ListTypes::SPEAKEASIES => array(
       self::ID           => ListTypes::SPEAKEASIES,
       self::LIST_NAME    => 'Speakeasies',

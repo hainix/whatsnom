@@ -3,7 +3,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 
 $city_id = idx($_GET, 'city_id');
 $force = idx($_GET, 'force');
-//$force = true; // TODO remove
+//$force = true; // For temp overrides
 
 
 if (!$city_id) {
@@ -46,10 +46,23 @@ if ($apc_data !== false) {
   }
 
   // Reindex everything, so client considers these as arrays and not objects
-  $list_response = array_values($list_response);
+/*
   foreach ($list_response as $key => $val) {
     $list_response[$key]['items'] =
       array_values($list_response[$key]['items']);
+  }
+*/
+
+  // Reorder Genres
+  $ordered_list_response = array();
+  $genre_order = array(
+    ListGenreTypes::ACTIVITIES,
+    ListGenreTypes::DRINK,
+    ListGenreTypes::FOOD,
+    ListGenreTypes::CUISINE
+  );
+  foreach ($genre_order as $genre_id) {
+    $ordered_list_response[] = $list_response[$genre_id];
   }
 
   $supported_cities = array(Cities::NYC, Cities::SF);
@@ -63,7 +76,7 @@ if ($apc_data !== false) {
 
   $response = array(
     'cities'    => $cities,
-    'lists'     => $list_response
+    'lists'     => $ordered_list_response
   );
 
   apc_store($apc_key, serialize($response), ApiUtils::API_APC_TTL);
