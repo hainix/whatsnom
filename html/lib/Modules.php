@@ -176,7 +176,7 @@ final class Modules {
 
 
   public static function listItem($entry, $spot, $placeholder = false, $editable = false) {
-    if ($spot && isset($spot['id']) && $spot['id'] && (is_admin() || mt_rand(1, 100) == 100)) {
+    if ($spot && isset($spot['id']) && $spot['id'] && (mt_rand(1, 50) == 50)) {
       DataWriteUtils::updateSpot($spot['id']);
     }
 
@@ -302,9 +302,14 @@ final class Modules {
         .'placeholder="what do you order?"/>'
         .'</div>';
     } else {
-      $ret .= idx($entry, 'tip')
+      $tip = idx($entry, 'tip');
+      if (strlen($tip) > 120) {
+        $tip = substr($tip, 0, 120) . '...';
+      }
+
+      $ret .= $tip
         ? '<div class="item-tip"><span class="subtle">Tip:</span> '
-        . $entry['tip'].'</div>'
+        . $tip.'</div>'
         : '<div class="tip-holder"></div>';
     }
     $ret .= '</div></div>';
