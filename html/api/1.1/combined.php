@@ -61,7 +61,9 @@ if ($apc_data !== false) {
     ListGenreTypes::CUISINE
   );
   foreach ($genre_order as $genre_id) {
-    $ordered_list_response[] = $list_response[$genre_id];
+    if (isset($list_response[$genre_id])) {
+      $ordered_list_response[] = $list_response[$genre_id];
+    }
   }
 
   $supported_cities = array(Cities::NYC, Cities::SF);
@@ -73,8 +75,19 @@ if ($apc_data !== false) {
     );
   }
 
+  $headers_and_lists = array();
+  foreach (array_filter($ordered_list_response) as $lists) {
+    $headers_and_lists[] =
+      array('isDivider' => true, 'name' => $lists['name']);
+    foreach ($lists['items'] as $item) {
+      unset($item['entries']);
+      $headers_and_lists[] = $item;
+    }
+  }
+
   $response = array(
     'cities'    => $cities,
+    'lists_with_headers' => $headers_and_lists,
     'lists'     => $ordered_list_response
   );
 

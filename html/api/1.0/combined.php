@@ -45,14 +45,6 @@ if ($apc_data !== false) {
     }
   }
 
-  // Reindex everything, so client considers these as arrays and not objects
-/*
-  foreach ($list_response as $key => $val) {
-    $list_response[$key]['items'] =
-      array_values($list_response[$key]['items']);
-  }
-*/
-
   // Reorder Genres
   $ordered_list_response = array();
   $genre_order = array(
