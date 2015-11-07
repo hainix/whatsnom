@@ -18,6 +18,14 @@ final class ApiUtils {
   const API_APC_TTL = 10000;
   const API_SKIP_APC = false; // this should always be false
 
+  public static function shouldHideSeasonablList($list) {
+    switch($list['type']) {
+      case ListTypes::HALLOWEEN_PARTIES:
+        return true;
+    }
+    return false;
+  }
+
   public static function addListConfigToList($list) {
     $config_for_list = ListTypeConfig::$config[$list['type']];
 

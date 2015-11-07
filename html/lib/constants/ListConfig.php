@@ -95,6 +95,7 @@ final class ListTypeConfig {
 
   public static $config = array(
 
+
     ListTypes::HALLOWEEN_PARTIES => array(
       self::ID           => ListTypes::HALLOWEEN_PARTIES,
       self::LIST_NAME    => 'Halloween Parties',

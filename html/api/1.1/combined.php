@@ -22,6 +22,13 @@ if ($apc_data !== false) {
   // Get all lists to show on homepage
   $lists = DataReadUtils::getTopListsForCity($city_id, 100);
 
+  // Hide seasonal lists
+  foreach ($lists as $key => $list) {
+    if (ApiUtils::shouldHideSeasonablList($list)) {
+      unset($lists[$key]);
+    }
+  }
+
   // Start with the Genres
   $list_response = array();
   foreach (ListGenreTypes::getConstants() as $genre_name => $genre_id) {
@@ -35,7 +42,7 @@ if ($apc_data !== false) {
   // Now go through all the lists and put them in genre buckets
   foreach ($lists as $list) {
     $list = ApiUtils::addListDataToList($list);
-    $list_response[$list['list_genre']]['items'][$list['id']] = $list;
+    $list_response[$list['list_genre']]['items'][$list['name']] = $list;
   }
 
   // Remove empty categories
@@ -47,6 +54,7 @@ if ($apc_data !== false) {
 
   // Reindex everything, so client considers these as arrays and not objects
   foreach ($list_response as $key => $val) {
+    ksort($list_response[$key]['items']);
     $list_response[$key]['items'] =
       array_values($list_response[$key]['items']);
   }
