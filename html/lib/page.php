@@ -85,6 +85,19 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
   }
 
   protected function getBaseHeadContent() {
+//      <meta property="og:image" content="'.BASE_URL.'images/logo-1024x1024.jpg" />
+$og_image_url = null;
+if ($this->query) {
+   // These are too small for now
+   //$og_image_url = $this->query->getCoverURL();
+}
+if (!$og_image_url) {
+//  $og_image_url = BASE_URL.'images/ads/wide_fb_share_banner.jpg';
+    $og_image_url = BASE_URL.'images/logo-1024x1024.jpg';
+}
+$og_image =
+'<meta property="og:image" content="'.$og_image_url.'" />';
+
     return
 '<!-- Mobile Specific Metas
   ================================================== -->
@@ -95,12 +108,13 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
       <meta property="fb:app_id" content="'.FacebookUtils::getAppID().'"/>
       <meta property="og:title" content="'.$this->getTitle().'" />
       <meta property="og:description" content="'.$this->getDefaultDescription().'" />'
-//      <meta property="og:image" content="'.BASE_URL.'images/logo-1024x1024.jpg" />
-.'<meta property="og:image" content="'.BASE_URL.'images/ads/wide_fb_share_banner.jpg" />'
+.$og_image
       .'<meta property="og:type" content="website" />
       <meta property="og:url" content="'.$this->getURL().'" />'
 .'<!-- JS -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBtS-_FLNzSZDSUf9FRBvB1_2Z4OqTMPPc" type="text/javascript"></script>
+
 <script src="'.BASE_URL.'js/filter.js"></script>
 <script src="'.BASE_URL.'js/jquery.fancybox.pack.js"></script>'
       .'<script>$(".lightbox").fancybox({

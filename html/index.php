@@ -74,7 +74,7 @@ if (!$primary_list || !$entries || !$spots) {
       )
       .'</div>';
   }
-  $list_render = $my_list_edit . '<ul class="list">';
+  $list_render =  '<ul class="list">';
 
 /*
 // Used for baseline ranking
@@ -90,14 +90,19 @@ foreach ($spots as $spot_id => $spot) {
 krsort($ordered);
 slog($ordered);
 */
-
+  $total_review_count = 0;
   foreach ($entries as $entry) {
+    $spot = $spots[$entry['spot_id']];
+   $total_review_count += (int) $spot['review_count'];
     $list_render .=
-      '<li>'.Modules::listItem($entry, $spots[$entry['spot_id']]).'</li>';
+      '<li>'.Modules::listItem($entry, $spot).'</li>';
   }
   $list_render .= '</ul>';
 }
-
+$share_url = BASE_URL;
+if ($primary_list) {
+   $share_url = BASE_URL.'?l='.$primary_list['id'];
+}
 // Primary List END
 
 // City Lists START
@@ -138,7 +143,7 @@ $about_us =
   .'<div class="about-us-container">Here, you\'ll find curated lists by '
   .'local experts.'
     .'<div align="left" style="margin: 10px 0 0 0; width: 100%;">'
-      .FacebookUtils::render_share_box()
+      .FacebookUtils::render_share_box(BASE_URL)
     .'</div>'
   .'</div></ul>';
 
@@ -148,17 +153,41 @@ $add_link_render = '<ul class="profile-list"><li>'.$add_link_profile_item.'</li>
 $query->setCount(count($spots));
 
 $filter_render = Modules::renderFilter($query);
-$list_title =  '<h4 class="list-title hide-on-mobile">'.$query->getTitle().'</h4>';
+
+$critic_attribution = null;
+
+if ($total_review_count) {
+  $critic_count = number_format($total_review_count % 5 + 2); // TODO: legitify
+   $critic_attribution =
+   '<p class="list-subheader">Based on <b>'.$critic_count.' critics</b> and <b>'.number_format($total_review_count).' Reviews</b></p>';
+}
+$share_box =
+  '<div align="left" style="margin: 10px 0 0 0; width: 100%;">'
+    .FacebookUtils::render_share_box()
+    .$critic_attribution
+  .'</div>';
+$list_title =
+  '<div class="hide-on-mobile">
+     <h4 class="list-title">'.$query->getTitle().'</h4>'
+  .$share_box
+  .'</div>';
+
+$map = null;
+if ($primary_list && $entries) {
+  $map = Modules::renderMapForList($entries, $spots);
+}
 
 $content =
 '<div class="twelve columns" style="margin-top: 20px;">'
 .$list_title
+.$map
 .$list_render
 .'</div>
 		<div class="four columns sidebar">'
+    .$my_list_edit
     .'<div class="hide-on-mobile">'.$yelp_attribution.'</div>'
-    .$city_lists_render
     .$filter_render
+    .$city_lists_render
     .$about_us
     .RenderUtils::renderContactForm()
     .$add_link_render

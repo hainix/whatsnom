@@ -73,25 +73,32 @@ div.primary-container {
     _border: 1px solid #d0beed;
 }
 
- div.inline-actions-container {
+div.inline-actions-container {
      text-align: center;
      margin: 18px 0;
  }
 
- ul.horizontal {
+ul.horizontal {
      margin: 0;
 }
- ul.horizontal li {
+ul.horizontal li {
     display: inline;
     list-style-type: none;
  }
 
- h4.list-title {
-    font-size: 27px;
-    line-height: 42px;
-    margin-bottom: 21px;
-    font-weight: 400;
+h4.list-title {
+    font-size: 28px;
+    margin-bottom: 0;
 }
+
+p.list-subheader {
+  margin-top: 6px;
+}
+
+p.list-subheader b {
+  font-weight: 800;
+}
+
 
 /** Covers **/
 .lists-detail-container .list-detail-row {
@@ -307,7 +314,7 @@ div.item-container {
 }
  div.item-container div.item-details {
 	padding: 6px;
-	margin-left: 174px;
+	margin-left: 166px;
 	font-size: 12px;
 }
 
@@ -554,40 +561,47 @@ div.stars {
     width: 83px;
 }
 
+/** map **/
+.googlemap {
+        position: relative;
+        padding-bottom: 75%; /* 4:3 ratio*/
+        height: 0;
+        overflow: hidden;
+}
 
+.googlemap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#map {
+    width: 100%;
+    height: 340px;
+    margin-bottom: 30px;
+}
 
 /* Mobile CSS, keep at end */
 
 
 @media only screen and (max-width: 480px) {
-    div.bubble-container {
-        margin: 0 0 8px 0;
-        background: #fff;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-    }
-
-    ul.profile-list {
-        margin-left: 20px;
-    }
+  #map {
+    margin-top: -30px;
+    margin-bottom: 10px;;
+    height: 200px;
+  }
 
 
 }
 
 @media only screen and (max-width: 959px) {
 
-    h4 {
-        line-height: 20px;
-        margin-bottom: 4px;
-    }
 }
 
-@media only screen and (max-width: 767px) {
 
-    h4 {
-        margin-left: 10px;
-    }
+@media only screen and (max-width: 767px) {
 
     div.search-container {
         margin-top: -10px;

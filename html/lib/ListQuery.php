@@ -43,7 +43,7 @@ final class ListQuery {
     } else if ($this->count == 10) {
       $pre_header = 'Top '.$this->count;
     } else {
-      $pre_header = 'Top';
+      $pre_header = 'Best';
     }
     return $pre_header.' ';
   }
@@ -71,6 +71,17 @@ final class ListQuery {
       }
     }
     return $noun;
+  }
+
+  public function getCoverURL() {
+    if ($this->getType()) {
+      $type = $this->getType();
+      if (idx(ListTypeConfig::$config, $type)) {
+        $type_config = ListTypeConfig::$config[$type];
+        return BASE_URL.'covers/'.$type_config[ListTypeConfig::COVER];
+      }
+    }
+    return false;
   }
 
   public function getTitle() {

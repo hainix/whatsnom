@@ -42,7 +42,7 @@ final class FacebookUtils {
     if (!$db_user) {
       $sql =
         sprintf(
-          "INSERT INTO users (id, name, first_name, profile_pic_url, "
+          "INSERT IGNORE INTO users (id, name, first_name, profile_pic_url, "
           ."last_updated) VALUES "
           ."(%.0f, '%s', '%s', '%s', %d)",
           $fb_user['id'],
@@ -55,7 +55,7 @@ final class FacebookUtils {
       $r = mysql_query($sql);
       if (!$r) {
         $message  = 'Invalid query: ' . mysql_error() . "\n";
-        $message .= 'Whole query: ' . $q;
+        $message .= 'Whole query: ' . $sql;
         die($message);
       }
       $entry_id = mysql_insert_id();
@@ -102,9 +102,9 @@ final class FacebookUtils {
     return FB_APP_ID;
   }
 
-  public static function renderLikeButton() {
+  public static function renderLikeButton($url) {
     return
-      '<div class="fb-like" data-href="https://www.whatsnom.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>';
+      '<div class="fb-like" data-href="'.$url.'" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>';
   }
 
   public static function get_fb_session() {
@@ -117,22 +117,6 @@ final class FacebookUtils {
       '<div class="fb-comments" data-href="'.$url.'" data-num-posts="'.$posts.'" data-width="'.$width.'"></div>';
   }
 
-  public static function render_fb_like($url, $send_button = true) {
-    return
-      '<div class="fb-like-container">'
-      .'<fb:like href="'.$url.'" send="'.$send_button.'" layout="button_count" width="100"'
-      .' show_faces="false" font="arial"></fb:like>'
-      .'</div>';
-  }
-
-  public static function render_fb_like_box($url) {
-    return
-      '<div style="margin-right: 15px;">'
-      .'<fb:like href="'.$url.'" send="false" layout="box_count" width="80"'
-      .' show_faces="false" font="arial"></fb:like></div>';
-  }
-
-
   public static function render_wide_fb_like($url) {
     return
       '<div class="fb-like" data-href="'.$url.'" data-send="true" data-width="600" data-show-faces="false"></div>';
@@ -144,14 +128,9 @@ final class FacebookUtils {
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>';
   }
 
-  public static function render_fb_send($url) {
-    return
-      '<div class="fb-send" data-href="'.$url.'" data-font="arial"></div>';
-  }
-
   public static function render_share_box($url = null, $two_rows = false) {
     if (!$url) {
-      $url = BASE_URL;
+      $url = '';//BASE_URL;
     }
     $ret =
       '<table>

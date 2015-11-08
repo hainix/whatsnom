@@ -77,7 +77,7 @@ abstract class ListTypes extends Enum {
   const GROUP_DINNER                = 61;
   const BIRTHDAY_DINNER             = 62;
   const HALLOWEEN_PARTIES           = 63;
-
+  const BOTTOMLESS_BRUNCH           = 64;
 }
 
 
@@ -112,6 +112,15 @@ final class ListTypeConfig {
       self::COVER        => 'speakeasies.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
+    ListTypes::BOTTOMLESS_BRUNCH => array(
+      self::ID           => ListTypes::BOTTOMLESS_BRUNCH,
+      self::LIST_NAME    => "Bottomless Brunch",
+      self::ENTRY_NAME   => "Bottomless Brunch",
+      self::PLURAL_ENTRY => "Bottomless Brunch",
+      self::COVER        => 'bottomless.jpg',
+      self::GENRE        => ListGenreTypes::FOOD,
+    ),
+
     ListTypes::PARENTS_DINNER => array(
       self::ID           => ListTypes::PARENTS_DINNER,
       self::LIST_NAME    => "Parent's Dinner",
@@ -566,5 +575,14 @@ final class ListTypeConfig {
     ),
 
   );
+
+  public static function shouldHideSeasonablList($list) {
+    switch($list['type']) {
+      case ListTypes::HALLOWEEN_PARTIES:
+        return true;
+    }
+    return false;
+  }
+
 
 }

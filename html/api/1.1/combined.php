@@ -24,7 +24,7 @@ if ($apc_data !== false) {
 
   // Hide seasonal lists
   foreach ($lists as $key => $list) {
-    if (ApiUtils::shouldHideSeasonablList($list)) {
+    if (ListTypeConfig::shouldHideSeasonablList($list)) {
       unset($lists[$key]);
     }
   }

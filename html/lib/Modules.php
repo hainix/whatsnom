@@ -4,9 +4,67 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/write.php';
 
 final class Modules {
 
+  public static function renderMapForList($entries, $spots) {
+
+    $ret = "
+      <div id='map'></div>
+
+  <script type='text/javascript'>
+    var locations = [";
+
+    $js_entry_strings = array();
+    $center_lat_long = null;
+    foreach ($entries as $entry) {
+      $spot = $spots[$entry['spot_id']];
+      if (!$spot['latitude'] || !$spot['longitude']) {
+        continue;
+      }
+      if (!$center_lat_long) {
+         $center_lat_long = array('latitude' => $spot['latitude'], 'longitude' => $spot['longitude']);
+      }
+      $js_entry_strings[] =
+      "['". addslashes($spot['name']). "', ".$spot['latitude'].", ".$spot['longitude'].", ".$entry['position']."]";
+    }
+    if ($js_entry_strings) {
+      $ret .= implode($js_entry_strings, ', ');
+    }
+
+      $ret .= "];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: new google.maps.LatLng(".$center_lat_long['latitude'].", ".$center_lat_long['longitude']."),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>";
+return $ret;
+
+  }
+
   public static function renderCoverList($lists) {
     $ret = '<div class="lists-detail-container">';
     foreach ($lists as $list) {
+      if (ListTypeConfig::shouldHideSeasonablList($list)) {
+        continue;
+      }
       $type = $list['type'];
       $cover_url = null;
       if (idx(ListTypeConfig::$config, $type)) {
@@ -273,9 +331,10 @@ final class Modules {
 
     $ret .= '</tr></table>';
 
-    $phone = idx($spot, 'phone')
-      ? ' · '.$spot['phone']
-      : null;
+    $phone = null;
+    if (idx($spot, 'phone')) {
+      $phone =  " ·" . " (".substr($spot['phone'], 0, 3).") ".substr($spot['phone'], 3, 3)."-".substr($spot['phone'],6);
+    }
 
     $spot_name = $placeholder
       ? $spot['name']
