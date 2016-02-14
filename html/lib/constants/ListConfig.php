@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * To add a new list, add an entry to ListTypes and a corresponding config
+ * to ListTypeConfig
+ */
+
 // These can be renumbered for ordering on the list
 abstract class ListGenreTypes extends Enum {
   const DRINK            = 1;
@@ -78,6 +83,9 @@ abstract class ListTypes extends Enum {
   const BIRTHDAY_DINNER             = 62;
   const HALLOWEEN_PARTIES           = 63;
   const BOTTOMLESS_BRUNCH           = 64;
+  const SPORTS_BARS                 = 65;
+  const CLUBS                       = 66;
+  const KOREAN                      = 67;
 }
 
 
@@ -312,6 +320,14 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Japanese Food',
       self::PLURAL_ENTRY => 'Japanese Food',
       self::COVER        => 'japanese.jpg',
+      self::GENRE        => ListGenreTypes::CUISINE,
+    ),
+    ListTypes::KOREAN => array(
+      self::ID           => ListTypes::KOREAN,
+      self::LIST_NAME    => 'Korean',
+      self::ENTRY_NAME   => 'Korean Food',
+      self::PLURAL_ENTRY => 'Korean Food',
+      self::COVER        => 'korean.jpg',
       self::GENRE        => ListGenreTypes::CUISINE,
     ),
     ListTypes::MALAYSIAN => array(
@@ -553,6 +569,24 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Date Bar',
       self::PLURAL_ENTRY => 'Date Bars',
       self::COVER        => 'datebar.jpg',
+      self::GENRE        => ListGenreTypes::DRINK,
+    ),
+
+    ListTypes::SPORTS_BARS => array(
+      self::ID           => ListTypes::SPORTS_BARS,
+      self::LIST_NAME    => 'Sports Bars',
+      self::ENTRY_NAME   => 'Sports Bar',
+      self::PLURAL_ENTRY => 'Sports Bars',
+      self::COVER        => 'sportsbar.jpg',
+      self::GENRE        => ListGenreTypes::DRINK,
+    ),
+
+    ListTypes::CLUBS => array(
+      self::ID           => ListTypes::CLUBS,
+      self::LIST_NAME    => 'Clubs',
+      self::ENTRY_NAME   => 'Club',
+      self::PLURAL_ENTRY => 'Clubs',
+      self::COVER        => 'club.jpg',
       self::GENRE        => ListGenreTypes::DRINK,
     ),
 
