@@ -36,39 +36,37 @@ final class ApiUtils {
   private static function getIconTypeForSpot($spot) {
   $categories = $spot['categories'];
     if (stripos($categories, 'wine') !== false) {
-      return 'W';
-    }
-else if (stripos($categories, 'museum') !==  false ||
+      return 'ion-wineglass';
+    } else if (stripos($categories, 'museum') !==  false ||
                stripos($categories, 'tour')   !==  false ||
                stripos($categories, 'art ')   !==  false ||
                stripos($categories, 'arts')   !==  false) {
-      return 'A';
+      return 'ion-easel';
     } else if (stripos($categories, 'zoo') !==  false ||
                stripos($categories, 'park') !==  false ||
                stripos($categories, 'garden') !==  false) {
-      return 'L';
+      return 'ion-leaf';
     } else if (stripos($categories, 'game') !==  false ||
                stripos($categories, 'camp') !==  false ||
                stripos($categories, 'golf') !==  false ||
                stripos($categories, 'arcade') !==  false ||
                stripos($categories, 'gym') !==  false ||
                stripos($categories, 'climb') !==  false) {
-      return 'S';
-   } else if (stripos($categories, 'cocktail') !==  false ||
-              stripos($categories, 'lounge') !==  false) {
-      return 'C';
+      return 'ion-ios-body';
+    } else if (stripos($categories, 'cocktail') !==  false ||
+               stripos($categories, 'lounge') !==  false) {
+      return 'ion-android-bar';
     } else if (stripos($categories, 'club') !==  false ||
                stripos($categories, 'music') !==  false) {
-      return 'M';
+      return 'ion-headphone';
     } else if (stripos($categories, 'bar') !==  false) {
-      return 'B';
+      return 'ion-beer';
     } else if (stripos($categories, 'shop') !== false ||
                stripos($categories, 'carousel') !==  false) {
-      return 'G';
+      return 'ion-flag';
     }
-  return 'F';
+    return 'ion-spoon';
   }
-
 
   private static function getSpotFieldsNeededForListView() {
     return array(
