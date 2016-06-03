@@ -72,11 +72,10 @@ final class ApiUtils {
     return array(
       'latitude',
       'longitude',
-      //'name',
       'neighborhoods',
-      //'profile_pic',
       'categories',
       'review_count',
+      'phone',
     );
   }
 
