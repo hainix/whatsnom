@@ -172,8 +172,8 @@ return $ret;
     $list_type_options = ListTypes::getConstants();
     $city_options = Cities::getConstants();
     $ret = "<form id='filter-form'><div class='filter'>";
-    $ret .= "<p class='title'>Browse</p>";
-    $city_label = 'City';
+    //$ret .= "<p class='title'>Browse</p>";
+    $city_label = 'Change City';
     $lists_label = 'Lists';
     $city_default = 0;
     $list_default = 0;
@@ -199,6 +199,7 @@ return $ret;
     </li>";
     }
     $ret .= '</ul>';
+/*
     $ret .= "<p class='title_items'>".$lists_label."</p><ul>";
     foreach ($list_type_options as $option => $key) {
       $ret .=
@@ -208,6 +209,7 @@ return $ret;
       </li>";
     }
     $ret .= '</ul>';
+*/
     $ret .= '</div>';
 
     $ret .= "<input id='city-input' name='c' type='hidden' value='".$city_default."'>";

@@ -532,9 +532,9 @@ final class ListTypeConfig {
     ),
     ListTypes::FIRST_DATE_IDEAS => array(
       self::ID           => ListTypes::FIRST_DATE_IDEAS,
-      self::LIST_NAME    => 'First Date Ideas',
-      self::ENTRY_NAME   => 'First Date Idea',
-      self::PLURAL_ENTRY => 'First Date Ideas',
+      self::LIST_NAME    => 'Date Ideas',
+      self::ENTRY_NAME   => 'Date Idea',
+      self::PLURAL_ENTRY => 'Date Ideas',
       self::COVER        => 'firstdateideas.jpg',
       self::GENRE        => ListGenreTypes::ACTIVITIES,
     ),

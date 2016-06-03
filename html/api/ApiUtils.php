@@ -33,7 +33,44 @@ final class ApiUtils {
     return $list;
   }
 
-  public static function getSpotFieldsNeededForListView() {
+  private static function getIconTypeForSpot($spot) {
+  $categories = $spot['categories'];
+    if (stripos($categories, 'wine') !== false) {
+      return 'W';
+    }
+else if (stripos($categories, 'museum') !==  false ||
+               stripos($categories, 'tour')   !==  false ||
+               stripos($categories, 'art ')   !==  false ||
+               stripos($categories, 'arts')   !==  false) {
+      return 'A';
+    } else if (stripos($categories, 'zoo') !==  false ||
+               stripos($categories, 'park') !==  false ||
+               stripos($categories, 'garden') !==  false) {
+      return 'L';
+    } else if (stripos($categories, 'game') !==  false ||
+               stripos($categories, 'camp') !==  false ||
+               stripos($categories, 'golf') !==  false ||
+               stripos($categories, 'arcade') !==  false ||
+               stripos($categories, 'gym') !==  false ||
+               stripos($categories, 'climb') !==  false) {
+      return 'S';
+   } else if (stripos($categories, 'cocktail') !==  false ||
+              stripos($categories, 'lounge') !==  false) {
+      return 'C';
+    } else if (stripos($categories, 'club') !==  false ||
+               stripos($categories, 'music') !==  false) {
+      return 'M';
+    } else if (stripos($categories, 'bar') !==  false) {
+      return 'B';
+    } else if (stripos($categories, 'shop') !== false ||
+               stripos($categories, 'carousel') !==  false) {
+      return 'G';
+    }
+  return 'F';
+  }
+
+
+  private static function getSpotFieldsNeededForListView() {
     return array(
       'latitude',
       'longitude',
@@ -78,6 +115,12 @@ final class ApiUtils {
         // Default to original image
       }
       $new_entry['list_item_thumbnail'] = $src;
+      $new_entry['icon'] = self::getIconTypeForSpot($spot);
+
+      if ($spot['neighborhoods'] && strpos($spot['neighborhoods'], ',') !== false) {
+      $neighborhoods = explode(',', $spot['neighborhoods']);
+      $spot['neighborhoods'] = trim($neighborhoods[0]);
+      }
 
       // Only essential fields to display in the list view are
       // sent back with the spot.
@@ -91,6 +134,7 @@ final class ApiUtils {
       $list_review_count += (int) $spot['review_count'];
     }
 
+    $list['spot_count'] = count($spot_names);
     $list['snippet'] = implode(array_slice($spot_names, 0, 5), ', ');
     $list['review_count'] = number_format($list_review_count);
     $list['critic_count'] =

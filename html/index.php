@@ -185,8 +185,8 @@ $content =
 .'</div>
 		<div class="four columns sidebar">'
     .$my_list_edit
-    .'<div class="hide-on-mobile">'.$yelp_attribution.'</div>'
     .$filter_render
+    .'<div class="hide-on-mobile">'.$yelp_attribution.'</div>'
     .$city_lists_render
     .$about_us
     .RenderUtils::renderContactForm()
