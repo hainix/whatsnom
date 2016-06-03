@@ -76,24 +76,15 @@ final class ApiUtils {
       'neighborhoods',
       //'profile_pic',
       'categories',
+      'review_count',
     );
   }
 
-  public static function addListDataToList($list) {
-    $list_id = $list['id'];
-
-    // Merge render info about the list type into the response
-    $list = self::addListConfigToList($list);
-    $entries = DataReadUtils::getEntriesForList($list);
-
-    // Parse and put the list items on the list
-    $entries_keyed_by_spot_id = array();
-    $spot_names = array();
-    $list_review_count = 0;
-    foreach ($entries as $entry_key => $entry) {
+  public static function addDataToEntry($entry, $full_entry = false) {
       $spot = get_object($entry['spot_id'], 'spots');
       $spot['city_name'] = Cities::getName($spot['city_id']);
       $new_entry = $entry;
+      $new_entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
       $new_entry['name'] = $spot['name'];
       $src = $spot['profile_pic'];
       if (self::PROFILE_IMAGE_TYPE == 'PHPTHUMB') {
@@ -119,17 +110,35 @@ final class ApiUtils {
       $neighborhoods = explode(',', $spot['neighborhoods']);
       $spot['neighborhoods'] = trim($neighborhoods[0]);
       }
-
       // Only essential fields to display in the list view are
       // sent back with the spot.
-      $new_entry['place'] =
-        array_select_keys(
-          $spot,
-          self::getSpotFieldsNeededForListView()
-        );
+      if (!$full_entry) {
+        $spot =
+          array_select_keys(
+            $spot,
+            self::getSpotFieldsNeededForListView()
+          );
+      }
+      $new_entry['place'] = $spot;
+      return $new_entry;
+}
+
+  public static function addListDataToList($list) {
+    $list_id = $list['id'];
+
+    // Merge render info about the list type into the response
+    $list = self::addListConfigToList($list);
+    $entries = DataReadUtils::getEntriesForList($list);
+
+    // Parse and put the list items on the list
+    $entries_keyed_by_spot_id = array();
+    $spot_names = array();
+    $list_review_count = 0;
+    foreach ($entries as $entry_key => $entry) {
+      $new_entry = self::addDataToEntry($entry);
       $entries_keyed_by_spot_id[$entry['spot_id']] = $new_entry;
-      $spot_names[] = $spot['name'];
-      $list_review_count += (int) $spot['review_count'];
+      $spot_names[] = $new_entry['name'];
+      $list_review_count += (int) $new_entry['place']['review_count'];
     }
 
     $list['spot_count'] = count($spot_names);

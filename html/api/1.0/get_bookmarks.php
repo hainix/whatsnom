@@ -22,7 +22,6 @@ if ($user_id && is_numeric($user_id)) {
   }
   $bookmarks = array();
   foreach ($bookmarks_by_list as $bookmark_list_id => $_) {
-
     $list = get_object($bookmark_list_id, 'lists');
     $list = ApiUtils::addListConfigToList($list);
     ksort($bookmarks_by_list[$bookmark_list_id]);

@@ -15,11 +15,7 @@ if ($user_id && is_numeric($user_id)) {
   foreach ($users_bookmarks_assocs as $bookmark_key => $bookmark) {
     $entry_id = $bookmark['target_id'];
     $entry = get_object($entry_id, 'entries');
-    $spot = get_object($entry['spot_id'], 'spots');
-    $entry['list_item_thumbnail'] = $spot['profile_pic'];
-    $entry['place'] = $spot;
-    $entry['name'] = $spot['name'];
-    $entry['snippet'] = $entry['tip'] ?: idx($spot, 'snippet');
+    $entry = ApiUtils::addDataToEntry($entry, $full_entry = true);
     $bookmarks_by_list[$entry['list_id']][$entry['position']] = $entry;
   }
 
