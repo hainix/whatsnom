@@ -76,6 +76,8 @@ final class ApiUtils {
       'categories',
       'review_count',
       'phone',
+      'opentable_id',
+      'yelp_seat_me'
     );
   }
 
