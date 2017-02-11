@@ -22,16 +22,17 @@ if ($apc_data !== false) {
 } else {
 
   // Get all lists to show on homepage, including header layout
-  $list_response_with_headers = LitAppUtils::getLitListResponseForCity($city_id, 100);
+  $lit_lists_raw = LitAppUtils::getLitListResponseForCity($city_id, 100);
 
   // Get entries for each list
   $lists_with_entries = array();
-  foreach ($list_response_with_headers as $list_response) {
-    if (idx($list_response, 'isDivider')) {
-      continue;
-    }
-    $ordered_list_response[]['items']
-      = array(ApiUtils::addListDataToLitList($list_response));
+  $list_response_with_headers = array();
+  $list_response_with_headers[] = array('isDivider' => 1, 'name' => 'Lit Right Now');
+
+  foreach ($lit_lists_raw as $raw_list) {
+    $temp_list = ApiUtils::addListDataToLitList($raw_list);
+    $list_response_with_headers[] = $temp_list;
+    $ordered_list_response[]['items'] = array($temp_list);
   }
 
   $supported_cities = array(Cities::NYC);
