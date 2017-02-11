@@ -10,7 +10,7 @@ if ($primary_list) {
   $type_id = $primary_list['type'];
   $city_id = $primary_list['city'];
 } else {
-  $type_id = idx($_GET, 't', ListTypes::CHEAP_EATS);
+  $type_id = idx($_GET, 't', ListTypes::BOTTOMLESS_BRUNCH);
   $city_id = idx($_GET, 'c', Cities::NYC);
 }
 
@@ -36,6 +36,7 @@ $user = FacebookUtils::getUser();
 // Data Fetch END
 
 $heart_icon =  '<img class="list-profile" src="'.BASE_URL.'/images/add-favorite.png" />';
+$star_icon =  '<img class="list-profile" src="'.BASE_URL.'/images/star.png" />';
 $edit_icon =  '<img width="26px" height="26px" '
   .'src="'.BASE_URL.'/images/pencil.png" />';
 
@@ -89,7 +90,10 @@ foreach ($spots as $spot_id => $spot) {
 }
 krsort($ordered);
 slog($ordered);
+// End baseline ranking
 */
+
+
   $total_review_count = 0;
   foreach ($entries as $entry) {
     $spot = $spots[$entry['spot_id']];
@@ -139,13 +143,27 @@ $yelp_attribution =
   .'</div>';
 
 $about_us =
-  '<ul class="profile-list" style="margin-top: 20px"><h3><span>What Is This?</span></h3>'
-  .'<div class="about-us-container">Here, you\'ll find curated lists by '
-  .'local experts.'
-    .'<div align="left" style="margin: 10px 0 0 0; width: 100%;">'
-      .FacebookUtils::render_share_box(BASE_URL)
-    .'</div>'
-  .'</div></ul>';
+  '<ul class="profile-list" style="margin-top: 0px"><h3><span>What Is WhatsNom?</span></h3>'
+  .'<li>'.$star_icon.'Curated lists of food and bars</br> by '
+  .'resident experts. Nom!'
+  .'</li>';
+$about_us .= '</ul>';
+
+$ios_icon =
+  RenderUtils::renderExternalLink(
+    '<img width="110px" class="list-profile" src="'.BASE_URL.'/images/appstore.svg" />',
+    'https://itunes.apple.com/us/app/whatsnom-curated-top-lists/id1044133059'
+  );
+$googleplay_icon =
+  RenderUtils::renderExternalLink(
+    '<img width="110px" class="list-profile" src="'.BASE_URL.'/images/playstore.svg" />',
+    'https://play.google.com/store/apps/details?id=com.whatsnom.inlist&hl=en'
+  );
+$app_buttons = '<table style="margin-top: 20px;"><tr>'
+.'<td>'.$ios_icon.'</td>'
+.'<td>'.$googleplay_icon.'</td>'
+.'</tr></table>';
+
 
 $add_link_render = '<ul class="profile-list"><li>'.$add_link_profile_item.'</li></ul>';
 
@@ -184,13 +202,14 @@ $content =
 .$list_render
 .'</div>
 		<div class="four columns sidebar">'
+    .$app_buttons
+    .$about_us
+    .$city_lists_render
     .$my_list_edit
     .$filter_render
-    .'<div class="hide-on-mobile">'.$yelp_attribution.'</div>'
-    .$city_lists_render
-    .$about_us
     .RenderUtils::renderContactForm()
     .$add_link_render
+    .'<div class="hide-on-mobile">'.$yelp_attribution.'</div>'
 		.'</div>
 	</div><!-- container -->
 ';

@@ -7,6 +7,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
 include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ImageUtils.php';
 
+
 function cmpByPosition($a, $b)  {
   return (((int) $a['position']) > ((int) $b['position']));
 }
@@ -125,11 +126,23 @@ final class ApiUtils {
 }
 
   public static function addListDataToList($list) {
+    return self::addListDataToListHelper($list, false);
+  }
+
+  public static function addListDataToLitList($list) {
+    return self::addListDataToListHelper($list, true);
+  }
+
+  private static function addListDataToListHelper($list, $use_lit_table = false) {
     $list_id = $list['id'];
 
     // Merge render info about the list type into the response
     $list = self::addListConfigToList($list);
-    $entries = DataReadUtils::getEntriesForList($list);
+    if ($use_lit_table) {
+      $entries = DataReadUtils::getEntriesForLitList($list);
+    } else {
+      $entries = DataReadUtils::getEntriesForList($list);
+    }
 
     // Parse and put the list items on the list
     $entries_keyed_by_spot_id = array();

@@ -43,7 +43,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
 	}
 
   private function getSiteName() {
-    return "What's Nom";
+    return "WhatsNom";
   }
 
   private function isHomepage() {
@@ -55,7 +55,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/ListQuery.php';
     return $this->getSiteName()." ·Curated Top Lists";
   }
 
-  private function getDefaultDescription() {
+  public function getDefaultDescription() {
     return "Curated Top Lists, from Resident Experts";
   }
 
@@ -263,7 +263,7 @@ $og_image =
       <div class="logo-subtitle">
         Curated Top Lists
       </div>
-      <h1>'.RenderUtils::renderLink('What\'s Nom?', '').'</h1>
+      <h1>'.RenderUtils::renderLink('WhatsNom?', '').'</h1>
     </div>'
     .$this->getLoginModule()
     .'</div>';

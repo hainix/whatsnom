@@ -60,9 +60,17 @@ return $ret;
   }
 
   public static function renderCoverList($lists) {
-    $ret = '<div class="lists-detail-container">';
+    $genre_grouped_lists = array();
+    foreach (ListGenreTypes::getConstants() as $genre_name => $genre_id) {
+      $genre_grouped_lists[$genre_id] =
+        array(
+          'items' => array(),
+          'name'  => $genre_name,
+        );
+    }
+
     foreach ($lists as $list) {
-      if (ListTypeConfig::shouldHideSeasonablList($list)) {
+      if (ListTypeConfig::shouldHideSeasonalList($list)) {
         continue;
       }
       $type = $list['type'];
@@ -80,11 +88,19 @@ return $ret;
                  <h4>'.$type_config[ListTypeConfig::LIST_NAME].'</h4>
                </div>';
       $row .= '</div>';
-
-        $ret .= RenderUtils::renderLink(
-        $row,
+      $genre_grouped_lists[$type_config['genre']]['items'][] =
+        RenderUtils::renderLink(
+          $row,
           '?l='.$list['id']
         );
+    }
+    $ret = '<div class="lists-detail-container">';
+    foreach ($genre_grouped_lists as $genre => $genre_group) {
+      $ret .= '<h3 style="padding-left: 4px"><span>'.$genre_group['name'].'</span></h3>';
+      foreach ($genre_group['items'] as $list) {
+        $ret .= $list;
+      }
+      $ret .= '<br/>';
     }
     $ret .= '</div>';
     return $ret;

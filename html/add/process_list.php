@@ -52,7 +52,9 @@ if (count($spots) < MIN_ENTRIES_FOR_LIST) {
   // TODO nice boxify
   $error = 'Rats! We need at least '.MIN_ENTRIES_FOR_LIST.' spots.';
 } else if (count($spots) != count(array_flip($spots))) {
-  slog($spots);
+  slog(array_diff_assoc($spots, array_unique($spots)));
+
+
   $error = 'Oops! Looks like you repeated a spot.';
 } else if ($max_spot_position != count($spots)) {
   $error = 'Whoops, make sure you fill out consecutive spots.';

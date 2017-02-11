@@ -7,8 +7,8 @@
 
 // These can be renumbered for ordering on the list
 abstract class ListGenreTypes extends Enum {
-  const DRINK            = 1;
   const ACTIVITIES       = 2;
+  const DRINK            = 1;
   const FOOD             = 3;
   const CUISINE          = 4;
 
@@ -610,7 +610,7 @@ final class ListTypeConfig {
 
   );
 
-  public static function shouldHideSeasonablList($list) {
+  public static function shouldHideSeasonalList($list) {
     switch($list['type']) {
       case ListTypes::HALLOWEEN_PARTIES:
         return true;
