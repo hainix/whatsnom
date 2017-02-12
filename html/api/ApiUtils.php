@@ -12,6 +12,10 @@ function cmpByPosition($a, $b)  {
   return (((int) $a['position']) > ((int) $b['position']));
 }
 
+function cmpByLitness($a, $b)  {
+  return (((int) $a['place']['litness']) < ((int) $b['place']['litness']));
+}
+
 final class ApiUtils {
 
   const PROFILE_IMAGE_TYPE = 'SMALLER'; // ORIGINAL, SMALLER, PHPTHUMB
@@ -82,6 +86,14 @@ final class ApiUtils {
     );
   }
 
+  public static function addLitDataToEntry($entry) {
+    $entry = self::addDataToEntry($entry, $full_entry = true);
+
+    // TODO: fetch from place DB
+    $entry['place']['litness'] = mt_rand(5, 99);
+    return $entry;
+  }
+
   public static function addDataToEntry($entry, $full_entry = false) {
       $spot = get_object($entry['spot_id'], 'spots');
       $spot['city_name'] = Cities::getName($spot['city_id']);
@@ -150,6 +162,13 @@ final class ApiUtils {
     $list_review_count = 0;
     foreach ($entries as $entry_key => $entry) {
       $new_entry = self::addDataToEntry($entry);
+
+      if ($use_lit_table) {
+        $new_entry = self::addLitDataToEntry($new_entry);
+      } else {
+        $new_entry = self::addDataToEntry($entry);
+      }
+
       $entries_keyed_by_spot_id[$entry['spot_id']] = $new_entry;
       $spot_names[] = $new_entry['name'];
       $list_review_count += (int) $new_entry['place']['review_count'];
@@ -162,7 +181,12 @@ final class ApiUtils {
       number_format($list_review_count % 5 + 2); // TODO: legitify
 
     // Sort entries by rank on list, and rekey to the positions for render
-    usort($entries_keyed_by_spot_id, "cmpByPosition");
+
+    if ($use_lit_table) {
+      usort($entries_keyed_by_spot_id, "cmpByLitness");
+    } else {
+      usort($entries_keyed_by_spot_id, "cmpByPosition");
+    }
     $list['entries'] = $entries_keyed_by_spot_id;
     return $list;
   }

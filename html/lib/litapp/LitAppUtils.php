@@ -1,7 +1,9 @@
 <?php
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
+//include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/read.php';
 
 final class LitAppUtils {
+
+  // TODO - fetch from db
   public static function getLitListResponseForCity($city_id, $limit = 1) {
     $lists = array(
       1 => array(

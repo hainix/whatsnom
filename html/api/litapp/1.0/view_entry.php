@@ -13,11 +13,11 @@ if (!$entry) {
   echo 'no entry found for id '.$entry_id;
   die(1);
 }
+$entry = ApiUtils::addLitDataToEntry($entry);
 
-$place = get_object($entry['spot_id'], 'spots');
 $response = array(
   'entry'    => $entry,
-  'place'    => $place,
+  'place'    => $entry['place'],
 );
 
 header('Cache-Control: no-cache, must-revalidate');
