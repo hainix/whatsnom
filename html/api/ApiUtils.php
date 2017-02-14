@@ -145,12 +145,14 @@ final class ApiUtils {
     return self::addListDataToListHelper($list, true);
   }
 
-  private static function addListDataToListHelper($list, $use_lit_table = false) {
-    $list_id = $list['id'];
-
+  private static function addListDataToListHelper($raw_list, $use_lit_table = false) {
     // Merge render info about the list type into the response
-    $list = self::addListConfigToList($list);
+    $list = self::addListConfigToList($raw_list);
     if ($use_lit_table) {
+      // Override the name from addListConfigToList
+      $list['name'] = $raw_list['name'];
+      $list['cover'] = self::BASE_URL . 'covers/'.$raw_list['cover'];
+
       $entries = DataReadUtils::getEntriesForLitList($list);
     } else {
       $entries = DataReadUtils::getEntriesForList($list);

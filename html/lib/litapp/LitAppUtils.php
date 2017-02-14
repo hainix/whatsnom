@@ -10,9 +10,25 @@ final class LitAppUtils {
         'city' => 4,
         'id' => 1,
         'items' => array(),
-        'name' => 'Clubs',
+        'name' => "let's dance",
         'type' => 66,
-        'cover' => 'http://www.whatsnom.com/covers/club.jpg',
+        'cover' => 'club.jpg',
+      ),
+      112 => array(
+        'city' => 4,
+        'id' => 112,
+        'items' => array(),
+        'name' => 'buy me a drink',
+        'type' => 59,
+        'cover' => 'pickup.jpg',
+      ),
+      124 => array(
+        'city' => 4,
+        'id' => 124,
+        'items' => array(),
+        'name' => 'bring the crew',
+        'type' => 6,
+        'cover' => 'group.jpg',
       ),
     );
     return array_slice($lists, 0, $limit, true);

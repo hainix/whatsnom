@@ -27,7 +27,7 @@ if ($apc_data !== false) {
   // Get entries for each list
   $lists_with_entries = array();
   $list_response_with_headers = array();
-  $list_response_with_headers[] = array('isDivider' => 1, 'name' => 'Lit Right Now');
+  $list_response_with_headers[] = array('isDivider' => 1, 'name' => 'lit right now');
 
   foreach ($lit_lists_raw as $raw_list) {
     $temp_list = ApiUtils::addListDataToLitList($raw_list);
