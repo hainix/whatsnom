@@ -13,6 +13,9 @@ function cmpByPosition($a, $b)  {
 }
 
 function cmpByLitness($a, $b)  {
+  if (!isset($a['place']['litness']) || !isset($b['place']['litness'])) {
+    return (((int) $a['place']['id']) < ((int) $b['place']['id']));
+  }
   return (((int) $a['place']['litness']) < ((int) $b['place']['litness']));
 }
 
