@@ -49,11 +49,13 @@ if ($html->find('div._kpj')) {
   exit (1);
 }
 
+$encode_data = array();
 $day_counter = 1;
 foreach($html->find('div._kpj') as $day_row) {
 echo $day_array[$day_counter] . ': ';
 if (stripos($day_row->innertext, 'pick another day')) {
    echo 'closed';
+   $encode_data[$day_counter] = null;
 } else {
   foreach ($day_row->find('div') as $potential_div) {
     if (stripos($potential_div->class, '_Toj') != 0) {
@@ -82,6 +84,7 @@ if (stripos($day_row->innertext, 'pick another day')) {
     }
   }
   echo implode($bar_row_array, ','). '</br>';
+  $encode_data[$day_counter] = $bar_row_array;
 }
 $day_counter++;
 //echo   '<pre>'.$day_row->innertext.'</pre>';
@@ -89,7 +92,19 @@ echo "<br/>";
 }
 }
 
-echo '[[parse complete]]';
+echo '[[parse complete]]<br/>';
+echo '[[starting validation]]<br/>';
+$valid_bars_per_day = 18;
+foreach ($encode_data as $day => $day_data) {
+  if ($day_data !== null) {
+    if (count($day_data) !== $valid_bars_per_day) {
+      echo "ERROR: problem with day data, expected ".$valid_bars_per_day.' but got '
+           . count($day_data)." for day ".$day."<br/>";
+      exit(1);
+    }
+  }
+}
+echo '[[all data validated and ready to save]]<br/>';
 
 
 /*
