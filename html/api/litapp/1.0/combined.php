@@ -5,7 +5,7 @@ include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/litapp/LitAppUtils.php';
 
 $city_id = idx($_GET, 'city_id');
 $force = idx($_GET, 'force');
-$force = true; // For temp overrides
+//$force = true; // For temp overrides
 
 
 if (!$city_id) {
@@ -23,6 +23,7 @@ if ($apc_data !== false) {
 
   // Get all lists to show on homepage, including header layout
   $lit_lists_raw = LitAppUtils::getLitListResponseForCity($city_id, 100);
+  $normal_lists_raw = LitAppUtils::getGeneralListResponseForCity($city_id, 100);
 
   // Get entries for each list
   $lists_with_entries = array();
@@ -30,6 +31,13 @@ if ($apc_data !== false) {
   $list_response_with_headers[] = array('isDivider' => 1, 'name' => 'lit right now');
 
   foreach ($lit_lists_raw as $raw_list) {
+    $temp_list = ApiUtils::addListDataToLitList($raw_list);
+    $list_response_with_headers[] = $temp_list;
+    $ordered_list_response[]['items'] = array($temp_list);
+  }
+
+  $list_response_with_headers[] = array('isDivider' => 1, 'name' => 'more lit stuff');
+  foreach ($normal_lists_raw as $raw_list) {
     $temp_list = ApiUtils::addListDataToLitList($raw_list);
     $list_response_with_headers[] = $temp_list;
     $ordered_list_response[]['items'] = array($temp_list);

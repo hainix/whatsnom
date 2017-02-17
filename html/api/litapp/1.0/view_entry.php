@@ -2,7 +2,6 @@
 include_once  $_SERVER['DOCUMENT_ROOT'].'/api/ApiUtils.php';
 
 $entry_id = idx($_GET, 'entry_id');
-$uid = idx($_GET, 'uid');
 if (!$entry_id || !is_numeric($entry_id)) {
   echo 'unsupported entry id '.$entry_id;
   die(1);

@@ -9,6 +9,14 @@ if (!$list_id || !is_numeric($list_id)) {
 }
 
 $list = idx(LitAppUtils::getLitListResponseForCity($city_id = null, 100), $list_id);
+if (!$list) {
+  $list = idx(LitAppUtils::getGeneralListResponseForCity($city_id = null, 100), $list_id);
+}
+if (!$list) {
+   echo 'could not find list';
+  die(1);
+}
+
 $list = ApiUtils::addListDataToLitList($list);
 
 $response = $list;

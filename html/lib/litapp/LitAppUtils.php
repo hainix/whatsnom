@@ -33,6 +33,30 @@ final class LitAppUtils {
     );
     return array_slice($lists, 0, $limit, true);
   }
+
+  public static function getGeneralListResponseForCity($city_id, $limit = 1) {
+    $lists = array(
+      123 => array(
+        'city' => 4,
+        'id' => 123,
+        'items' => array(),
+        'name' => "bottomless drunch",
+        'type' => 64,
+        'cover' => 'bottomless.jpg',
+      ),
+      107 => array(
+        'city' => 4,
+        'id' => 107,
+        'items' => array(),
+        'name' => "wine time",
+        'type' => 47,
+        'cover' => 'wine.jpg',
+      ),
+);
+    return array_slice($lists, 0, $limit, true);
+}
+
+
 }
 
 ?>
