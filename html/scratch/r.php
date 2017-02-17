@@ -1,6 +1,9 @@
 <?php
 // example of how to use advanced selector features
 include('simple_html_dom.php');
+include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/write.php';
+include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/base.php';
+
 
 function rem($text, $removals) {
   if (!is_array($removals)) {
@@ -22,22 +25,41 @@ array(
 7 => 'Su',
 );
 
+if (!$_GET || !isset($_GET['sid'])) {
+  echo 'malformed';
+  exit (1);
+}
 
+$spot_id = (int) $_GET['sid'];
+//$spot = get_object($spot_id, 'spots');
+
+/*
+if (!$spot || !isset($spot['name']) || !$spot['name']) {
+   echo 'no spot found';
+   exit(1);
+}
+*/
 
 $form =
-"
-<form method='post' action='parse.php'>
-enter html code to parse:
-<textarea name='htmlinput'>
+'
+<form method="post" action="r.php?sid='.$spot_id.'">
+enter html code to parse for spot '.$spot_id.'<br/>
+<textarea name="htmlinput" rows="20" cols="120">
 </textarea>
-<input type='submit' />
+<br/>
+  <input type="radio" name="run" value="dry" checked>dry run<br>
+  <input type="radio" name="run" value="write">write first entry<br>
+  <input type="radio" name="run" value="overwrite">overwrite other entries
+
+<br/>
+<input type="submit" />
 </form>
-";
+';
 echo $form;
 
 
 if ($_POST && isset($_POST["htmlinput"])) {
-  echo '[[ parsing html input ]]<br/>';
+  echo '[[ parsing html input for run type: '.$_POST['run'].']]<br/>';
 //   echo 'got input: <pre>' . $_POST["htmlinput"] . '</pre><br/>';
 
 $html = str_get_html($_POST["htmlinput"]);

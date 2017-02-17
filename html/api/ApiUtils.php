@@ -85,7 +85,7 @@ final class ApiUtils {
       'review_count',
       'phone',
       'opentable_id',
-      'yelp_seat_me'
+      'yelp_seat_me',
     );
   }
 
@@ -93,6 +93,7 @@ final class ApiUtils {
     $entry = self::addDataToEntry($entry, $full_entry = true);
 
     // TODO: fetch from place DB
+    mt_srand($entry['id']);
     $entry['place']['litness'] = mt_rand(5, 99);
     return $entry;
   }
