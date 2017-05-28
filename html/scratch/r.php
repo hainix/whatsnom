@@ -75,7 +75,8 @@ $encode_data = array();
 $day_counter = 1;
 foreach($html->find('div._kpj') as $day_row) {
 echo $day_array[$day_counter] . ': ';
-if (stripos($day_row->innertext, 'pick another day')) {
+if (stripos($day_row->innertext, 'pick another day')
+|| stripos($day_row->innertext, 'Not enough data yet for')) {
    echo 'closed';
    $encode_data[$day_counter] = null;
 } else {
@@ -106,7 +107,7 @@ if (stripos($day_row->innertext, 'pick another day')) {
     }
   }
   echo implode($bar_row_array, ','). '</br>';
-  $encode_data[$day_counter] = $bar_row_array;
+  $encode_data[$day_counter] = $bar_row_array.'<br/>';
 }
 $day_counter++;
 //echo   '<pre>'.$day_row->innertext.'</pre>';
@@ -116,6 +117,7 @@ echo "<br/>";
 
 echo '[[parse complete]]<br/>';
 echo '[[starting validation]]<br/>';
+/*
 $valid_bars_per_day = 18;
 foreach ($encode_data as $day => $day_data) {
   if ($day_data !== null) {
@@ -126,58 +128,27 @@ foreach ($encode_data as $day => $day_data) {
     }
   }
 }
+*/
+$blob = json_encode($encode_data, JSON_FORCE_OBJECT);
+//$blob = json_encode($encode_data, JSON_NUMERIC_CHECK);
+echo 'got blob: '.$blob.'<br/>';
 echo '[[all data validated and ready to save]]<br/>';
 
 
-/*
-// -----------------------------------------------------------------------------
-// descendant selector
-$str = <<<HTML
-<div>
-    <div>
-        <div class="foo bar">ok</div>
-    </div>
-</div>
-HTML;
-
-$html = str_get_html($str);
-echo $html->find('div div div', 0)->innertext . '<br>'; // result: "ok"
-
-// -----------------------------------------------------------------------------
-// nested selector
-$str = <<<HTML
-<ul id="ul1">
-    <li>item:<span>1</span></li>
-    <li>item:<span>2</span></li>
-</ul>
-<ul id="ul2">
-    <li>item:<span>3</span></li>
-    <li>item:<span>4</span></li>
-</ul>
-HTML;
-
-$html = str_get_html($str);
-foreach($html->find('ul') as $ul) {
-    foreach($ul->find('li') as $li)
-        echo $li->innertext . '<br>';
+if ($_POST && ($_POST['run'] == 'write' || $_POST['run'] == 'overwrite')) {
+echo '[[ starting save ]]<br/>';
+  $try_write = DataWriteUtils::updateSpotHours($spot_id, $blob, $_POST['run'] == 'overwrite');
+  if ($try_write) {
+    echo 'wrote to spot '.$spot_id.' with blob: '.$blob.'</br>';
+} else {
+    echo 'ERROR writing to spot '.$spot_id.' with blob: '.$blob.'</br>';
 }
-
-// -----------------------------------------------------------------------------
-// parsing checkbox
-$str = <<<HTML
-<form name="form1" method="post" action="">
-    <input type="checkbox" name="checkbox1" value="checkbox1" checked>item1<br>
-    <input type="checkbox" name="checkbox2" value="checkbox2">item2<br>
-    <input type="checkbox" name="checkbox3" value="checkbox3" checked>item3<br>
-</form>
-HTML;
-
-$html = str_get_html($str);
-foreach($html->find('input[type=checkbox]') as $checkbox) {
-    if ($checkbox->checked)
-        echo $checkbox->name . ' is checked<br>';
-    else
-        echo $checkbox->name . ' is not checked<br>';
+} else {
+  echo 'dry run or not submitted, so exiting<br/>';
 }
-*/
+echo '[[ end save ]]<br/>';
+
+
+
+
 ?>

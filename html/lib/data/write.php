@@ -54,6 +54,48 @@ final class DataWriteUtils {
     return true;
   }
 
+  public static function updateSpotHours($spot_id, $hours_json_blob, $overwrite = false) {
+  echo 'call update spot hours with '.$spot_id. ' and blob: '.$hours_json_blob.'<br/>';
+  if (!$spot_id) {
+    echo 'no spot id';
+    die(1);
+  }
+/*
+  $spot = get_object($spot_id, 'spots');
+  echo 'got spot '.$spot;
+  if (!$spot || !$spot['name']) {
+    echo 'invalid spot';
+    die (1);
+  }
+
+  if (!$overwrite && $spot['lit_hours']) {
+  echo 'skipping, since we have lit hours for spot '.$spot_id.': '.$spot['lit_hours'];
+  die(1);
+  }
+*/
+
+    $sql =
+      sprintf(
+        "UPDATE spots SET lit_hours = '%s' WHERE "
+        ."id = %d limit 1",
+          $hours_json_blob,
+        $spot_id
+      );
+echo 'try sql '.$sql.'<br/>';
+
+
+    global $link;
+    $r = mysql_query($sql);
+    if (!$r) {
+      $message  = '[Update Spot Hours] Invalid query: ' . mysql_error() . "\n";
+      $message .= 'Whole query: ' . $sql;
+      die($message);
+    }
+
+    return true;
+}
+
+
   public static function alterListVotes($list, $delta) {
     if (!$list) {
       slog($list);

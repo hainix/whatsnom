@@ -1,36 +1,53 @@
 <?php
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/api/facebook.php';
-include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/data/base.php';
 define('FB_APP_ID', '299948876841231');
+define('FB_APP_SEC', 'a801a5c6aa83043990b8f3a44331f04e');
+define('FB_APP_VER', 'v2.3');
 
 
-$facebook = new Facebook(array(
-  'appId'  => FB_APP_ID,
-  'secret' => 'a801a5c6aa83043990b8f3a44331f04e',
-  'cookie' => true,
-));
+if(!session_id()) {
+    session_start();
+}
+
+include_once  $_SERVER['DOCUMENT_ROOT'].'/lib/base.php';
+require_once( $_SERVER['DOCUMENT_ROOT'].'/lib/api/fb-sdk-v5.5/autoload.php');
+
+$fb = new Facebook\Facebook([
+  'app_id'                => FB_APP_ID,
+  'app_secret'            => FB_APP_SEC,
+  'default_graph_version' => FB_APP_VER,
+]);
 
 // Handle logout first
-if ($_GET && idx($_GET, 'logout')) {
-  $facebook->destroySession();
+if ($_GET && isset($_GET['logout'])) {
+  $fb->destroySession();
 }
 
-$uid = $facebook->getUser();
-$me = null;
-$fb_user = null;
-// Session based API call.
-if ($uid) {
+$helper = $fb->getCanvasHelper();
+
+if ($_SESSION && isset($_SESSION['fb_access_token'])) {
   try {
-    $fb_user = $facebook->api('/me?fields=id,name,first_name,picture');
-  } catch (FacebookApiException $e) {
-    error_log($e);
+    // Returns a `Facebook\FacebookResponse` object
+    $response =
+      $fb->get(
+        '/me?fields=id,name,first_name,picture',
+        $_SESSION['fb_access_token']
+      );
+  } catch(Facebook\Exceptions\FacebookResponseException $e) {
+    echo 'Graph returned an error: ' . $e->getMessage();
+    exit;
+  } catch(Facebook\Exceptions\FacebookSDKException $e) {
+    echo 'Facebook SDK returned an error: ' . $e->getMessage();
+    exit;
   }
 }
+$fb_user = $response->getGraphUser();
+
 
 final class FacebookUtils {
   public static function getUser() {
     global $fb_user;
-    if ($fb_user && idx($fb_user, 'id')) {
+
+    if ($fb_user && isset($fb_user['id'])) {
       return self::addOrFetchUserFromFBUser($fb_user);
     }
     return null;
@@ -40,7 +57,7 @@ final class FacebookUtils {
     $db_user = get_object($fb_user['id'], 'users');
     $now = time();
     if (!$db_user) {
-      $sql =
+     $sql =
         sprintf(
           "INSERT IGNORE INTO users (id, name, first_name, profile_pic_url, "
           ."last_updated) VALUES "
@@ -48,7 +65,7 @@ final class FacebookUtils {
           $fb_user['id'],
           DataReadUtils::cln($fb_user['name']),
           DataReadUtils::cln($fb_user['first_name']),
-          $fb_user['picture']['data']['url'],
+          $fb_user['picture']['url'],
           $now
         );
       global $link;
@@ -66,11 +83,12 @@ final class FacebookUtils {
       $sql =
         sprintf(
           "UPDATE users SET profile_pic_url = '%s', last_updated = %d"
-          ." WHERE id = %d LIMIT 1",
-          $fb_user['picture']['data']['url'],
+          ." WHERE id = %.0f LIMIT 1",
+          $fb_user['picture']['url'],
           $now,
           $fb_user['id']
         );
+
       global $link;
       $r = mysql_query($sql);
       if (!$r) {
@@ -88,14 +106,16 @@ final class FacebookUtils {
   }
 
   public static function getLoginURL() {
-    global $facebook;
-    return $facebook->getLoginUrl(
-    );
+    global $fb;
+    $helper = $fb->getRedirectLoginHelper();
+    return $helper->getLoginUrl(BASE_URL.'fb-callback.php');
   }
 
   public static function getLogoutURL($params = array()) {
-    global $facebook;
-    return $facebook->getLogoutUrl($params);
+    return 'https://www.facebook.com/logout.php';
+    global $fb;
+    $helper = $fb->getRedirectLoginHelper();
+    return $helper->getLogoutUrl($params);
   }
 
   public static function getAppID() {
@@ -105,11 +125,6 @@ final class FacebookUtils {
   public static function renderLikeButton($url) {
     return
       '<div class="fb-like" data-href="'.$url.'" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>';
-  }
-
-  public static function get_fb_session() {
-    global $session;
-    return $session ? json_encode($session) : null;
   }
 
   public static function render_fb_comments($url, $posts = 20, $width = 550) {
