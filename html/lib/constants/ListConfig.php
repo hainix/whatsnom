@@ -76,7 +76,7 @@ abstract class ListTypes extends Enum {
   const FANCY_DINNER_DATE           = 55;
   const MICHELIN_1_STAR             = 56;
   const MICHELIN_2_AND_3_STARS      = 57;
-  const PARENTS_DINNER              = 58;
+  //const PARENTS_DINNER              = 58;
   const PICKUP_BARS                 = 59;
   const GROUP_BARS                  = 60;
   const GROUP_DINNER                = 61;
@@ -126,16 +126,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => "Bottomless Brunch",
       self::PLURAL_ENTRY => "Bottomless Brunch",
       self::COVER        => 'bottomless.jpg',
-      self::GENRE        => ListGenreTypes::FOOD,
-    ),
-
-    ListTypes::PARENTS_DINNER => array(
-      self::ID           => ListTypes::PARENTS_DINNER,
-      self::LIST_NAME    => "Parent's Dinner",
-      self::ENTRY_NAME   => "Parent's Dinner",
-      self::PLURAL_ENTRY => "Parent's Dinner",
-      self::COVER        => 'parents.jpg',
-      self::GENRE        => ListGenreTypes::FOOD,
+      self::GENRE        => ListGenreTypes::ACTIVITIES,
     ),
     ListTypes::GROUP_DINNER => array(
       self::ID           => ListTypes::GROUP_DINNER,
@@ -540,17 +531,17 @@ final class ListTypeConfig {
     ),
     ListTypes::FIRST_DATE_EATS => array(
       self::ID           => ListTypes::FIRST_DATE_EATS,
-      self::LIST_NAME    => 'First Date Eats',
-      self::ENTRY_NAME   => 'Casual First Date Spot',
-      self::PLURAL_ENTRY => 'Casual First Date Spots',
+      self::LIST_NAME    => 'Dinner Date',
+      self::ENTRY_NAME   => 'Dinner Date Spot',
+      self::PLURAL_ENTRY => 'Dinner Date Spots',
       self::COVER        => 'firstdate.jpg',
-      self::GENRE        => ListGenreTypes::FOOD,
+      self::GENRE        => ListGenreTypes::ACTIVITIES,
     ),
     ListTypes::FANCY_DINNER_DATE => array(
       self::ID           => ListTypes::FANCY_DINNER_DATE,
-      self::LIST_NAME    => 'Fancy Dinner Date',
-      self::ENTRY_NAME   => 'Fancy Dinner Date Spot',
-      self::PLURAL_ENTRY => 'Fancy Dinner Date Spots',
+      self::LIST_NAME    => 'Fancy Dinner',
+      self::ENTRY_NAME   => 'Fancy Dinner Spot',
+      self::PLURAL_ENTRY => 'Fancy Dinner Spots',
       self::COVER        => 'dinnerdate.jpg',
       self::GENRE        => ListGenreTypes::FOOD,
     ),
@@ -560,7 +551,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Cheap Eats Spot',
       self::PLURAL_ENTRY => 'Cheap Eats Spots',
       self::COVER        => 'cheapeats.jpg',
-      self::GENRE        => ListGenreTypes::FOOD,
+      self::GENRE        => ListGenreTypes::ACTIVITIES,
     ),
 
     ListTypes::DATE_BAR => array(
@@ -569,7 +560,7 @@ final class ListTypeConfig {
       self::ENTRY_NAME   => 'Date Bar',
       self::PLURAL_ENTRY => 'Date Bars',
       self::COVER        => 'datebar.jpg',
-      self::GENRE        => ListGenreTypes::DRINK,
+      self::GENRE        => ListGenreTypes::ACTIVITIES,
     ),
 
     ListTypes::SPORTS_BARS => array(

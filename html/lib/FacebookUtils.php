@@ -23,7 +23,7 @@ if ($_GET && isset($_GET['logout'])) {
 }
 
 $helper = $fb->getCanvasHelper();
-
+$response = null;
 if ($_SESSION && isset($_SESSION['fb_access_token'])) {
   try {
     // Returns a `Facebook\FacebookResponse` object
@@ -40,8 +40,9 @@ if ($_SESSION && isset($_SESSION['fb_access_token'])) {
     exit;
   }
 }
-$fb_user = $response->getGraphUser();
-
+if ($response) {
+  $fb_user = $response->getGraphUser();
+}
 
 final class FacebookUtils {
   public static function getUser() {

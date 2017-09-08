@@ -80,7 +80,7 @@ return $ret;
         $cover_handle = $type_config[ListTypeConfig::COVER];
         $cover_url = BASE_URL.'covers/'.$cover_handle;
       } else {
-        slog('no cover for type '.ListTypes::getName($type));
+        slog('no cover for type '.$type.': '.ListTypes::getName($type));
         continue;
       }
       $row = '<div class="list-detail-row" style="background: url('.$cover_url.'); background-position: center; background-size: cover;">';

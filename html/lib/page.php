@@ -101,6 +101,8 @@ $og_image =
     return
 '<!-- Mobile Specific Metas
   ================================================== -->
+    <meta name="apple-itunes-app" content="app-id=1044133059">
+    <meta name="google-play-app" content="app-id=com.whatsnom.inlist">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">'
       .'<title>'.$this->getTitle().'</title>
       <meta name="description" content="'.$this->getDescription().'">
@@ -116,6 +118,10 @@ $og_image =
 <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBtS-_FLNzSZDSUf9FRBvB1_2Z4OqTMPPc" type="text/javascript"></script>
 
 <script src="'.BASE_URL.'js/filter.js"></script>
+<script src="'.BASE_URL.'js/jquery.smartbanner.js"></script>
+<script type="text/javascript">
+  $(function() { $.smartbanner(); } )
+</script>
 <script src="'.BASE_URL.'js/jquery.fancybox.pack.js"></script>'
       .'<script>$(".lightbox").fancybox({
     openEffect: \'fade\',
@@ -133,6 +139,7 @@ $og_image =
   <link rel="stylesheet" href="'.BASE_URL.'css/layout.css">
   <link rel="stylesheet" href="'.BASE_URL.'css/filter.css">
   <link rel="stylesheet" href="'.BASE_URL.'css/jquery.fancybox.css">
+  <link rel="stylesheet" href="'.BASE_URL.'css/jquery.smartbanner.css">
   <link rel="stylesheet" href="'.BASE_URL.'css/style.css">
   <!-- END CSS -->
 
